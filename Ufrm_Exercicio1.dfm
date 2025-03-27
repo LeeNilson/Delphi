@@ -1,7 +1,7 @@
-object Exercicio1: TExercicio1
+object Frm_exercicio1: TFrm_exercicio1
   Left = 0
   Top = 0
-  Caption = 'Exercicio1'
+  Caption = 'Exercicio 1'
   ClientHeight = 905
   ClientWidth = 1229
   Color = clBtnFace
@@ -11,55 +11,47 @@ object Exercicio1: TExercicio1
   Font.Name = 'Arial'
   Font.Style = []
   TextHeight = 38
-  object Label1: TLabel
-    Left = 416
-    Top = 136
-    Width = 82
+  object Lbl_Resultado: TLabel
+    Left = 640
+    Top = 288
+    Width = 153
     Height = 38
-    Caption = 'Peso:'
+    Caption = 'Resultado:'
+  end
+  object Label1: TLabel
+    Left = 112
+    Top = 128
+    Width = 246
+    Height = 38
+    Caption = 'Digite seu Nome:'
   end
   object Label2: TLabel
-    Left = 409
-    Top = 227
-    Width = 93
+    Left = 112
+    Top = 328
+    Width = 238
     Height = 38
-    Caption = 'Altura:'
+    Caption = 'Digite sua idade:'
   end
-  object LblIMC: TLabel
-    Left = 409
-    Top = 304
-    Width = 69
-    Height = 38
-    Caption = 'IMC:'
-  end
-  object LblClassificacao: TLabel
-    Left = 529
-    Top = 528
-    Width = 200
-    Height = 38
-    Caption = 'Classifica'#231#227'o:'
-  end
-  object BtnCalcular: TButton
-    Left = 544
-    Top = 416
-    Width = 169
-    Height = 70
-    Caption = 'Calcular'
+  object Edt_Nome: TEdit
+    Left = 112
+    Top = 216
+    Width = 337
+    Height = 46
     TabOrder = 0
-    OnClick = BtnCalcularClick
   end
-  object EdtPeso: TEdit
-    Left = 544
-    Top = 133
-    Width = 209
+  object Edt_Idade: TEdit
+    Left = 112
+    Top = 400
+    Width = 337
     Height = 46
     TabOrder = 1
   end
-  object EdtAltura: TEdit
-    Left = 544
-    Top = 224
-    Width = 209
-    Height = 46
+  object Btn_Calcular: TButton
+    Left = 176
+    Top = 568
+    Width = 233
+    Height = 89
+    Caption = 'Iniciar'
     TabOrder = 2
   end
 end

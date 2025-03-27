@@ -7,52 +7,24 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-  TExercicio1 = class(TForm)
+  TFrm_exercicio1 = class(TForm)
+    Edt_Nome: TEdit;
+    Edt_Idade: TEdit;
+    Btn_Calcular: TButton;
+    Lbl_Resultado: TLabel;
     Label1: TLabel;
     Label2: TLabel;
-    LblIMC: TLabel;
-    LblClassificacao: TLabel;
-    BtnCalcular: TButton;
-    EdtPeso: TEdit;
-    EdtAltura: TEdit;
-    procedure BtnCalcularClick(Sender: TObject);
-  private
+     private
     { Private declarations }
   public
     { Public declarations }
   end;
 
 var
-  Exercicio1: TExercicio1;
+  Frm_exercicio1: TFrm_exercicio1;
 
 implementation
 
 {$R *.dfm}
-
-procedure TExercicio1.BtnCalcularClick(Sender: TObject);
-
-var peso : double;
-var altura : double;
-var imc : double;
-var classificacao : String ;
-
-
-begin
-
-  peso := StrToFloat(EdtPeso.Text) ;
-  altura := StrToFloat(EdtAltura.Text) ;
-  imc := peso /  (altura * altura) ;
-
-  classificacao := FloatToStr(imc) ;
-
-  if imc < 18,5 then
-  begin
-    LblClassificacao.Caption:=('Magreza')
-  end;
-
-
-
-
-end;
 
 end.

@@ -1,6 +1,7 @@
-object Exercicio2: TExercicio2
+object Frm_exercicio2: TFrm_exercicio2
   Left = 0
   Top = 0
+  Caption = 'Exerc'#237'cio 2'
   ClientHeight = 769
   ClientWidth = 1095
   Color = clBtnFace

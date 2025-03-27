@@ -8,11 +8,16 @@ uses
 
 type
   TFrm_exercicio4 = class(TForm)
-    ValorBaseProduto: TEdit;
-    ComboBox1: TComboBox;
-    BtnCalcular: TButton;
-    FreteTotal: TLabel;
     Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    LblSalarioLiquido: TLabel;
+    EdtNomeFuncionario: TEdit;
+    EdtSalarioBruto: TEdit;
+    EdtDependentes: TEdit;
+    CmBoxCargo: TComboBox;
+    ChckBoxPlanoSaude: TCheckBox;
+    BtnCalcular: TButton;
   private
     { Private declarations }
   public

@@ -11,41 +11,77 @@ object Frm_exercicio4: TFrm_exercicio4
   Font.Name = 'Arial'
   Font.Style = []
   TextHeight = 38
-  object FreteTotal: TLabel
-    Left = 448
-    Top = 504
-    Width = 156
-    Height = 38
-    Caption = 'Valor Total:'
-  end
   object Label1: TLabel
-    Left = 338
-    Top = 120
-    Width = 367
+    Left = 0
+    Top = 92
+    Width = 261
     Height = 38
-    Caption = 'Digite o valor  do Produto:'
+    Caption = 'Nome Funcion'#225'rio'
   end
-  object ValorBaseProduto: TEdit
-    Left = 368
-    Top = 192
-    Width = 329
+  object Label2: TLabel
+    Left = 8
+    Top = 212
+    Width = 184
+    Height = 38
+    Caption = 'Sal'#225'rio Bruto'
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 340
+    Width = 357
+    Height = 38
+    Caption = 'N'#250'mero de Dependentes'
+  end
+  object LblSalarioLiquido: TLabel
+    Left = 632
+    Top = 340
+    Width = 219
+    Height = 38
+    Caption = 'Sal'#225'rio Liquido:'
+  end
+  object EdtNomeFuncionario: TEdit
+    Left = 8
+    Top = 136
+    Width = 361
     Height = 46
     TabOrder = 0
   end
-  object ComboBox1: TComboBox
-    Left = 368
-    Top = 264
-    Width = 337
+  object EdtSalarioBruto: TEdit
+    Left = 8
+    Top = 256
+    Width = 361
     Height = 46
     TabOrder = 1
-    Text = 'Cidade de Entrega'
+  end
+  object EdtDependentes: TEdit
+    Left = 8
+    Top = 384
+    Width = 361
+    Height = 46
+    TabOrder = 2
+  end
+  object CmBoxCargo: TComboBox
+    Left = 8
+    Top = 496
+    Width = 361
+    Height = 46
+    TabOrder = 3
+    Text = 'Selecione o Cargo'
+  end
+  object ChckBoxPlanoSaude: TCheckBox
+    Left = 632
+    Top = 139
+    Width = 273
+    Height = 41
+    Caption = '  Plano de Sa'#250'de'
+    TabOrder = 4
   end
   object BtnCalcular: TButton
-    Left = 400
-    Top = 376
-    Width = 265
-    Height = 65
+    Left = 642
+    Top = 256
+    Width = 209
+    Height = 46
     Caption = 'Calcular'
-    TabOrder = 2
+    TabOrder = 5
   end
 end

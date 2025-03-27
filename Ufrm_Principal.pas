@@ -12,14 +12,18 @@ type
     Exercicio11: TMenuItem;
     Exercicio21: TMenuItem;
     Exercicio22: TMenuItem;
-    Exercicio3: TMenuItem;
     Exercicios1: TMenuItem;
     Sobre1: TMenuItem;
     A1: TMenuItem;
     A2: TMenuItem;
+    Exerc1: TMenuItem;
+    Exerccio51: TMenuItem;
+    Exercício3: TMenuItem;
     procedure Exercicio21Click(Sender: TObject);
     procedure Exercicio22Click(Sender: TObject);
-    procedure Exercicio3Click(Sender: TObject);
+    procedure Exerc1Click(Sender: TObject);
+    procedure Exercício3Click(Sender: TObject);
+    procedure Exerccio51Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,21 +37,33 @@ implementation
 
 {$R *.dfm}
 
-uses Ufrm_Exercicio1, Ufrm_exercicio2;
+uses Ufrm_Exercicio1, Ufrm_exercicio2, Ufrm_exercicio3, Ufrm_exercicio4,
+  Ufrm_exercicio5;
+
+procedure TFrm_Principal.Exerc1Click(Sender: TObject);
+begin
+ frm_exercicio4.Show;
+end;
+
+procedure TFrm_Principal.Exerccio51Click(Sender: TObject);
+begin
+Frm_exercicio5.Show;
+end;
 
 procedure TFrm_Principal.Exercicio21Click(Sender: TObject);
 begin
-  Exercicio1.Show;
+  Frm_exercicio1.Show;
 end;
 
 procedure TFrm_Principal.Exercicio22Click(Sender: TObject);
 begin
-  Exercicio2.Show;
+  Frm_exercicio2.Show;
 end;
 
-procedure TFrm_Principal.Exercicio3Click(Sender: TObject);
+
+procedure TFrm_Principal.Exercício3Click(Sender: TObject);
 begin
-Exercicio3.Show;
+ Frm_exercicio33.Show;
 end;
 
-end.
+end .

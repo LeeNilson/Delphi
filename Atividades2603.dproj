@@ -128,15 +128,15 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Ufrm_Exercicio1.pas">
-            <Form>Exercicio1</Form>
+            <Form>Frm_exercicio1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Ufrm_exercicio2.pas">
-            <Form>Exercicio2</Form>
+            <Form>Frm_exercicio2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Ufrm_exercicio3.pas">
-            <Form>exercicio3</Form>
+            <Form>Frm_Exercicio33</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Ufrm_exercicio4.pas">

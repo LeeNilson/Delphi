@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TExercicio2 = class(TForm)
+  TFrm_exercicio2 = class(TForm)
     EdtValor: TEdit;
     Rdg_FormaPagamento: TRadioGroup;
     Button1: TButton;
@@ -20,7 +20,7 @@ type
   end;
 
 var
-  Exercicio2: TExercicio2;
+  Frm_exercicio2: TFrm_exercicio2;
 
 implementation
 

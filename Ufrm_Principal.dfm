@@ -1,8 +1,8 @@
-object Frm_Principal: TFrm_Principal
+﻿object Frm_Principal: TFrm_Principal
   Left = 0
   Top = 0
   Caption = 'Atividades'
-  ClientHeight = 889
+  ClientHeight = 885
   ClientWidth = 1029
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object Frm_Principal: TFrm_Principal
     object Exercicio11: TMenuItem
       Caption = '&Exercicios'
       object Exercicio21: TMenuItem
-        Caption = 'Exercicio1'
+        Caption = 'Exercicio 1'
         OnClick = Exercicio21Click
         object A1: TMenuItem
           Caption = 'A'
@@ -29,12 +29,20 @@ object Frm_Principal: TFrm_Principal
         end
       end
       object Exercicio22: TMenuItem
-        Caption = 'Exercicio2'
+        Caption = 'Exercicio 2'
         OnClick = Exercicio22Click
       end
-      object Exercicio3: TMenuItem
-        Caption = 'Exercicio3'
-        OnClick = Exercicio3Click
+      object Exercício3: TMenuItem
+        Caption = 'Exercicio 3'
+        OnClick = Exercício3Click
+      end
+      object Exerc1: TMenuItem
+        Caption = 'Exerc'#237'cio 4'
+        OnClick = Exerc1Click
+      end
+      object Exerccio51: TMenuItem
+        Caption = 'Exerc'#237'cio 5'
+        OnClick = Exerccio51Click
       end
     end
     object Exercicios1: TMenuItem

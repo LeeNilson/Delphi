@@ -1,0 +1,14 @@
+object Frm_exercicio1: TFrm_exercicio1
+  Left = 0
+  Top = 0
+  Caption = 'Exercicio 1'
+  ClientHeight = 905
+  ClientWidth = 1229
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -33
+  Font.Name = 'Arial'
+  Font.Style = []
+  TextHeight = 38
+end

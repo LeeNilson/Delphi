@@ -1,14 +1,51 @@
-object exercicio3: Texercicio3
+object Frm_Exercicio33: TFrm_Exercicio33
   Left = 0
   Top = 0
-  Caption = 'Exercicio3'
-  ClientHeight = 441
-  ClientWidth = 624
+  Caption = 'Exercicio 3'
+  ClientHeight = 764
+  ClientWidth = 1133
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
-  Font.Name = 'Segoe UI'
+  Font.Height = -33
+  Font.Name = 'Arial'
   Font.Style = []
-  TextHeight = 15
+  TextHeight = 38
+  object FreteTotal: TLabel
+    Left = 448
+    Top = 504
+    Width = 156
+    Height = 38
+    Caption = 'Valor Total:'
+  end
+  object Label1: TLabel
+    Left = 338
+    Top = 120
+    Width = 367
+    Height = 38
+    Caption = 'Digite o valor  do Produto:'
+  end
+  object ValorBaseProduto: TEdit
+    Left = 368
+    Top = 192
+    Width = 329
+    Height = 46
+    TabOrder = 0
+  end
+  object ComboBox1: TComboBox
+    Left = 368
+    Top = 264
+    Width = 337
+    Height = 46
+    TabOrder = 1
+    Text = 'Cidade de Entrega'
+  end
+  object BtnCalcular: TButton
+    Left = 400
+    Top = 376
+    Width = 265
+    Height = 65
+    Caption = 'Calcular'
+    TabOrder = 2
+  end
 end
