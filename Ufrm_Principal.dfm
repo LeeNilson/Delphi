@@ -1,0 +1,47 @@
+object Frm_Principal: TFrm_Principal
+  Left = 0
+  Top = 0
+  Caption = 'Atividades'
+  ClientHeight = 889
+  ClientWidth = 1029
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MenuPrincipal
+  Position = poDesktopCenter
+  TextHeight = 15
+  object MenuPrincipal: TMainMenu
+    Left = 432
+    Top = 320
+    object Exercicio11: TMenuItem
+      Caption = '&Exercicios'
+      object Exercicio21: TMenuItem
+        Caption = 'Exercicio1'
+        OnClick = Exercicio21Click
+        object A1: TMenuItem
+          Caption = 'A'
+        end
+        object A2: TMenuItem
+          Caption = 'B'
+        end
+      end
+      object Exercicio22: TMenuItem
+        Caption = 'Exercicio2'
+        OnClick = Exercicio22Click
+      end
+      object Exercicio3: TMenuItem
+        Caption = 'Exercicio3'
+        OnClick = Exercicio3Click
+      end
+    end
+    object Exercicios1: TMenuItem
+      Caption = '&Ajuda'
+      object Sobre1: TMenuItem
+        Caption = '&Sobre'
+      end
+    end
+  end
+end

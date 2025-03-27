@@ -1,0 +1,20 @@
+program Atividades2603;
+
+uses
+  Vcl.Forms,
+  Ufrm_Principal in 'Ufrm_Principal.pas' {Frm_Principal},
+  Ufrm_Exercicio1 in 'Ufrm_Exercicio1.pas' {Exercicio1},
+  Ufrm_exercicio2 in 'Ufrm_exercicio2.pas' {Exercicio2},
+  Ufrm_exercio3 in 'Ufrm_exercio3.pas' {Frm_exercicio3};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrm_Principal, Frm_Principal);
+  Application.CreateForm(TExercicio1, Exercicio1);
+  Application.CreateForm(TExercicio2, Exercicio2);
+  Application.CreateForm(TFrm_exercicio3, Frm_exercicio3);
+  Application.Run;
+end.
