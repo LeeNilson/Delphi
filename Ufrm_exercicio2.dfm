@@ -12,7 +12,7 @@ object Frm_exercicio2: TFrm_exercicio2
   Font.Style = []
   TextHeight = 38
   object Lbl_ValorTotal: TLabel
-    Left = 408
+    Left = 656
     Top = 632
     Width = 156
     Height = 38
@@ -28,7 +28,7 @@ object Frm_exercicio2: TFrm_exercicio2
   end
   object EdtValor: TEdit
     Left = 288
-    Top = 112
+    Top = 137
     Width = 417
     Height = 46
     TabOrder = 0
@@ -48,12 +48,21 @@ object Frm_exercicio2: TFrm_exercicio2
     OnClick = Rdg_FormaPagamentoClick
   end
   object Btn_Calcular: TButton
-    Left = 766
-    Top = 99
+    Left = 351
+    Top = 616
     Width = 163
     Height = 73
     Caption = 'Calcular'
     TabOrder = 2
     OnClick = Btn_CalcularClick
+  end
+  object Btn_Apagar: TButton
+    Left = 804
+    Top = 124
+    Width = 163
+    Height = 73
+    Caption = 'Apagar'
+    TabOrder = 3
+    OnClick = Btn_ApagarClick
   end
 end

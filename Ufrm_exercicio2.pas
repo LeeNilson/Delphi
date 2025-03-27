@@ -13,11 +13,11 @@ type
     Btn_Calcular: TButton;
     Lbl_ValorTotal: TLabel;
     LblValor: TLabel;
-
     procedure Btn_CalcularClick(Sender: TObject);
     procedure Rdg_FormaPagamentoClick(Sender: TObject);
+    procedure Btn_ApagarClick(Sender: TObject);
   private
-    { Private declarations }
+    FEdtValorUsado: Boolean;
   public
     { Public declarations }
   end;
@@ -30,21 +30,34 @@ implementation
 {$R *.dfm}
 
 procedure TFrm_exercicio2.Btn_CalcularClick(Sender: TObject);
-
-var Valor : integer ;
-var ValorTotal : integer;
-
-
-
+var
+  Valor: Integer;
 begin
-  Lbl_ValorTotal.Visible := true ;
+  if FEdtValorUsado then
+  begin
+    ShowMessage('O valor já foi inserido. Clique em "Apagar" para reiniciar.');
+    Exit;
+  end;
+
+  if not TryStrToInt(EdtValor.Text, Valor) then
+  begin
+    ShowMessage('Por favor, insira um valor numérico válido.');
+    Exit;
+  end;
+
+  FEdtValorUsado := True;
+  Lbl_ValorTotal.Visible := True;
 end;
 
 procedure TFrm_exercicio2.Rdg_FormaPagamentoClick(Sender: TObject);
-
 var
   valor: Integer;
- begin
+begin
+  if FEdtValorUsado then
+  begin
+    ShowMessage('O valor já foi inserido. Clique em "Apagar" para reiniciar.');
+
+  end;
 
   if not TryStrToInt(EdtValor.Text, valor) then
   begin
@@ -60,4 +73,12 @@ var
     ShowMessage('Selecione uma forma de pagamento válida.');
   end;
 end;
+
+procedure TFrm_exercicio2.Btn_ApagarClick(Sender: TObject);
+begin
+  EdtValor.Clear;
+  Lbl_ValorTotal.Visible := False;
+  FEdtValorUsado := False;
+end;
+
 end.
