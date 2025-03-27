@@ -53,5 +53,6 @@ object Frm_exercicio1: TFrm_exercicio1
     Height = 89
     Caption = 'Iniciar'
     TabOrder = 2
+    OnClick = Btn_CalcularClick
   end
 end

@@ -11,12 +11,13 @@ object Frm_exercicio2: TFrm_exercicio2
   Font.Name = 'Arial'
   Font.Style = []
   TextHeight = 38
-  object ValorTotal: TLabel
+  object Lbl_ValorTotal: TLabel
     Left = 408
     Top = 632
     Width = 156
     Height = 38
     Caption = 'Valor Total:'
+    Visible = False
   end
   object LblValor: TLabel
     Left = 288
@@ -44,13 +45,15 @@ object Frm_exercicio2: TFrm_exercicio2
       'Parcelado'
       'Cart'#227'o')
     TabOrder = 1
+    OnClick = Rdg_FormaPagamentoClick
   end
-  object Button1: TButton
+  object Btn_Calcular: TButton
     Left = 766
     Top = 99
     Width = 163
     Height = 73
     Caption = 'Calcular'
     TabOrder = 2
+    OnClick = Btn_CalcularClick
   end
 end
