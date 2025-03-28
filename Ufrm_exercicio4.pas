@@ -19,6 +19,7 @@ type
     CheckBox_PlanoSaude: TCheckBox;
     Btn_Calcular: TButton;
     procedure Btn_CalcularClick(Sender: TObject);
+    procedure Edt_DependenteseyPress(Sender: TObject; var Key: Char);
 
   private
     Dependentes: Double;
@@ -52,11 +53,23 @@ begin
   if CheckBox_PlanoSaude.Checked then
     Salario_Liquido := Salario_Liquido - 200.00;
 
-  if Dependentes > 0 then
+  if Dependentes >= 0 then
     Salario_Liquido := Salario_Liquido + (Dependentes * AdicionalDependente);
 
   Lbl_SalarioLiquido.Visible := True;
-  Lbl_SalarioLiquido.Caption := FormatFloat('0.00', Salario_Liquido);
+  Lbl_SalarioLiquido.Caption := 'Cargo: '+ CmBox_Cargo.Text + #13#10 +
+  'Funcionário: ' + Edt_NomeFuncionario.Text + #13#10 +
+  'Salário Liquido: ' + FormatFloat('0.00', Salario_Liquido);
+end;
+
+procedure TFrm_exercicio4.Edt_DependenteseyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if Key = '.' then
+  begin
+    Key := #0;
+    ShowMessage('Use vírgula (,) para separar as casas decimais.');
+end;
 end;
 
 end.
