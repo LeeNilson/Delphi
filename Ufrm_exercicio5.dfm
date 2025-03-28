@@ -10,6 +10,7 @@ object Frm_exercicio5: TFrm_exercicio5
   Font.Height = -33
   Font.Name = 'Arial'
   Font.Style = []
+  WindowState = wsMaximized
   TextHeight = 38
   object Label1: TLabel
     Left = 416
@@ -26,15 +27,16 @@ object Frm_exercicio5: TFrm_exercicio5
     Caption = 'Altura:'
   end
   object LblIMC: TLabel
-    Left = 409
+    Left = 684
     Top = 304
     Width = 69
     Height = 38
     Caption = 'IMC:'
+    Visible = False
   end
   object LblClassificacao: TLabel
-    Left = 529
-    Top = 528
+    Left = 393
+    Top = 304
     Width = 200
     Height = 38
     Caption = 'Classifica'#231#227'o:'
@@ -46,6 +48,7 @@ object Frm_exercicio5: TFrm_exercicio5
     Height = 70
     Caption = 'Calcular'
     TabOrder = 0
+    OnClick = BtnCalcularClick
   end
   object EdtPeso: TEdit
     Left = 544
