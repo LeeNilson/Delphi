@@ -32,35 +32,36 @@ object Frm_exercicio4: TFrm_exercicio4
     Height = 38
     Caption = 'N'#250'mero de Dependentes'
   end
-  object LblSalarioLiquido: TLabel
+  object Lbl_SalarioLiquido: TLabel
     Left = 632
     Top = 340
     Width = 219
     Height = 38
     Caption = 'Sal'#225'rio Liquido:'
+    Visible = False
   end
-  object EdtNomeFuncionario: TEdit
+  object Edt_NomeFuncionario: TEdit
     Left = 8
     Top = 136
     Width = 361
     Height = 46
     TabOrder = 0
   end
-  object EdtSalarioBruto: TEdit
+  object Edt_SalarioBruto: TEdit
     Left = 8
     Top = 256
     Width = 361
     Height = 46
     TabOrder = 1
   end
-  object EdtDependentes: TEdit
+  object Edt_Dependentes: TEdit
     Left = 8
     Top = 384
     Width = 361
     Height = 46
     TabOrder = 2
   end
-  object CmBoxCargo: TComboBox
+  object CmBox_Cargo: TComboBox
     Left = 8
     Top = 496
     Width = 361
@@ -68,7 +69,7 @@ object Frm_exercicio4: TFrm_exercicio4
     TabOrder = 3
     Text = 'Selecione o Cargo'
   end
-  object ChckBoxPlanoSaude: TCheckBox
+  object CheckBox_PlanoSaude: TCheckBox
     Left = 632
     Top = 139
     Width = 273
@@ -76,12 +77,13 @@ object Frm_exercicio4: TFrm_exercicio4
     Caption = '  Plano de Sa'#250'de'
     TabOrder = 4
   end
-  object BtnCalcular: TButton
+  object Btn_Calcular: TButton
     Left = 642
     Top = 256
     Width = 209
     Height = 46
     Caption = 'Calcular'
     TabOrder = 5
+    OnClick = Btn_CalcularClick
   end
 end

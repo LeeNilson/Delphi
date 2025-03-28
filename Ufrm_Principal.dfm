@@ -12,6 +12,7 @@
   Font.Style = []
   Menu = MenuPrincipal
   Position = poDesktopCenter
+  WindowState = wsMaximized
   TextHeight = 15
   object MenuPrincipal: TMainMenu
     Left = 432
