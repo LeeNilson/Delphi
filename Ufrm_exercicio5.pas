@@ -1,4 +1,4 @@
-unit Ufrm_exercicio5;
+﻿unit Ufrm_exercicio5;
 
 interface
 
@@ -32,6 +32,61 @@ implementation
 
 {$R *.dfm}
 
+function VerificarDados(Peso,Altura:Double):Boolean;
+var EhValido : Boolean;
+if (Altura < 0) or (Peso < 0) then
+  begin
+    EhValido := False;
+    ShowMessage('Altura  e Peso não pode ser zero.');
+    Exit;
+  end;
+else
+  Begin
+  VerificarDados := EhValido;
+  End;
+End;
+
+function CalcularIMC(Peso,Altura:Double):Double;
+var imc : Double ;
+begin
+  imc := Peso / (Altura * Altura);
+  CalcularIMC:= imc;
+end;
+
+function ObterClassificacaoIMC(imc:Double) :String ;
+var Classificacao : string;
+begin
+  if  (Imc < 18.5) then
+  begin
+  Classificacao := 'Magreza:'
+  end;
+
+  if (Imc >= 18.5) and (Imc < 24.9) then
+    begin
+    Classificacao := 'Peso Normal:'
+    end;
+
+  if (Imc >= 24.9)  and (Imc < 29.9) then
+    begin
+     Classificacao := ('Obesidade grau 1:')
+    end;
+
+  if (Imc >= 29.9)  and (Imc < 34.9) then
+    begin
+     Classificacao := ('Obesidade grau 2:')
+    end;
+
+   if (Imc >= 34.9)  and (Imc < 39.9) then
+    begin
+     Classificacao := ('Obesidade grau 3:')
+    end;
+
+   if (Imc > 40) then
+    begin
+     Classificacao := ('Obesidade grau 4:')
+    end;
+end;
+
 procedure TFrm_exercicio5.BtnCalcularClick(Sender: TObject);
 
 var
@@ -54,6 +109,8 @@ begin
     ShowMessage('Altura não pode ser zero.');
     LblIMC.Visible := False;
   end;
+
+  Imc:=CalcularIMC(Peso,Altura);
 
   if  (Imc < 18.5) then
   begin
@@ -88,5 +145,7 @@ begin
 
 
 end;
+
+
 
 end.
