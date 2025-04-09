@@ -54,7 +54,6 @@ object Frm_exercicio4: TFrm_exercicio4
     Width = 361
     Height = 46
     TabOrder = 1
-    OnKeyPress = Edt_DependenteseyPress
   end
   object Edt_Dependentes: TEdit
     Left = 152
@@ -62,7 +61,6 @@ object Frm_exercicio4: TFrm_exercicio4
     Width = 361
     Height = 46
     TabOrder = 2
-    OnKeyPress = Edt_DependenteseyPress
   end
   object CmBox_Cargo: TComboBox
     Left = 168

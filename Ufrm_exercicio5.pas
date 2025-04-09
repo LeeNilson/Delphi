@@ -18,9 +18,9 @@ type
 
     procedure BtnCalcularClick(Sender: TObject);
   private
-    Peso: Double;
-    Altura: Double;
-    Imc: Double;
+    function VerificarDados(Peso, Altura: Double): Boolean;
+    function CalcularIMC(Peso, Altura: Double): Double;
+    function ObterClassificacaoIMC(Imc: Double): String;
   public
 
   end;
@@ -32,120 +32,68 @@ implementation
 
 {$R *.dfm}
 
-function VerificarDados(Peso,Altura:Double):Boolean;
-var EhValido : Boolean;
-if (Altura < 0) or (Peso < 0) then
-  begin
-    EhValido := False;
-    ShowMessage('Altura  e Peso não pode ser zero.');
-    Exit;
-  end;
-else
-  Begin
-  VerificarDados := EhValido;
-  End;
-End;
 
-function CalcularIMC(Peso,Altura:Double):Double;
-var imc : Double ;
+function TFrm_exercicio5.VerificarDados(Peso, Altura: Double): Boolean;
 begin
-  imc := Peso / (Altura * Altura);
-  CalcularIMC:= imc;
-end;
-
-function ObterClassificacaoIMC(imc:Double) :String ;
-var Classificacao : string;
-begin
-  if  (Imc < 18.5) then
+  if (Peso <= 0) or (Altura <= 0) then
   begin
-  Classificacao := 'Magreza:'
-  end;
-
-  if (Imc >= 18.5) and (Imc < 24.9) then
-    begin
-    Classificacao := 'Peso Normal:'
-    end;
-
-  if (Imc >= 24.9)  and (Imc < 29.9) then
-    begin
-     Classificacao := ('Obesidade grau 1:')
-    end;
-
-  if (Imc >= 29.9)  and (Imc < 34.9) then
-    begin
-     Classificacao := ('Obesidade grau 2:')
-    end;
-
-   if (Imc >= 34.9)  and (Imc < 39.9) then
-    begin
-     Classificacao := ('Obesidade grau 3:')
-    end;
-
-   if (Imc > 40) then
-    begin
-     Classificacao := ('Obesidade grau 4:')
-    end;
-end;
-
-procedure TFrm_exercicio5.BtnCalcularClick(Sender: TObject);
-
-var
-  Peso: Double;
-  Altura: Double;
-  Imc: Double;
-
-begin
-  Peso := StrToFloat(EdtPeso.Text);
-  Altura := StrToFloat(EdtAltura.Text);
-
-  if Altura <> 0 then
-  begin
-    Imc := Peso / (Altura * Altura);
-    LblIMC.Caption := FloatToStr(Imc);
-    LblIMC.Visible := True;
+    ShowMessage('Altura e Peso devem ser maiores que zero.');
+    Result := False;
   end
   else
-  begin
-    ShowMessage('Altura não pode ser zero.');
-    LblIMC.Visible := False;
-  end;
+    Result := True;
+end;
 
-  Imc:=CalcularIMC(Peso,Altura);
-
-  if  (Imc < 18.5) then
-  begin
-   LblClassificacao.Caption := ('Baixo Peso:')
-  end;
-
-  if (Imc >= 18.5) and (Imc < 24.9) then
-    begin
-     LblClassificacao.Caption := ('Peso Normal:')
-    end;
-
-  if (Imc >= 24.9)  and (Imc < 29.9) then
-    begin
-     LblClassificacao.Caption := ('Obesidade grau 1:')
-    end;
-
-  if (Imc >= 29.9)  and (Imc < 34.9) then
-    begin
-     LblClassificacao.Caption := ('Obesidade grau 1:')
-    end;
-
-   if (Imc >= 34.9)  and (Imc < 39.9) then
-    begin
-     LblClassificacao.Caption := ('Obesidade grau 2:')
-    end;
-
-   if (Imc > 40) then
-    begin
-     LblClassificacao.Caption := ('Obesidade grau 3:')
-    end;
-
-
-
+function TFrm_exercicio5.CalcularIMC(Peso, Altura: Double): Double;
+begin
+  Result := Peso / (Altura * Altura);
 end;
 
 
+function TFrm_exercicio5.ObterClassificacaoIMC(Imc: Double): String;
+begin
+  if Imc < 18.5 then
+    Result := 'Magreza'
+  else if Imc < 24.9 then
+    Result := 'Peso Normal'
+  else if Imc < 29.9 then
+    Result := 'Sobrepeso'
+  else if Imc < 34.9 then
+    Result := 'Obesidade grau 1'
+  else if Imc < 39.9 then
+    Result := 'Obesidade grau 2'
+  else
+    Result := 'Obesidade grau 3';
+end;
+
+
+procedure TFrm_exercicio5.BtnCalcularClick(Sender: TObject);
+var
+  Peso, Altura, Imc: Double;
+begin
+  try
+    Peso := StrToFloat(EdtPeso.Text);
+    Altura := StrToFloat(EdtAltura.Text);
+
+    if VerificarDados(Peso, Altura) then
+    begin
+      Imc := CalcularIMC(Peso, Altura);
+      LblIMC.Visible := true;
+      LblIMC.Caption := FormatFloat('0.00', Imc);
+      LblClassificacao.Caption := ObterClassificacaoIMC(Imc);
+    end
+    else
+    begin
+      LblIMC.Visible := true;
+      LblIMC.Caption := '';
+      LblClassificacao.Caption := '';
+    end;
+
+  except
+    on E: Exception do
+      ShowMessage('Erro: ' + E.Message);
+  end;
+end;
 
 end.
+
