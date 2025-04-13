@@ -1,0 +1,16 @@
+program Prj_Principal;
+
+uses
+  Vcl.Forms,
+  Ufrm_Principal in 'Ufrm_Principal.pas' {Form1},
+  Ufrm_TicTacToe in 'Ufrm_TicTacToe.pas' {Frm_TicTacToe};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFrm_TicTacToe, Frm_TicTacToe);
+  Application.Run;
+end.

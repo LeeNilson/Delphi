@@ -1,0 +1,178 @@
+object Frm_TicTacToe: TFrm_TicTacToe
+  Left = 0
+  Top = 0
+  Caption = 'Tica Tac Toe'
+  ClientHeight = 747
+  ClientWidth = 993
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -30
+  Font.Name = 'Arial'
+  Font.Style = []
+  TextHeight = 35
+  object Label1: TLabel
+    Left = 328
+    Top = 24
+    Width = 363
+    Height = 35
+    Caption = 'Tic Tac Toe (Jogo da Velha)'
+  end
+  object Label2: TLabel
+    Left = 127
+    Top = 398
+    Width = 127
+    Height = 35
+    Caption = 'Placar X :'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -30
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 123
+    Top = 478
+    Width = 131
+    Height = 35
+    Caption = 'Placar O :'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -30
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 550
+    Top = 438
+    Width = 202
+    Height = 35
+    Caption = 'Jogador da vez'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -30
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 792
+    Top = 406
+    Width = 44
+    Height = 89
+    Caption = 'o'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -80
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TLabel
+    Left = 288
+    Top = 398
+    Width = 17
+    Height = 35
+    Caption = '0'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -30
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit2: TLabel
+    Left = 288
+    Top = 478
+    Width = 17
+    Height = 35
+    Caption = '0'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -30
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Btn_1: TButton
+    Left = 344
+    Top = 96
+    Width = 75
+    Height = 65
+    TabOrder = 0
+  end
+  object Btn_2: TButton
+    Left = 448
+    Top = 96
+    Width = 75
+    Height = 65
+    TabOrder = 1
+  end
+  object Btn_3: TButton
+    Left = 550
+    Top = 96
+    Width = 75
+    Height = 65
+    TabOrder = 2
+  end
+  object Btn_4: TButton
+    Left = 344
+    Top = 192
+    Width = 75
+    Height = 65
+    TabOrder = 3
+  end
+  object Btn_5: TButton
+    Left = 448
+    Top = 192
+    Width = 75
+    Height = 65
+    TabOrder = 4
+  end
+  object Btn_6: TButton
+    Left = 550
+    Top = 192
+    Width = 75
+    Height = 65
+    TabOrder = 5
+  end
+  object Btn_7: TButton
+    Left = 344
+    Top = 288
+    Width = 75
+    Height = 65
+    TabOrder = 6
+  end
+  object Btn_8: TButton
+    Left = 448
+    Top = 288
+    Width = 75
+    Height = 65
+    TabOrder = 7
+  end
+  object Btn_9: TButton
+    Left = 550
+    Top = 288
+    Width = 75
+    Height = 65
+    TabOrder = 8
+  end
+  object Btn_Reiniciar: TButton
+    Left = 168
+    Top = 584
+    Width = 225
+    Height = 41
+    Caption = 'Reiniciar Jogo'
+    TabOrder = 9
+  end
+  object Btn_Apagar: TButton
+    Left = 550
+    Top = 584
+    Width = 225
+    Height = 41
+    Caption = 'Apagar'
+    TabOrder = 10
+  end
+end

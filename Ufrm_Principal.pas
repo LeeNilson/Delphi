@@ -35,7 +35,7 @@ var
 
 implementation
 
-{$R *.dfm}
+{$R *.dfm}                  ////
 
 uses Ufrm_Exercicio1, Ufrm_exercicio2, Ufrm_exercicio3, Ufrm_exercicio4,
   Ufrm_exercicio5;
@@ -66,4 +66,4 @@ begin
  Frm_exercicio33.Show;
 end;
 
-end .
+end .                      /

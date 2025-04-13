@@ -1,0 +1,43 @@
+unit Ufrm_TicTacToe;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TFrm_TicTacToe = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Edit1: TLabel;
+    Edit2: TLabel;
+    Btn_1: TButton;
+    Btn_2: TButton;
+    Btn_3: TButton;
+    Btn_4: TButton;
+    Btn_5: TButton;
+    Btn_6: TButton;
+    Btn_7: TButton;
+    Btn_8: TButton;
+    Btn_9: TButton;
+    Btn_Reiniciar: TButton;
+    Btn_Apagar: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_TicTacToe: TFrm_TicTacToe;
+
+implementation
+
+{$R *.dfm}
+
+end.
+

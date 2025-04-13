@@ -1,0 +1,202 @@
+unit Ufrm_JogodaVelha;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TUFrm_PrincipalJogoVelha = class(TForm)
+    Btn_1, Btn_2, Btn_3, Btn_4, Btn_5, Btn_6, Btn_7, Btn_8, Btn_9: TButton;
+    Btn_Reiniciar, Btn_Apagar: TButton;
+    Label1, Label2, Label3, Label4, Label5: TLabel;
+    Edit1, Edit2: TLabel;
+
+    procedure Btn_1Click(Sender: TObject);
+    procedure Btn_2Click(Sender: TObject);
+    procedure Btn_3Click(Sender: TObject);
+    procedure Btn_4Click(Sender: TObject);
+    procedure Btn_5Click(Sender: TObject);
+    procedure Btn_6Click(Sender: TObject);
+    procedure Btn_7Click(Sender: TObject);
+    procedure Btn_8Click(Sender: TObject);
+    procedure Btn_9Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Btn_ReiniciarClick(Sender: TObject);
+
+  private
+    procedure ReiniciaJogo;
+    function Vencedor: Integer;
+    procedure MarcaX(Btn: TButton; linha, coluna, diagonal: Integer);
+    procedure MarcaO(Btn: TButton; linha, coluna, diagonal: Integer);
+  public
+    vez: Integer;
+    rodada: Integer;
+    Ganhador: String;
+    Xlinha1, Xlinha2, Xlinha3, Xcoluna1, Xcoluna2, Xcoluna3, Xdiagonal1, Xdiagonal2: Integer;
+    Olinha1, Olinha2, Olinha3, Ocoluna1, Ocoluna2, Ocoluna3, Odiagonal1, Odiagonal2: Integer;
+  end;
+
+var
+  UFrm_PrincipalJogoVelha: TUFrm_PrincipalJogoVelha;
+
+implementation
+
+{$R *.dfm}
+
+procedure TUFrm_PrincipalJogoVelha.ReiniciaJogo;
+begin
+  vez := 0;
+  rodada := 0;
+  Xlinha1 := 0; Xlinha2 := 0; Xlinha3 := 0;
+  Xcoluna1 := 0; Xcoluna2 := 0; Xcoluna3 := 0;
+  Xdiagonal1 := 0; Xdiagonal2 := 0;
+  Olinha1 := 0; Olinha2 := 0; Olinha3 := 0;
+  Ocoluna1 := 0; Ocoluna2 := 0; Ocoluna3 := 0;
+  Odiagonal1 := 0; Odiagonal2 := 0;
+  Ganhador := '';
+
+  Btn_1.Caption := ''; Btn_2.Caption := ''; Btn_3.Caption := '';
+  Btn_4.Caption := ''; Btn_5.Caption := ''; Btn_6.Caption := '';
+  Btn_7.Caption := ''; Btn_8.Caption := ''; Btn_9.Caption := '';
+end;
+
+function TUFrm_PrincipalJogoVelha.Vencedor: Integer;
+begin
+  if (Xlinha2 = 3) or (Xcoluna2 = 3) or (Xdiagonal1 = 3) or (Xdiagonal2 = 3) then
+  begin
+    Ganhador := Edit1.Caption;
+    ShowMessage(Ganhador + ' foi o ganhador!');
+    Exit(1);
+  end;
+
+  if (Olinha2 = 3) or (Ocoluna2 = 3) or (Odiagonal1 = 3) or (Odiagonal2 = 3) then
+  begin
+    Ganhador := Edit2.Caption;
+    ShowMessage(Ganhador + ' foi o ganhador!');
+    Exit(2);
+  end;
+
+  Result := 0;
+end;
+
+procedure TUFrm_PrincipalJogoVelha.MarcaX(Btn: TButton; linha, coluna, diagonal: Integer);
+begin
+  Btn.Caption := 'X';
+  Inc(Xlinha2); // exemplo: linha 2
+  Inc(Xcoluna2); // exemplo: coluna 2
+  if diagonal = 1 then Inc(Xdiagonal1);
+  if diagonal = 2 then Inc(Xdiagonal2);
+  vez := 1;
+  Vencedor;
+end;
+
+procedure TUFrm_PrincipalJogoVelha.MarcaO(Btn: TButton; linha, coluna, diagonal: Integer);
+begin
+  Btn.Caption := 'O';
+  Inc(Olinha2); // exemplo
+  Inc(Ocoluna2);
+  if diagonal = 1 then Inc(Odiagonal1);
+  if diagonal = 2 then Inc(Odiagonal2);
+  vez := 0;
+  Vencedor;
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_1Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_1, 1, 1, 1)
+  else
+    MarcaO(Btn_1, 1, 1, 1);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_2Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_2, 1, 2, 0)
+  else
+    MarcaO(Btn_2, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_3Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_3, 1, 2, 0)
+  else
+    MarcaO(Btn_3, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_4Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_4, 1, 2, 0)
+  else
+    MarcaO(Btn_4, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_5Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_5, 1, 2, 0)
+  else
+    MarcaO(Btn_5, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_6Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_6, 1, 2, 0)
+  else
+    MarcaO(Btn_6, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_7Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_7, 1, 2, 0)
+  else
+    MarcaO(Btn_7, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_8Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_8, 1, 2, 0)
+  else
+    MarcaO(Btn_8, 1, 2, 0);
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_9Click(Sender: TObject);
+begin
+  rodada := rodada + 1;
+  if vez = 0 then
+    MarcaX(Btn_9, 1, 2, 0)
+  else
+    MarcaO(Btn_9, 1, 2, 0);
+end;
+
+
+
+// Faça isso para os botões restantes (Btn_3 até Btn_9), alterando os parâmetros linha, coluna e diagonal conforme a posição.
+
+procedure TUFrm_PrincipalJogoVelha.FormShow(Sender: TObject);
+begin
+  ReiniciaJogo;
+end;
+
+procedure TUFrm_PrincipalJogoVelha.Btn_ReiniciarClick(Sender: TObject);
+begin
+  ReiniciaJogo;
+end;
+
+end.
+
