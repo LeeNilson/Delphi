@@ -1,0 +1,202 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Btn_1: TButton;
+    Btn_2: TButton;
+    Btn_3: TButton;
+    Btn_4: TButton;
+    Btn_5: TButton;
+    Btn_6: TButton;
+    Btn_7: TButton;
+    Btn_8: TButton;
+    Btn_9: TButton;
+    Btn_Reiniciar: TButton;
+    Btn_Sair: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    procedure ButtonClick(Sender: TObject);
+    procedure Btn_ReiniciarClick(Sender: TObject);
+    procedure Btn_SairClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+
+  private
+    { Private declarations }
+    Tabuleiro: array[1..9] of Char;
+    Jogador: Char;
+    Vencedor: Char;
+    Jogadas: Integer;
+
+    function VerificarVencedor: Char;
+    function VerificarEmpate: Boolean;
+    procedure AtualizarTabuleiro;
+    procedure ReiniciarJogo;
+
+
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+  i: Integer;
+begin
+  for i := 1 to 9 do
+    Tabuleiro[i] := ' ';
+
+  Jogador := 'X';
+  Vencedor := ' ';
+  Jogadas := 0;
+
+  // Atualiza botões
+  AtualizarTabuleiro;
+  Label6.Caption := 'Vez do Jogador X';
+
+  // Associa eventos
+  Btn_1.OnClick := ButtonClick;
+  Btn_2.OnClick := ButtonClick;
+  Btn_3.OnClick := ButtonClick;
+  Btn_4.OnClick := ButtonClick;
+  Btn_5.OnClick := ButtonClick;
+  Btn_6.OnClick := ButtonClick;
+  Btn_7.OnClick := ButtonClick;
+  Btn_8.OnClick := ButtonClick;
+  Btn_9.OnClick := ButtonClick;
+end;
+
+procedure TForm1.ButtonClick(Sender: TObject);
+var
+  Botao: TButton;
+  Posicao: Integer;
+begin
+  Botao := Sender as TButton;
+  Posicao := StrToInt(Copy(Botao.Name, 5, Length(Botao.Name) - 4));
+
+  if Tabuleiro[Posicao] = ' ' then
+  begin
+    Tabuleiro[Posicao] := Jogador;
+    Botao.Caption := Jogador;
+    Jogadas := Jogadas + 1;
+
+    Vencedor := VerificarVencedor;
+
+    if Vencedor <> ' ' then
+    begin
+      if Vencedor = 'X' then
+      begin
+        Label6.Caption := 'Jogador X Venceu!';
+      end
+      else
+      begin
+        Label6.Caption := 'Jogador O Venceu!';
+      end;
+      AtualizarTabuleiro;
+      Exit;
+    end;
+
+    if VerificarEmpate then
+    begin
+      Label6.Caption := 'Empate!';
+      AtualizarTabuleiro;
+      Exit;
+    end;
+
+    if Jogador = 'X' then
+    begin
+      Jogador := 'O';
+      Label6.Caption := 'Vez do Jogador O';
+    end
+    else
+    begin
+      Jogador := 'X';
+      Label6.Caption := 'Vez do Jogador X';
+    end;
+  end;
+end;
+
+function TForm1.VerificarVencedor: Char;
+begin
+  Result := ' ';
+
+  // Linhas
+  if (Tabuleiro[1] = Tabuleiro[2]) and (Tabuleiro[2] = Tabuleiro[3]) and (Tabuleiro[1] <> ' ') then Result := Tabuleiro[1];
+  if (Tabuleiro[4] = Tabuleiro[5]) and (Tabuleiro[5] = Tabuleiro[6]) and (Tabuleiro[4] <> ' ') then Result := Tabuleiro[4];
+  if (Tabuleiro[7] = Tabuleiro[8]) and (Tabuleiro[8] = Tabuleiro[9]) and (Tabuleiro[7] <> ' ') then Result := Tabuleiro[7];
+
+  // Colunas
+  if (Tabuleiro[1] = Tabuleiro[4]) and (Tabuleiro[4] = Tabuleiro[7]) and (Tabuleiro[1] <> ' ') then Result := Tabuleiro[1];
+  if (Tabuleiro[2] = Tabuleiro[5]) and (Tabuleiro[5] = Tabuleiro[8]) and (Tabuleiro[2] <> ' ') then Result := Tabuleiro[2];
+  if (Tabuleiro[3] = Tabuleiro[6]) and (Tabuleiro[6] = Tabuleiro[9]) and (Tabuleiro[3] <> ' ') then Result := Tabuleiro[3];
+
+  // Diagonais
+  if (Tabuleiro[1] = Tabuleiro[5]) and (Tabuleiro[5] = Tabuleiro[9]) and (Tabuleiro[1] <> ' ') then Result := Tabuleiro[1];
+  if (Tabuleiro[3] = Tabuleiro[5]) and (Tabuleiro[5] = Tabuleiro[7]) and (Tabuleiro[3] <> ' ') then Result := Tabuleiro[3];
+end;
+
+function TForm1.VerificarEmpate: Boolean;
+begin
+  Result := Jogadas = 9;
+end;
+
+procedure TForm1.AtualizarTabuleiro;
+begin
+  Btn_1.Caption := Tabuleiro[1];
+  Btn_2.Caption := Tabuleiro[2];
+  Btn_3.Caption := Tabuleiro[3];
+  Btn_4.Caption := Tabuleiro[4];
+  Btn_5.Caption := Tabuleiro[5];
+  Btn_6.Caption := Tabuleiro[6];
+  Btn_7.Caption := Tabuleiro[7];
+  Btn_8.Caption := Tabuleiro[8];
+  Btn_9.Caption := Tabuleiro[9];
+end;
+
+procedure TForm1.ReiniciarJogo;
+procedure LimparTabuleiro;
+var
+  i: Integer;
+begin
+  for i := Low(Tabuleiro) to High(Tabuleiro) do
+    Tabuleiro[i] := ' ';
+end;
+
+begin
+  LimparTabuleiro;
+
+  Jogador := 'X';
+  Vencedor := ' ';
+  Jogadas := 0;
+
+  AtualizarTabuleiro;
+
+  Label6.Caption := Format('Vez do Jogador %s', [Jogador]);
+end;
+
+procedure TForm1.Btn_ReiniciarClick(Sender: TObject);
+begin
+  ReiniciarJogo;
+end;
+
+procedure TForm1.Btn_SairClick(Sender: TObject);
+begin
+  Close;
+end;
+end.
