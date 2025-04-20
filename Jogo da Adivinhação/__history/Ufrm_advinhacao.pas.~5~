@@ -1,0 +1,125 @@
+unit Ufrm_advinhacao;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          unit Ufrm_advinhacao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ExtDlgs,
+  Vcl.Imaging.jpeg;
+
+type
+  TFrm_Numeros = class(TForm)
+    Label1: TLabel;
+    Lbl_PrimeiroValor: TLabel;
+    Lbl_SegundoValor: TLabel;
+    Lbl_Resultado: TLabel;
+    Btn_Adivinhar: TButton;
+    Btn_NovoGame: TButton;
+    Edt_numero: TEdit;
+    Rdg_Nivel: TRadioGroup;
+    Image1: TImage;
+
+    procedure RadioGroup1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+  ValorMax : Integer;
+  ValorMin : Integer;
+  end;
+
+var
+  Frm_Numeros: TFrm_Numeros;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TFrm_Numeros.RadioGroup1Click(Sender: TObject);
+begin
+case Rdg_Nivel.ItemIndex of
+ 0:
+ begin
+    ValorMax := 50;
+    Lbl_SegundoValor.Caption := '50' ;
+ end;
+
+  1:
+ begin
+    ValorMax := 100;
+    Lbl_SegundoValor.Caption := '100';
+ end;
+
+  2:
+  begin
+    ValorMax := 1000;
+    Lbl_SegundoValor.Caption := '1000';
+ end;
+end;
+
+end;
+
+end.
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ExtDlgs,
+  Vcl.Imaging.jpeg;
+
+type
+  TFrm_Numeros = class(TForm)
+    Label1: TLabel;
+    Lbl_PrimeiroValor: TLabel;
+    Lbl_SegundoValor: TLabel;
+    Lbl_Resultado: TLabel;
+    Btn_Adivinhar: TButton;
+    Btn_NovoGame: TButton;
+    Edt_numero: TEdit;
+    Rdg_Nivel: TRadioGroup;
+    Image1: TImage;
+
+    procedure RadioGroup1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+  ValorMax : Integer;
+  ValorMin : Integer;
+  end;
+
+var
+  Frm_Numeros: TFrm_Numeros;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TFrm_Numeros.RadioGroup1Click(Sender: TObject);
+begin
+case Rdg_Nivel.ItemIndex of
+ 0:
+ begin
+    ValorMax := 50;
+    Lbl_SegundoValor.Caption := '50' ;
+ end;
+
+  1:
+ begin
+    ValorMax := 100;
+    Lbl_SegundoValor.Caption := '100';
+ end;
+
+  2:
+  begin
+    ValorMax := 1000;
+    Lbl_SegundoValor.Caption := '1000';
+ end;
+end;
+
+end;
+
+end.

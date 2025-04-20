@@ -1,0 +1,84 @@
+object Frm_Numeros: TFrm_Numeros
+  Left = 0
+  Top = 0
+  Caption = 'Jogo da Adivinha'#231#227'o'
+  ClientHeight = 955
+  ClientWidth = 1313
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -42
+  Font.Name = 'Arial'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 47
+  object Label1: TLabel
+    Left = 104
+    Top = 24
+    Width = 513
+    Height = 47
+    Caption = 'Adivinhe um numero entre: '
+  end
+  object Lbl_PrimeiroValor: TLabel
+    Left = 669
+    Top = 24
+    Width = 23
+    Height = 47
+    Caption = '1'
+  end
+  object Lbll_SegundoValor: TLabel
+    Left = 797
+    Top = 24
+    Width = 69
+    Height = 47
+    Caption = '100'
+  end
+  object Lbl_Resultado: TLabel
+    Left = 460
+    Top = 872
+    Width = 361
+    Height = 47
+    Caption = 'Acertou Parab'#233'ns!!'
+  end
+  object Image1: TImage
+    Left = 368
+    Top = 344
+    Width = 601
+    Height = 473
+    Visible = False
+  end
+  object Btn_Adivinhar: TButton
+    Left = 669
+    Top = 101
+    Width = 211
+    Height = 55
+    Caption = 'Adivinhar'
+    TabOrder = 0
+  end
+  object Btn_NovoGame: TButton
+    Left = 112
+    Top = 208
+    Width = 847
+    Height = 65
+    Caption = 'Iniciar Novo Jogo'
+    TabOrder = 1
+  end
+  object Edt_numero: TEdit
+    Left = 112
+    Top = 101
+    Width = 465
+    Height = 55
+    TabOrder = 2
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 112
+    Top = 440
+    Width = 177
+    Height = 289
+    Items.Strings = (
+      'F'#225'cil'
+      'M'#233'dio'
+      'Dif'#237'cil')
+    TabOrder = 3
+  end
+end

@@ -1,0 +1,15 @@
+object Frm_Numeros: TFrm_Numeros
+  Left = 0
+  Top = 0
+  Caption = 'Jogo da Adivinha'#231#227'o'
+  ClientHeight = 955
+  ClientWidth = 1313
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 15
+end
