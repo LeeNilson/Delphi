@@ -1,4 +1,4 @@
-unit Ufrm_advinhacao;
+     unit Ufrm_advinhacao;
 
 interface
 
@@ -26,6 +26,7 @@ type
   public
   ValorMax : Integer;
   ValorMin : Integer;
+  NumeroJogador : Integer;
   end;
 
 var
@@ -34,6 +35,25 @@ var
 implementation
 
 {$R *.dfm}
+
+function GerarNumeroAleatorio (ValorMin,ValorMax:integer):Integer;
+begin
+  randomize;
+  Result := Random(101);
+end;
+
+function CheckarNumer (ValorMin,ValorMax:integer):Integer;
+
+NumeroJogador := StrToInt(Edt_numero.text)
+
+  begin
+    if NumeroJogador = Result then
+      begin
+        Image1.Visible := true;
+      end;
+
+  end;
+
 
 
 procedure TFrm_Numeros.RadioGroup1Click(Sender: TObject);
