@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2025/04/16 19:53:14.000.633,=C:\Users\lee_n\Documents\Delphi\Delphi\Unit1.pas</Transaction>
-    <Transaction>2025/04/16 20:02:32.000.796,C:\Users\lee_n\Documents\Delphi\Delphi\Unit1.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Jogo da Adivinhação\Ufrm_advinhacao.dfm</Transaction>
-    <Transaction>2025/04/16 20:02:32.000.796,C:\Users\lee_n\Documents\Delphi\Delphi\Unit1.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Jogo da Adivinhação\Ufrm_advinhacao.pas</Transaction>
-    <Transaction>2025/04/16 20:03:01.000.640,C:\Users\lee_n\Documents\Delphi\Delphi\Project1.dproj=C:\Users\lee_n\Documents\Delphi\Delphi\Jogo da Adivinhação\Prj_Adivinhacao.dproj</Transaction>
+    <Transaction>2025/04/16 20:02:32.000.796,C:\Users\lee_n\Documents\Delphi\Delphi\Jogo da Adivinhação\Ufrm_advinhacao.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2025/04/16 20:02:32.000.796,C:\Users\lee_n\Documents\Delphi\Delphi\Jogo da Adivinhação\Ufrm_advinhacao.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Unit1.pas</Transaction>
+    <Transaction>2025/04/16 20:03:01.000.640,C:\Users\lee_n\Documents\Delphi\Delphi\Jogo da Adivinhação\Prj_Adivinhacao.dproj=C:\Users\lee_n\Documents\Delphi\Delphi\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
