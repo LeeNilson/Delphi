@@ -18,13 +18,13 @@ type
     Edt_numero: TEdit;
     Rdg_Nivel: TRadioGroup;
     Image1: TImage;
-    Label2: TLabel;
     procedure Rdg_NivelClick(Sender: TObject);
     procedure Btn_NovoGameClick(Sender: TObject);
     procedure Btn_AdivinharClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     NumeroSorteado: Integer;
+    procedure GerarNumero;
   public
   end;
 
@@ -35,38 +35,47 @@ implementation
 
 {$R *.dfm}
 
-procedure TFrm_Numeros.FormCreate(Sender: TObject);
+procedure TFrm_Numeros.GerarNumero;
+var
+  Maximo: Integer;
 begin
-  Randomize;
+  case Rdg_Nivel.ItemIndex of
+    0: Maximo := 100;
+    1: Maximo := 200;
+  else
+    Maximo := 500;
+  end;
+  NumeroSorteado := Random(Maximo);
   Image1.Visible := False;
+  Lbl_Resultado.Caption := 'Boa sorte! Digite um número.';
+  Edt_numero.Text := '';
+  Edt_numero.SetFocus;
 end;
 
 procedure TFrm_Numeros.Rdg_NivelClick(Sender: TObject);
 begin
-  if Rdg_Nivel.ItemIndex = 0 then
-    Lbl_SegundoValor.Caption := '100'
-  else if Rdg_Nivel.ItemIndex = 1 then
-    Lbl_SegundoValor.Caption := '200'
-  else if Rdg_Nivel.ItemIndex = 2 then
-    Lbl_SegundoValor.Caption := '500'
+  // Apenas exibe o intervalo na tela
+  case Rdg_Nivel.ItemIndex of
+    0: Lbl_SegundoValor.Caption := '100';
+    1: Lbl_SegundoValor.Caption := '200';
+    2: Lbl_SegundoValor.Caption := '500';
   else
     Lbl_SegundoValor.Caption := '100';
+  end;
+end;
+
+procedure TFrm_Numeros.FormCreate(Sender: TObject);
+begin
+  Randomize;
+  Rdg_Nivel.ItemIndex := 0;
+  Lbl_SegundoValor.Caption := '100';
+  GerarNumero;
 end;
 
 procedure TFrm_Numeros.Btn_NovoGameClick(Sender: TObject);
-var
-  Maximo: Integer;
 begin
   Randomize;
-  if Rdg_Nivel.ItemIndex = 0 then
-    Maximo := 100
-  else if Rdg_Nivel.ItemIndex = 1 then
-    Maximo := 200
-  else
-    Maximo := 500;
-
-  NumeroSorteado := Random(Maximo);
-  Image1.Visible := False;
+  GerarNumero;
 end;
 
 procedure TFrm_Numeros.Btn_AdivinharClick(Sender: TObject);
@@ -76,18 +85,17 @@ begin
   if TryStrToInt(Edt_numero.Text, NumeroJogador) then
   begin
     if NumeroJogador < NumeroSorteado then
-      ShowMessage('Tente um numero maior!')
+      Lbl_Resultado.Caption := 'Tente um número maior!'
     else if NumeroJogador > NumeroSorteado then
-      ShowMessage('Tente um numero menor!')
+      Lbl_Resultado.Caption := 'Tente um número menor!'
     else
     begin
-      ShowMessage('Acertou!');
+      Lbl_Resultado.Caption := 'Acertou!';
       Image1.Visible := True;
     end;
   end
   else
-    ShowMessage('Digite um numero valido!');
+    Lbl_Resultado.Caption := 'Digite um número válido!';
 end;
 
 end.
-

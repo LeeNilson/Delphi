@@ -25,6 +25,7 @@ type
     procedure FormCreate(Sender: TObject);
   private
     NumeroSorteado: Integer;
+    procedure GerarNumero;
   public
   end;
 
@@ -35,38 +36,44 @@ implementation
 
 {$R *.dfm}
 
-procedure TFrm_Numeros.FormCreate(Sender: TObject);
-begin
-  Randomize;
-  Image1.Visible := False;
-end;
-
-procedure TFrm_Numeros.Rdg_NivelClick(Sender: TObject);
-begin
-  if Rdg_Nivel.ItemIndex = 0 then
-    Lbl_SegundoValor.Caption := '100'
-  else if Rdg_Nivel.ItemIndex = 1 then
-    Lbl_SegundoValor.Caption := '200'
-  else if Rdg_Nivel.ItemIndex = 2 then
-    Lbl_SegundoValor.Caption := '500'
-  else
-    Lbl_SegundoValor.Caption := '100';
-end;
-
-procedure TFrm_Numeros.Btn_NovoGameClick(Sender: TObject);
+procedure TFrm_Numeros.GerarNumero;
 var
   Maximo: Integer;
 begin
-  Randomize;
-  if Rdg_Nivel.ItemIndex = 0 then
-    Maximo := 100
-  else if Rdg_Nivel.ItemIndex = 1 then
-    Maximo := 200
+  case Rdg_Nivel.ItemIndex of
+    0: Maximo := 100;
+    1: Maximo := 200;
   else
     Maximo := 500;
-
+  end;
   NumeroSorteado := Random(Maximo);
   Image1.Visible := False;
+
+  end;
+
+procedure TFrm_Numeros.Rdg_NivelClick(Sender: TObject);
+begin
+  // Apenas exibe o intervalo na tela
+  case Rdg_Nivel.ItemIndex of
+    0: Lbl_SegundoValor.Caption := '100';
+    1: Lbl_SegundoValor.Caption := '200';
+    2: Lbl_SegundoValor.Caption := '500';
+  else
+    Lbl_SegundoValor.Caption := '100';
+  end;
+end;
+
+procedure TFrm_Numeros.FormCreate(Sender: TObject);
+begin
+Randomize;
+Image1.Visible:= False;
+
+end;
+
+procedure TFrm_Numeros.Btn_NovoGameClick(Sender: TObject);
+begin
+  Randomize;
+  GerarNumero;
 end;
 
 procedure TFrm_Numeros.Btn_AdivinharClick(Sender: TObject);
@@ -76,18 +83,17 @@ begin
   if TryStrToInt(Edt_numero.Text, NumeroJogador) then
   begin
     if NumeroJogador < NumeroSorteado then
-      ShowMessage('Tente um numero maior!')
+      ShowMessage ('Tente um numero maior!')
     else if NumeroJogador > NumeroSorteado then
-      ShowMessage('Tente um numero menor!')
+      ShowMessage ('Tente um numero menor!')
     else
     begin
-      ShowMessage('Acertou!');
+      ShowMessage( 'Acertou!');
       Image1.Visible := True;
     end;
   end
   else
-    ShowMessage('Digite um numero valido!');
+   ShowMessage ('Digite um numero valido!');
 end;
 
 end.
-

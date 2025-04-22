@@ -3,7 +3,7 @@ object Frm_Numeros: TFrm_Numeros
   Top = 0
   Caption = 'Jogo da Adivinha'#231#227'o'
   ClientHeight = 955
-  ClientWidth = 1097
+  ClientWidth = 1313
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -35,12 +35,11 @@ object Frm_Numeros: TFrm_Numeros
     Caption = '100'
   end
   object Lbl_Resultado: TLabel
-    Left = 468
+    Left = 460
     Top = 872
     Width = 361
     Height = 47
     Caption = 'Acertou Parab'#233'ns!!'
-    Transparent = False
   end
   object Image1: TImage
     Left = 358
@@ -1445,7 +1444,6 @@ object Frm_Numeros: TFrm_Numeros
     Height = 55
     Caption = 'Adivinhar'
     TabOrder = 0
-    OnClick = Btn_AdivinharClick
   end
   object Btn_NovoGame: TButton
     Left = 112
@@ -1454,7 +1452,6 @@ object Frm_Numeros: TFrm_Numeros
     Height = 65
     Caption = 'Iniciar Novo Jogo'
     TabOrder = 1
-    OnClick = Btn_NovoGameClick
   end
   object Edt_numero: TEdit
     Left = 112
@@ -1473,6 +1470,5 @@ object Frm_Numeros: TFrm_Numeros
       'M'#233'dio'
       'Dif'#237'cil')
     TabOrder = 3
-    OnClick = Rdg_NivelClick
   end
 end

@@ -3,7 +3,7 @@ object Frm_Numeros: TFrm_Numeros
   Top = 0
   Caption = 'Jogo da Adivinha'#231#227'o'
   ClientHeight = 955
-  ClientWidth = 1097
+  ClientWidth = 1313
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,6 @@ object Frm_Numeros: TFrm_Numeros
   Font.Name = 'Arial'
   Font.Style = []
   WindowState = wsMaximized
-  OnCreate = FormCreate
   TextHeight = 47
   object Label1: TLabel
     Left = 104
@@ -28,22 +27,20 @@ object Frm_Numeros: TFrm_Numeros
     Caption = '1'
   end
   object Lbl_SegundoValor: TLabel
-    Left = 773
+    Left = 797
     Top = 24
-    Width = 69
+    Width = 12
     Height = 47
-    Caption = '100'
   end
   object Lbl_Resultado: TLabel
-    Left = 468
+    Left = 460
     Top = 872
     Width = 361
     Height = 47
     Caption = 'Acertou Parab'#233'ns!!'
-    Transparent = False
   end
   object Image1: TImage
-    Left = 358
+    Left = 368
     Top = 344
     Width = 601
     Height = 473
@@ -1431,13 +1428,6 @@ object Frm_Numeros: TFrm_Numeros
     Stretch = True
     Visible = False
   end
-  object Label2: TLabel
-    Left = 720
-    Top = 24
-    Width = 23
-    Height = 47
-    Caption = 'e'
-  end
   object Btn_Adivinhar: TButton
     Left = 669
     Top = 101
@@ -1445,7 +1435,6 @@ object Frm_Numeros: TFrm_Numeros
     Height = 55
     Caption = 'Adivinhar'
     TabOrder = 0
-    OnClick = Btn_AdivinharClick
   end
   object Btn_NovoGame: TButton
     Left = 112
@@ -1454,7 +1443,6 @@ object Frm_Numeros: TFrm_Numeros
     Height = 65
     Caption = 'Iniciar Novo Jogo'
     TabOrder = 1
-    OnClick = Btn_NovoGameClick
   end
   object Edt_numero: TEdit
     Left = 112
@@ -1473,6 +1461,5 @@ object Frm_Numeros: TFrm_Numeros
       'M'#233'dio'
       'Dif'#237'cil')
     TabOrder = 3
-    OnClick = Rdg_NivelClick
   end
 end
