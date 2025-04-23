@@ -10,8 +10,12 @@ type
   TLerEscrever = class(TForm)
     Salvar: TButton;
     Ler: TButton;
+    Button1: TButton;
+    Button2: TButton;
     procedure SalvarClick(Sender: TObject);
     procedure LerClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,8 +56,51 @@ begin
   CloseFile(arq);
 end;
 
+procedure SalvarComStringList;
+var
+  lista: TStringList;
+begin
+  lista := TStringList.Create;
+  try
+    lista.Add('Primeira linha');
+    lista.Add('Segunda linha');
+    lista.SaveToFile('C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt');
+  except
+    on Exception do
+    begin
+       ShowMessage('Ocorreu algum erro');
+    end;
+  end;
+end;
 
 
+procedure LerComStringList;
+var
+  lista: TStringList;
+  i: Integer;
+begin
+  lista := TStringList.Create;
+  try
+    lista.LoadFromFile('C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt');
+    for i := 0 to lista.Count - 1 do
+      ShowMessage(lista[i]);
+  except
+    on Exception do
+    begin
+       ShowMessage('Ocorreu algum erro');
+    end;
+  end;
+end;
+
+procedure TLerEscrever.Button1Click(Sender: TObject);
+begin
+SalvarComStringList;
+end;
+
+procedure TLerEscrever.Button2Click(Sender: TObject);
+begin
+LerComStringList;
+end;
 
 procedure TLerEscrever.LerClick(Sender: TObject);
 begin

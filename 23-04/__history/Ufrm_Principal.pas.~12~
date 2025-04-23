@@ -1,0 +1,116 @@
+unit Ufrm_Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TLerEscrever = class(TForm)
+    Salvar: TButton;
+    Ler: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    procedure SalvarClick(Sender: TObject);
+    procedure LerClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  LerEscrever: TLerEscrever;
+
+implementation
+
+{$R *.dfm}
+
+procedure EscreverArquivo;
+var
+  arq: TextFile;
+begin
+  AssignFile(arq, 'C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt');
+  Rewrite(arq); // Cria um novo arquivo
+  Writeln(arq, 'Ola mundo!');
+  Writeln(arq, 'Mais uma linha.');
+  CloseFile(arq);
+end;
+
+//Ler um arquivo:
+procedure LerArquivo;
+var
+  arq: TextFile;
+  linha: string;
+begin
+  AssignFile(arq, 'C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt');
+  Reset(arq);
+  while not Eof(arq) do
+  begin
+    Readln(arq, linha);
+    ShowMessage(linha);
+  end;
+  CloseFile(arq);
+end;
+
+procedure SalvarComStringList;
+var
+  lista: TStringList;
+begin
+  lista := TStringList.Create;
+  try
+    lista.Add('Primeira linha');
+    lista.Add('Segunda linha');
+    lista.SaveToFile('C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt'');
+  except
+    on Exception do
+    begin
+       ShowMessage('Ocorreu algum erro');
+    end;
+  end;
+end;
+
+
+procedure LerComStringList;
+var
+  lista: TStringList;
+  i: Integer;
+begin
+  lista := TStringList.Create;
+  try
+    lista.LoadFromFile('C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt'');
+    for i := 0 to lista.Count - 1 do
+      ShowMessage(lista[i]);
+  except
+    on Exception do
+    begin
+       ShowMessage('Ocorreu algum erro');
+    end;
+  end;
+end;
+
+procedure TLerEscrever.Button1Click(Sender: TObject);
+begin
+SalvarComStringList;
+end;
+
+procedure TLerEscrever.Button2Click(Sender: TObject);
+begin
+LerComStringList;
+end;
+
+procedure TLerEscrever.LerClick(Sender: TObject);
+begin
+LerArquivo;
+end;
+
+procedure TLerEscrever.SalvarClick(Sender: TObject);
+begin
+EscreverArquivo;
+
+end;
+
+end.

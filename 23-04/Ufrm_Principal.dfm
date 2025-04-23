@@ -12,21 +12,39 @@ object LerEscrever: TLerEscrever
   Font.Style = []
   TextHeight = 61
   object Salvar: TButton
-    Left = 496
-    Top = 480
-    Width = 297
+    Left = 416
+    Top = 8
+    Width = 425
     Height = 97
     Caption = 'Salvar'
     TabOrder = 0
     OnClick = SalvarClick
   end
   object Ler: TButton
-    Left = 496
-    Top = 616
-    Width = 305
+    Left = 416
+    Top = 144
+    Width = 425
     Height = 105
     Caption = 'Ler'
     TabOrder = 1
     OnClick = LerClick
+  end
+  object Button1: TButton
+    Left = 424
+    Top = 288
+    Width = 425
+    Height = 81
+    Caption = 'Save Alternative'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 424
+    Top = 408
+    Width = 425
+    Height = 73
+    Caption = 'Ler de outro Jeito'
+    TabOrder = 3
+    OnClick = Button2Click
   end
 end
