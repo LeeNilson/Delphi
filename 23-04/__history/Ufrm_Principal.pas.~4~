@@ -1,0 +1,43 @@
+unit Ufrm_Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Salvar: TButton;
+    procedure SalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure EscreverArquivo;
+var
+  arq: TextFile;
+begin
+  AssignFile(arq, 'C:\Users\lee_n\Documents\Delphi\Delphi\23-04\meuarquivo.txt');
+  Rewrite(arq); // Cria um novo arquivo
+  Writeln(arq, 'Ola mundo!');
+  Writeln(arq, 'Mais uma linha.');
+  CloseFile(arq);
+end;
+
+
+procedure TForm1.SalvarClick(Sender: TObject);
+begin
+EscreverArquivo;
+end;
+
+end.
