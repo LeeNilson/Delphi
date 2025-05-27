@@ -1,0 +1,43 @@
+unit UFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TForm2 = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastros1: TMenuItem;
+    Cadastros2: TMenuItem;
+    Albuns1: TMenuItem;
+    Artistas1: TMenuItem;
+    procedure Albuns1Click(Sender: TObject);
+    procedure Artistas1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses UFrmAlbuns, UFrmArtista;
+
+procedure TForm2.Albuns1Click(Sender: TObject);
+begin
+  FrmAlbuns.ShowModal;
+end;
+
+procedure TForm2.Artistas1Click(Sender: TObject);
+begin
+  FrmArtista.ShowModal;
+end;
+
+end.

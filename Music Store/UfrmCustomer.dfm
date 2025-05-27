@@ -1,0 +1,45 @@
+object FrmCustomer: TFrmCustomer
+  Left = 0
+  Top = 0
+  Caption = 'FrmCustomer'
+  ClientHeight = 785
+  ClientWidth = 1086
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object DBGridEmployees: TDBGrid
+    Left = 568
+    Top = 48
+    Width = 497
+    Height = 321
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 184
+    Top = 480
+    Width = 660
+    Height = 25
+    TabOrder = 1
+  end
+  object DBGridCustomers: TDBGrid
+    Left = 8
+    Top = 48
+    Width = 521
+    Height = 321
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+end

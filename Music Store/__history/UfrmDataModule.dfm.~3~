@@ -1,0 +1,44 @@
+object DataModule2: TDataModule2
+  Height = 1470
+  Width = 1960
+  PixelsPerInch = 168
+  object FDTableAlbum: TFDTable
+    Active = True
+    IndexFieldNames = 'AlbumId'
+    Connection = FDConnection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'albums'
+    Left = 216
+    Top = 48
+  end
+  object DsAlbum: TDataSource
+    DataSet = FDTableAlbum
+    Left = 360
+    Top = 48
+  end
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'DriverID=SQLite'
+      
+        'Database=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\chin' +
+        'ook.db'
+      'LockingMode=Normal')
+    Connected = True
+    Left = 48
+    Top = 48
+  end
+  object FDTableArtista: TFDTable
+    Active = True
+    IndexFieldNames = 'ArtistId'
+    Connection = FDConnection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'artists'
+    Left = 504
+    Top = 48
+  end
+  object DsArtista: TDataSource
+    DataSet = FDTableArtista
+    Left = 648
+    Top = 48
+  end
+end

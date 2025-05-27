@@ -1,0 +1,86 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 1216
+  ClientWidth = 1431
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -30
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 41
+  object Memo1: TMemo
+    Left = 200
+    Top = 264
+    Width = 897
+    Height = 401
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 0
+  end
+  object BtnSalvar: TButton
+    Left = 528
+    Top = 671
+    Width = 169
+    Height = 65
+    Caption = 'Salvar'
+    TabOrder = 1
+    OnClick = BtnSalvarClick
+  end
+  object BtnSalvarComo: TButton
+    Left = 848
+    Top = 671
+    Width = 249
+    Height = 64
+    Caption = 'Salvar Como'
+    TabOrder = 2
+    OnClick = BtnSalvarComoClick
+  end
+  object BtnAbrir: TButton
+    Left = 200
+    Top = 671
+    Width = 233
+    Height = 65
+    Caption = 'Abrir...'
+    TabOrder = 3
+    OnClick = BtnAbrirClick
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 1431
+    Height = 29
+    Caption = 'ToolBar1'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    ExplicitLeft = 88
+    ExplicitTop = 16
+    ExplicitWidth = 150
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 1197
+    Width = 1431
+    Height = 19
+    Panels = <>
+    ExplicitLeft = 448
+    ExplicitTop = 1152
+    ExplicitWidth = 0
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 640
+    Top = 769
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 936
+    Top = 760
+  end
+end

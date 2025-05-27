@@ -1,0 +1,118 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 1216
+  ClientWidth = 1431
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -30
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 41
+  object Memo1: TMemo
+    Left = 176
+    Top = 63
+    Width = 897
+    Height = 401
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 0
+  end
+  object BtnSalvar: TButton
+    Left = 672
+    Top = 503
+    Width = 169
+    Height = 65
+    Caption = 'Salvar'
+    TabOrder = 1
+    OnClick = BtnSalvarClick
+  end
+  object BtnSalvarComo: TButton
+    Left = 896
+    Top = 504
+    Width = 193
+    Height = 64
+    Caption = 'Salvar Como'
+    TabOrder = 2
+    OnClick = BtnSalvarComoClick
+  end
+  object BtnAbrir: TButton
+    Left = 187
+    Top = 503
+    Width = 201
+    Height = 65
+    Caption = 'Abrir...'
+    TabOrder = 3
+    OnClick = BtnAbrirClick
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 1197
+    Width = 1431
+    Height = 19
+    Panels = <>
+    ExplicitLeft = 448
+    ExplicitTop = 1152
+    ExplicitWidth = 0
+  end
+  object BtnNovo: TButton
+    Left = 448
+    Top = 504
+    Width = 169
+    Height = 64
+    Caption = 'Novo'
+    TabOrder = 5
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 1431
+    Height = 41
+    ButtonHeight = 40
+    ButtonWidth = 156
+    Caption = 'ToolBar1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    ShowCaptions = True
+    TabOrder = 6
+    object ToolButton1: TToolButton
+      Left = 0
+      Top = 0
+      Caption = 'Salvar'
+      ImageIndex = 0
+    end
+    object ToolButton2: TToolButton
+      Left = 156
+      Top = 0
+      Caption = 'Salvar Como...'
+      ImageIndex = 1
+    end
+    object ToolButton3: TToolButton
+      Left = 312
+      Top = 0
+      Caption = 'Novo'
+      ImageIndex = 2
+    end
+    object ToolButton4: TToolButton
+      Left = 468
+      Top = 0
+      Caption = 'Abrir'
+      ImageIndex = 3
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 640
+    Top = 769
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 936
+    Top = 760
+  end
+end

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/05/14 20:13:20.000.494,=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit2.pas</Transaction>
+    <Transaction>2025/05/14 20:15:47.000.534,C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit2.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\UfrmCustomer.pas</Transaction>
+    <Transaction>2025/05/14 20:15:47.000.534,C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit2.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\UfrmCustomer.dfm</Transaction>
+    <Transaction>2025/05/14 21:15:21.000.740,=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit1.pas</Transaction>
+    <Transaction>2025/05/14 21:16:05.000.241,=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit1.pas</Transaction>
+    <Transaction>2025/05/14 21:17:54.000.007,C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit1.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\UfrmPlaylists.pas</Transaction>
+    <Transaction>2025/05/14 21:17:54.000.007,C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\Unit1.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Music Store\UfrmPlaylists.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

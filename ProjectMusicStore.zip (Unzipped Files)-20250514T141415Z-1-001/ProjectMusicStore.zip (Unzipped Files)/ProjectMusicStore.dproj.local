@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/05/07 20:25:14.000.631,=C:\Users\tkaut\Desktop\Unit2.pas</Transaction>
+    <Transaction>2025/05/07 20:25:59.000.403,C:\Users\tkaut\Desktop\ProjectMusicStore\UFrmPrincipal.pas=C:\Users\tkaut\Desktop\Unit2.pas</Transaction>
+    <Transaction>2025/05/07 20:25:59.000.403,C:\Users\tkaut\Desktop\ProjectMusicStore\UFrmPrincipal.dfm=C:\Users\tkaut\Desktop\Unit2.dfm</Transaction>
+    <Transaction>2025/05/07 20:26:09.000.877,C:\Users\tkaut\Desktop\ProjectMusicStore\ProjectMusicStore.dproj=C:\Users\tkaut\Desktop\Project2.dproj</Transaction>
+    <Transaction>2025/05/07 20:28:25.000.656,=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.pas</Transaction>
+    <Transaction>2025/05/07 20:29:08.000.667,C:\Users\tkaut\Desktop\ProjectMusicStore\UDataModule.pas=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.pas</Transaction>
+    <Transaction>2025/05/07 20:29:08.000.667,C:\Users\tkaut\Desktop\ProjectMusicStore\UDataModule.dfm=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.dfm</Transaction>
+    <Transaction>2025/05/07 20:33:24.000.855,=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.pas</Transaction>
+    <Transaction>2025/05/07 20:33:54.000.747,C:\Users\tkaut\Desktop\ProjectMusicStore\UFrmAlbuns.pas=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.pas</Transaction>
+    <Transaction>2025/05/07 20:33:54.000.747,C:\Users\tkaut\Desktop\ProjectMusicStore\UFrmAlbuns.dfm=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.dfm</Transaction>
+    <Transaction>2025/05/07 21:21:52.000.661,=C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.pas</Transaction>
+    <Transaction>2025/05/07 21:22:06.000.451,C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.pas=C:\Users\tkaut\Desktop\ProjectMusicStore\UFrmArtista.pas</Transaction>
+    <Transaction>2025/05/07 21:22:06.000.451,C:\Users\tkaut\Desktop\ProjectMusicStore\Unit1.dfm=C:\Users\tkaut\Desktop\ProjectMusicStore\UFrmArtista.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

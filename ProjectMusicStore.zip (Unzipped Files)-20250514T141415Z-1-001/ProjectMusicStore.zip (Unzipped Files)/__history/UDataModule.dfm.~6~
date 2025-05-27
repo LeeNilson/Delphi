@@ -1,0 +1,58 @@
+object DataModule1: TDataModule1
+  Height = 339
+  Width = 416
+  PixelsPerInch = 120
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'DriverID=SQLite'
+      'Database=C:\Users\tkaut\Desktop\chinook.db'
+      'LockingMode=Normal')
+    Connected = True
+    Left = 72
+    Top = 40
+  end
+  object FDTabAlbum: TFDTable
+    Active = True
+    IndexFieldNames = 'AlbumId'
+    Connection = FDConnection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'albums'
+    Left = 200
+    Top = 40
+  end
+  object DSAlbum: TDataSource
+    DataSet = FDTabAlbum
+    Left = 312
+    Top = 40
+  end
+  object FDTabArtista: TFDTable
+    Active = True
+    IndexFieldNames = 'ArtistId'
+    Connection = FDConnection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'artists'
+    Left = 200
+    Top = 136
+  end
+  object DSArtista: TDataSource
+    DataSet = FDTabArtista
+    Left = 312
+    Top = 136
+  end
+  object FDTabTracks: TFDTable
+    Active = True
+    IndexFieldNames = 'AlbumId'
+    MasterSource = DSAlbum
+    MasterFields = 'AlbumId'
+    Connection = FDConnection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'tracks'
+    Left = 200
+    Top = 232
+  end
+  object DSTracks: TDataSource
+    DataSet = FDTabTracks
+    Left = 312
+    Top = 232
+  end
+end

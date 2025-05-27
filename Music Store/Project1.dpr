@@ -1,0 +1,23 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Ufrm_Principal in 'Ufrm_Principal.pas' {FrmArtista},
+  UfrmDataModule in 'UfrmDataModule.pas' {DsEmployees: TDataModule},
+  UfrmAlbums in 'UfrmAlbums.pas' {FrmAlbums},
+  UfrmArtista in 'UfrmArtista.pas' {FrmDataModule},
+  UfrmCustomer in 'UfrmCustomer.pas' {FrmCustomer},
+  UfrmPlaylists in 'UfrmPlaylists.pas' {FrmPlaylists};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmArtista, FrmArtista);
+  Application.CreateForm(TFrmAlbums, FrmAlbums);
+  Application.CreateForm(TFrmDataModule, FrmDataModule);
+  Application.CreateForm(TFrmCustomer, FrmCustomer);
+  Application.CreateForm(TFrmPlaylists, FrmPlaylists);
+  Application.Run;
+end.
