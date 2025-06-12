@@ -1,0 +1,31 @@
+unit Ufrm_Repertorio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ComCtrls;
+
+type
+  TFrm_Repertorio = class(TForm)
+    DBGrid1: TDBGrid;
+    Btn_AdicionarMusica: TButton;
+    Edt_AdicionaMusica: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    StatusBar1: TStatusBar;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Repertorio: TFrm_Repertorio;
+
+implementation
+
+{$R *.dfm}
+
+end.

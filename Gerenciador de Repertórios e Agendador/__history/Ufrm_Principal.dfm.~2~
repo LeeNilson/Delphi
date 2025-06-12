@@ -1,0 +1,35 @@
+object Frm_Principal: TFrm_Principal
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Principal'
+  ClientHeight = 1135
+  ClientWidth = 1508
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -36
+  Font.Name = 'Arial'
+  Font.Style = []
+  Menu = MainMenu1
+  Visible = True
+  TextHeight = 41
+  object MainMenu1: TMainMenu
+    Left = 1092
+    Top = 344
+    object Calendrio1: TMenuItem
+      Caption = 'Calend'#225'rio'
+    end
+    object Calendrio2: TMenuItem
+      Caption = 'Bandas'
+    end
+    object Repertrios1: TMenuItem
+      Caption = 'Repert'#243'rios'
+    end
+    object Letras1: TMenuItem
+      Caption = 'Letras'
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Relat'#243'rios'
+    end
+  end
+end

@@ -1,0 +1,30 @@
+﻿unit Ufrm_Calendario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TFrm_Calendário = class(TForm)
+    MonthCalendar1: TMonthCalendar;
+    lbl_Data: TLabel;
+    Label1: TLabel;
+    Edt_Evento: TEdit;
+    Label2: TLabel;
+    Edit1: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Calendário: TFrm_Calendário;
+
+implementation
+
+{$R *.dfm}
+
+end.

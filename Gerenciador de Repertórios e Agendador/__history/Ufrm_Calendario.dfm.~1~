@@ -1,0 +1,14 @@
+﻿object Frm_Calendário: TFrm_Calendário
+  Left = 0
+  Top = 0
+  Caption = 'Calend'#225'rio'
+  ClientHeight = 1111
+  ClientWidth = 1506
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+end

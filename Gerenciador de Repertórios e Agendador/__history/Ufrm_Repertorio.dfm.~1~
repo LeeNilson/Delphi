@@ -1,0 +1,58 @@
+object Frm_Repertorio: TFrm_Repertorio
+  Left = 0
+  Top = 0
+  Caption = 'Repertorio'
+  ClientHeight = 745
+  ClientWidth = 849
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -23
+  Font.Name = 'Arial'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 26
+  object DBGrid1: TDBGrid
+    Left = 112
+    Top = 80
+    Width = 553
+    Height = 305
+    TabOrder = 0
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -23
+    TitleFont.Name = 'Arial'
+    TitleFont.Style = []
+  end
+  object Btn_AdicionarMusica: TButton
+    Left = 112
+    Top = 551
+    Width = 161
+    Height = 25
+    Caption = 'Adicionar'
+    TabOrder = 1
+  end
+  object Edt_AdicionaMusica: TEdit
+    Left = 112
+    Top = 432
+    Width = 553
+    Height = 34
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 352
+    Top = 551
+    Width = 161
+    Height = 25
+    Caption = 'Deletar'
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 624
+    Top = 551
+    Width = 161
+    Height = 25
+    Caption = 'Atualizar'
+    TabOrder = 4
+  end
+end
