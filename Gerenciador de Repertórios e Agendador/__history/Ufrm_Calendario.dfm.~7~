@@ -32,13 +32,6 @@
     Height = 47
     Caption = 'Adicionar Evento:'
   end
-  object Lbl_Evento: TLabel
-    Left = 288
-    Top = 744
-    Width = 368
-    Height = 47
-    Caption = 'O evento de hoje '#233':'
-  end
   object MonthCalendar1: TMonthCalendar
     Left = 168
     Top = 126
@@ -66,7 +59,7 @@
     Width = 1007
     Height = 19
     Panels = <>
-    ExplicitTop = 1012
-    ExplicitWidth = 997
+    ExplicitTop = 1036
+    ExplicitWidth = 1005
   end
 end

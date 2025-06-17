@@ -13,7 +13,6 @@ type
     Label2: TLabel;
     Edit1: TEdit;
     StatusBar1: TStatusBar;
-    Lbl_Evento: TLabel;
   private
     { Private declarations }
   public
