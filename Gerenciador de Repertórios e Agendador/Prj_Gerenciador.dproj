@@ -135,6 +135,14 @@
             <Form>Frm_Repertorio</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Ufrm_Relatorio.pas">
+            <Form>Frm_relatorio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Ufrm_Letras.pas">
+            <Form>Frm_Letras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

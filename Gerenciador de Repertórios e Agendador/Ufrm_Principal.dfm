@@ -20,6 +20,22 @@ object Frm_Principal: TFrm_Principal
     Width = 1498
     Height = 19
     Panels = <>
+    ExplicitTop = 950
+    ExplicitWidth = 1488
+  end
+  object MonthCalendar1: TMonthCalendar
+    Left = 40
+    Top = 174
+    Width = 601
+    Height = 635
+    Date = 45870.000000000000000000
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -42
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
   end
   object MainMenu1: TMainMenu
     Left = 92
@@ -37,9 +53,11 @@ object Frm_Principal: TFrm_Principal
     end
     object Letras1: TMenuItem
       Caption = 'Letras'
+      OnClick = Letras1Click
     end
     object Relatrios1: TMenuItem
       Caption = 'Relat'#243'rios'
+      OnClick = Relatrios1Click
     end
   end
 end

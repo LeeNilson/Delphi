@@ -15,8 +15,11 @@ type
     Letras1: TMenuItem;
     Relatrios1: TMenuItem;
     StatusBar1: TStatusBar;
+    MonthCalendar1: TMonthCalendar;
     procedure Calendrio1Click(Sender: TObject);
     procedure Repertrios1Click(Sender: TObject);
+    procedure Relatrios1Click(Sender: TObject);
+    procedure Letras1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,12 +33,22 @@ implementation
 
 {$R *.dfm}
 
-uses Ufrm_Calendario, Ufrm_Repertorio;
+uses Ufrm_Calendario, Ufrm_Repertorio, Ufrm_Relatorio, Ufrm_Letras;
 
 procedure TFrm_Principal.Calendrio1Click(Sender: TObject);
 begin
 Frm_Calendário.Show;
 
+end;
+
+procedure TFrm_Principal.Letras1Click(Sender: TObject);
+begin
+  Frm_Letras.show;
+end;
+
+procedure TFrm_Principal.Relatrios1Click(Sender: TObject);
+begin
+ Frm_Relatorio.show;
 end;
 
 procedure TFrm_Principal.Repertrios1Click(Sender: TObject);

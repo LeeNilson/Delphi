@@ -68,8 +68,8 @@ object Frm_Repertorio: TFrm_Repertorio
     Width = 1242
     Height = 19
     Panels = <>
-    ExplicitTop = 654
-    ExplicitWidth = 993
+    ExplicitTop = 894
+    ExplicitWidth = 1232
   end
   object DBNavigator1: TDBNavigator
     Left = 144
