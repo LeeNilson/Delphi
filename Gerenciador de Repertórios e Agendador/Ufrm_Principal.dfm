@@ -20,8 +20,8 @@ object Frm_Principal: TFrm_Principal
     Width = 1498
     Height = 19
     Panels = <>
-    ExplicitTop = 950
-    ExplicitWidth = 1488
+    ExplicitTop = 965
+    ExplicitWidth = 1492
   end
   object MonthCalendar1: TMonthCalendar
     Left = 40

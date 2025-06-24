@@ -143,6 +143,11 @@
             <Form>Frm_Letras</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uDatamodule.pas">
+            <Form>DataModule1</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

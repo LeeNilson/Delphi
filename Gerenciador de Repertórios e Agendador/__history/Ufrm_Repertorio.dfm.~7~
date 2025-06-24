@@ -1,7 +1,7 @@
 object Frm_Repertorio: TFrm_Repertorio
   Left = 0
   Top = 0
-  Caption = 'q'
+  Caption = 'Frm_Repertorio'
   ClientHeight = 945
   ClientWidth = 1242
   Color = clBtnFace
@@ -68,8 +68,8 @@ object Frm_Repertorio: TFrm_Repertorio
     Width = 1242
     Height = 19
     Panels = <>
-    ExplicitTop = 909
-    ExplicitWidth = 1236
+    ExplicitTop = 894
+    ExplicitWidth = 1232
   end
   object DBNavigator1: TDBNavigator
     Left = 144

@@ -6,8 +6,7 @@ uses
   Ufrm_Calendario in 'Ufrm_Calendario.pas' {Frm_Calendário},
   Ufrm_Repertorio in 'Ufrm_Repertorio.pas' {Frm_Repertorio},
   Ufrm_Relatorio in 'Ufrm_Relatorio.pas' {Frm_relatorio},
-  Ufrm_Letras in 'Ufrm_Letras.pas' {Frm_Letras},
-  uDatamodule in 'uDatamodule.pas' {DataModule1: TDataModule};
+  Ufrm_Letras in 'Ufrm_Letras.pas' {Frm_Letras};
 
 {$R *.res}
 
@@ -19,6 +18,5 @@ begin
   Application.CreateForm(TFrm_Repertorio, Frm_Repertorio);
   Application.CreateForm(TFrm_relatorio, Frm_relatorio);
   Application.CreateForm(TFrm_Letras, Frm_Letras);
-  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.
