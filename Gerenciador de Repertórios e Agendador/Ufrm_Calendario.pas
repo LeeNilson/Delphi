@@ -13,7 +13,9 @@ type
     Label2: TLabel;
     Edit1: TEdit;
     StatusBar1: TStatusBar;
-    Lbl_Evento: TLabel;
+    Btn_Salvar: TButton;
+    Button1: TButton;
+    Button2: TButton;
   private
     { Private declarations }
   public

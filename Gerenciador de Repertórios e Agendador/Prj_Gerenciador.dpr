@@ -7,7 +7,7 @@ uses
   Ufrm_Repertorio in 'Ufrm_Repertorio.pas' {Frm_Repertorio},
   Ufrm_Relatorio in 'Ufrm_Relatorio.pas' {Frm_relatorio},
   Ufrm_Letras in 'Ufrm_Letras.pas' {Frm_Letras},
-  uDatamodule in 'uDatamodule.pas' {DataModule1: TDataModule};
+  UData_Module in 'UData_Module.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 

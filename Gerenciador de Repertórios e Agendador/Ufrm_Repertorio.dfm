@@ -1,10 +1,10 @@
 object Frm_Repertorio: TFrm_Repertorio
   Left = 0
   Top = 0
-  Caption = 'q'
-  ClientHeight = 945
-  ClientWidth = 1242
-  Color = clBtnFace
+  Caption = 'Frm_Repertorio'
+  ClientHeight = 842
+  ClientWidth = 985
+  Color = clBtnShadow
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -23
@@ -13,17 +13,18 @@ object Frm_Repertorio: TFrm_Repertorio
   Menu = MainMenu1
   TextHeight = 26
   object Label1: TLabel
-    Left = 368
-    Top = 129
+    Left = 352
+    Top = 25
     Width = 108
     Height = 26
     Caption = 'Repert'#243'rio'
   end
   object DBGrid1: TDBGrid
     Left = 149
-    Top = 176
+    Top = 72
     Width = 553
-    Height = 425
+    Height = 529
+    DataSource = DataSource1
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
@@ -64,8 +65,8 @@ object Frm_Repertorio: TFrm_Repertorio
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 926
-    Width = 1242
+    Top = 823
+    Width = 985
     Height = 19
     Panels = <>
     ExplicitTop = 909
@@ -79,8 +80,8 @@ object Frm_Repertorio: TFrm_Repertorio
     TabOrder = 6
   end
   object MainMenu1: TMainMenu
-    Left = 136
-    Top = 40
+    Left = 872
+    Top = 288
     object heWalkmans1: TMenuItem
       Caption = 'The Walkmans'
     end
@@ -99,5 +100,22 @@ object Frm_Repertorio: TFrm_Repertorio
     object Acustico1: TMenuItem
       Caption = 'Ac'#250'stico'
     end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'DriverID=MySQL'
+      'User_Name=lee')
+    Left = 872
+    Top = 72
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 872
+    Top = 136
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 872
+    Top = 208
   end
 end

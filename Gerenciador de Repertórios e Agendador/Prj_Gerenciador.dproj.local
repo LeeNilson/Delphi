@@ -1,38 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-	<Transactions>
-    <Transaction>2025/06/11 20:33:35.000.116,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/11 20:34:29.000.800,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Principal.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/11 20:34:29.000.800,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Principal.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
-    <Transaction>2025/06/11 20:35:17.000.697,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Prj_Gerenciador.dproj=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Project1.dproj</Transaction>
-    <Transaction>2025/06/11 20:35:29.000.063,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/11 20:43:52.000.715,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Calendario.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
-    <Transaction>2025/06/11 20:43:52.000.715,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Calendario.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/11 21:45:33.000.260,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/11 22:09:09.000.256,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Repertorio.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
-    <Transaction>2025/06/11 22:09:09.000.256,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Repertorio.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/18 20:02:38.000.407,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/18 20:03:42.000.191,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Relatorio.dfm</Transaction>
-    <Transaction>2025/06/18 20:03:42.000.191,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Relatorio.pas</Transaction>
-    <Transaction>2025/06/18 20:08:05.000.789,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/18 20:08:46.000.003,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Letras.dfm</Transaction>
-    <Transaction>2025/06/18 20:08:46.000.003,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_Letras.pas</Transaction>
-    <Transaction>2025/06/19 00:21:17.357,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/19 00:22:14.551,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\uDatamodule.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/19 00:22:14.551,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\uDatamodule.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
+  <Transactions>
+    <Transaction>2025/06/25 21:07:15.486,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
+    <Transaction>2025/06/25 21:15:21.653,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\UData_Module.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
+    <Transaction>2025/06/25 21:15:21.653,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\UData_Module.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
   </Transactions>
-	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="Ufrm_Calendario.pas"/>
-    <File Path="Ufrm_Calendario.dfm"/>
-    <File Path="Ufrm_Principal.pas"/>
-    <File Path="Ufrm_Principal.dfm"/>
-    <File Path="Ufrm_Repertorio.pas"/>
-    <File Path="Ufrm_Repertorio.dfm"/>
-    <File Path="Ufrm_Relatorio.pas"/>
-    <File Path="Ufrm_Relatorio.dfm"/>
-    <File Path="Ufrm_Letras.pas"/>
-    <File Path="Ufrm_Letras.dfm"/>
-    <File Path="uDatamodule.pas"/>
-    <File Path="uDatamodule.dfm"/>
-  </ProjectSortOrder>
 </BorlandProject>

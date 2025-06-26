@@ -2,8 +2,8 @@ object Frm_Principal: TFrm_Principal
   Left = 0
   Top = 0
   Caption = 'Frm_Principal'
-  ClientHeight = 1001
-  ClientWidth = 1498
+  ClientHeight = 984
+  ClientWidth = 1492
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -14,18 +14,23 @@ object Frm_Principal: TFrm_Principal
   Visible = True
   WindowState = wsMaximized
   TextHeight = 53
+  object Lbl_Evento: TLabel
+    Left = 184
+    Top = 56
+    Width = 410
+    Height = 53
+    Caption = 'O evento de hoje '#233':'
+  end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 982
-    Width = 1498
+    Top = 965
+    Width = 1492
     Height = 19
     Panels = <>
-    ExplicitTop = 965
-    ExplicitWidth = 1492
   end
   object MonthCalendar1: TMonthCalendar
-    Left = 40
-    Top = 174
+    Left = 112
+    Top = 134
     Width = 601
     Height = 635
     Date = 45870.000000000000000000
@@ -38,8 +43,8 @@ object Frm_Principal: TFrm_Principal
     TabOrder = 1
   end
   object MainMenu1: TMainMenu
-    Left = 92
-    Top = 88
+    Left = 772
+    Top = 152
     object Calendrio1: TMenuItem
       Caption = 'Calend'#225'rio'
       OnClick = Calendrio1Click
@@ -59,5 +64,18 @@ object Frm_Principal: TFrm_Principal
       Caption = 'Relat'#243'rios'
       OnClick = Relatrios1Click
     end
+  end
+  object FDConnection1: TFDConnection
+    Left = 768
+    Top = 232
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 776
+    Top = 312
+  end
+  object DataSource1: TDataSource
+    Left = 768
+    Top = 384
   end
 end
