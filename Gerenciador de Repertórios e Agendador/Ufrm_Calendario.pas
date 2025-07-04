@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
 
 type
-  TFrm_Calendário = class(TForm)
+  TFrm_Calendario = class(TForm)
     MonthCalendar1: TMonthCalendar;
     Label1: TLabel;
     Label2: TLabel;
@@ -23,7 +23,7 @@ type
   end;
 
 var
-  Frm_Calendário: TFrm_Calendário;
+  Frm_Calendario: TFrm_Calendario;
 
 implementation
 

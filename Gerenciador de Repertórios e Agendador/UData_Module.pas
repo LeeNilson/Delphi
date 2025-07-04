@@ -13,9 +13,9 @@ uses
 
 type
   TDataModule1 = class(TDataModule)
-    FDQuery1: TFDQuery;
-    FDConnection1: TFDConnection;
     DataSource1: TDataSource;
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
   private
     { Private declarations }
   public

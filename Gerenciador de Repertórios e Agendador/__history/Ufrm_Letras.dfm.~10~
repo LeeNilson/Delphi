@@ -1,0 +1,64 @@
+object Frm_Letras: TFrm_Letras
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Letras'
+  ClientHeight = 764
+  ClientWidth = 916
+  Color = clOrangered
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -24
+  Font.Name = 'Arial'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 27
+  object Letras: TMemo
+    Left = 48
+    Top = 32
+    Width = 553
+    Height = 633
+    Lines.Strings = (
+      'Letras')
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 704
+    Top = 288
+    Width = 105
+    Height = 25
+    Caption = 'Atualizar'
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 704
+    Top = 240
+    Width = 105
+    Height = 25
+    Caption = 'Deletar'
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 704
+    Top = 192
+    Width = 105
+    Height = 25
+    Caption = 'Adicionar'
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 745
+    Width = 916
+    Height = 19
+    Panels = <>
+    ExplicitTop = 713
+    ExplicitWidth = 906
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 48
+    Top = 680
+    Width = 550
+    Height = 25
+    TabOrder = 5
+  end
+end

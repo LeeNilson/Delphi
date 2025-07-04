@@ -128,7 +128,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Ufrm_Calendario.pas">
-            <Form>Frm_Calendário</Form>
+            <Form>Frm_Calendario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Ufrm_Repertorio.pas">
@@ -169,7 +169,7 @@
                     <Source Name="MainSource">Prj_Gerenciador.dpr</Source>
                 </Source>
             </Delphi.Personality>
-            <Deployment Version="5">
+            <Deployment Version="4">
                 <DeployFile LocalName="Win32\Debug\Prj_Gerenciador.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Prj_Gerenciador.exe</RemoteName>
@@ -186,6 +186,16 @@
                     </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="AndroidFileProvider">

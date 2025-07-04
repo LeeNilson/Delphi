@@ -2,9 +2,9 @@ object Frm_Principal: TFrm_Principal
   Left = 0
   Top = 0
   Caption = 'Frm_Principal'
-  ClientHeight = 984
+  ClientHeight = 1004
   ClientWidth = 1492
-  Color = clBtnFace
+  Color = clOrangered
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -47
@@ -15,67 +15,53 @@ object Frm_Principal: TFrm_Principal
   WindowState = wsMaximized
   TextHeight = 53
   object Lbl_Evento: TLabel
-    Left = 184
-    Top = 56
+    Left = 536
+    Top = 104
     Width = 410
     Height = 53
     Caption = 'O evento de hoje '#233':'
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 965
+    Top = 985
     Width = 1492
     Height = 19
     Panels = <>
+    ExplicitTop = 926
+    ExplicitWidth = 1484
   end
   object MonthCalendar1: TMonthCalendar
-    Left = 112
-    Top = 134
+    Left = 416
+    Top = 187
     Width = 601
-    Height = 635
-    Date = 45870.000000000000000000
-    Font.Charset = DEFAULT_CHARSET
+    Height = 507
+    Date = 45839.000000000000000000
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -42
-    Font.Name = 'Segoe UI'
+    Font.Height = -28
+    Font.Name = 'Verdana'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
   end
   object MainMenu1: TMainMenu
-    Left = 772
-    Top = 152
-    object Calendrio1: TMenuItem
-      Caption = 'Calend'#225'rio'
-      OnClick = Calendrio1Click
+    Left = 1288
+    Top = 344
+    object Eventos1: TMenuItem
+      Caption = 'Eventos'
+      OnClick = Eventos1Click
     end
-    object Calendrio2: TMenuItem
-      Caption = 'Bandas'
-    end
-    object Repertrios1: TMenuItem
-      Caption = 'Repert'#243'rios'
-      OnClick = Repertrios1Click
+    object Eventos2: TMenuItem
+      Caption = 'Repert'#243'rio'
+      OnClick = Eventos2Click
     end
     object Letras1: TMenuItem
       Caption = 'Letras'
       OnClick = Letras1Click
     end
-    object Relatrios1: TMenuItem
-      Caption = 'Relat'#243'rios'
-      OnClick = Relatrios1Click
+    object Letras2: TMenuItem
+      Caption = 'Relatorios'
+      OnClick = Letras2Click
     end
-  end
-  object FDConnection1: TFDConnection
-    Left = 768
-    Top = 232
-  end
-  object FDQuery1: TFDQuery
-    Connection = FDConnection1
-    Left = 776
-    Top = 312
-  end
-  object DataSource1: TDataSource
-    Left = 768
-    Top = 384
   end
 end

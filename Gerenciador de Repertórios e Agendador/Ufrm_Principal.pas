@@ -13,22 +13,20 @@ uses
 
 type
   TFrm_Principal = class(TForm)
-    MainMenu1: TMainMenu;
-    Calendrio1: TMenuItem;
-    Calendrio2: TMenuItem;
-    Repertrios1: TMenuItem;
-    Letras1: TMenuItem;
-    Relatrios1: TMenuItem;
     StatusBar1: TStatusBar;
     MonthCalendar1: TMonthCalendar;
-    FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
-    DataSource1: TDataSource;
     Lbl_Evento: TLabel;
-    procedure Calendrio1Click(Sender: TObject);
-    procedure Repertrios1Click(Sender: TObject);
+    MainMenu1: TMainMenu;
+    Eventos1: TMenuItem;
+    Eventos2: TMenuItem;
+    Letras1: TMenuItem;
+    Letras2: TMenuItem;
     procedure Relatrios1Click(Sender: TObject);
     procedure Letras1Click(Sender: TObject);
+    procedure Eventos1Click(Sender: TObject);
+    procedure Eventos2Click(Sender: TObject);
+    procedure Letras2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -42,12 +40,18 @@ implementation
 
 {$R *.dfm}
 
-uses Ufrm_Calendario, Ufrm_Repertorio, Ufrm_Relatorio, Ufrm_Letras;
+uses Ufrm_Calendario, Ufrm_Repertorio, Ufrm_Relatorio, Ufrm_Letras,
+  UData_Module;
 
-procedure TFrm_Principal.Calendrio1Click(Sender: TObject);
+
+procedure TFrm_Principal.Eventos1Click(Sender: TObject);
 begin
-Frm_Calendário.Show;
+Frm_Calendario.showmodal;
+end;
 
+procedure TFrm_Principal.Eventos2Click(Sender: TObject);
+begin
+  Frm_Repertorio.showmodal;
 end;
 
 procedure TFrm_Principal.Letras1Click(Sender: TObject);
@@ -55,14 +59,14 @@ begin
   Frm_Letras.show;
 end;
 
-procedure TFrm_Principal.Relatrios1Click(Sender: TObject);
+procedure TFrm_Principal.Letras2Click(Sender: TObject);
 begin
  Frm_Relatorio.show;
 end;
 
-procedure TFrm_Principal.Repertrios1Click(Sender: TObject);
+procedure TFrm_Principal.Relatrios1Click(Sender: TObject);
 begin
-    Frm_Repertorio.Show;
+ Frm_Relatorio.show;
 end;
 
 end.

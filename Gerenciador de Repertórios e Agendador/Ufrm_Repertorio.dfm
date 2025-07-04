@@ -2,62 +2,62 @@ object Frm_Repertorio: TFrm_Repertorio
   Left = 0
   Top = 0
   Caption = 'Frm_Repertorio'
-  ClientHeight = 842
+  ClientHeight = 876
   ClientWidth = 985
-  Color = clBtnShadow
+  Color = clOrangered
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -23
+  Font.Height = -19
   Font.Name = 'Arial'
   Font.Style = []
-  Menu = MainMenu1
-  TextHeight = 26
+  WindowState = wsMaximized
+  TextHeight = 22
   object Label1: TLabel
     Left = 352
-    Top = 25
-    Width = 108
-    Height = 26
+    Top = 8
+    Width = 90
+    Height = 22
     Caption = 'Repert'#243'rio'
   end
   object DBGrid1: TDBGrid
     Left = 149
-    Top = 72
+    Top = 56
     Width = 553
-    Height = 529
-    DataSource = DataSource1
+    Height = 385
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -23
+    TitleFont.Height = -19
     TitleFont.Name = 'Arial'
     TitleFont.Style = []
   end
   object Btn_AdicionarMusica: TButton
     Left = 352
-    Top = 751
+    Top = 599
     Width = 161
     Height = 33
     Caption = 'Adicionar'
     TabOrder = 1
   end
   object Edt_AdicionaMusica: TEdit
-    Left = 144
-    Top = 664
+    Left = 152
+    Top = 528
     Width = 553
-    Height = 34
+    Height = 30
     TabOrder = 2
+    TextHint = 'Digite para editar...'
   end
   object Button1: TButton
-    Left = 144
-    Top = 751
+    Left = 152
+    Top = 599
     Width = 161
     Height = 33
     Caption = 'Deletar'
     TabOrder = 3
   end
   object Button2: TButton
-    Left = 556
-    Top = 751
+    Left = 559
+    Top = 599
     Width = 146
     Height = 33
     Caption = 'Atualizar'
@@ -65,57 +65,18 @@ object Frm_Repertorio: TFrm_Repertorio
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 823
+    Top = 857
     Width = 985
     Height = 19
     Panels = <>
-    ExplicitTop = 909
-    ExplicitWidth = 1236
+    ExplicitTop = 798
+    ExplicitWidth = 977
   end
   object DBNavigator1: TDBNavigator
-    Left = 144
-    Top = 616
+    Left = 152
+    Top = 464
     Width = 550
     Height = 25
     TabOrder = 6
-  end
-  object MainMenu1: TMainMenu
-    Left = 872
-    Top = 288
-    object heWalkmans1: TMenuItem
-      Caption = 'The Walkmans'
-    end
-    object DapperHeart1: TMenuItem
-      Caption = 'Dapper Heart'
-    end
-    object BloodySkull1: TMenuItem
-      Caption = 'Bloody Skull'
-    end
-    object WickedSouls1: TMenuItem
-      Caption = 'Wicked Souls'
-    end
-    object WickedSouls2: TMenuItem
-      Caption = 'Tim Maia'
-    end
-    object Acustico1: TMenuItem
-      Caption = 'Ac'#250'stico'
-    end
-  end
-  object FDConnection1: TFDConnection
-    Params.Strings = (
-      'DriverID=MySQL'
-      'User_Name=lee')
-    Left = 872
-    Top = 72
-  end
-  object FDQuery1: TFDQuery
-    Connection = FDConnection1
-    Left = 872
-    Top = 136
-  end
-  object DataSource1: TDataSource
-    DataSet = FDQuery1
-    Left = 872
-    Top = 208
   end
 end

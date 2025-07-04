@@ -15,6 +15,8 @@ type
     Button3: TButton;
     StatusBar1: TStatusBar;
     DBNavigator1: TDBNavigator;
+    Button4: TButton;
+    Edit1: TEdit;
   private
     { Private declarations }
   public

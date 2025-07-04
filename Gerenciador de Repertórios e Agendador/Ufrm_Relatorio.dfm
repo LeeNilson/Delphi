@@ -4,7 +4,7 @@ object Frm_relatorio: TFrm_relatorio
   Caption = 'Frm_relatorio'
   ClientHeight = 971
   ClientWidth = 1189
-  Color = clBtnShadow
+  Color = clOrangered
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12

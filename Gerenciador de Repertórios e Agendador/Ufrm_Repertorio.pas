@@ -22,16 +22,6 @@ type
     StatusBar1: TStatusBar;
     DBNavigator1: TDBNavigator;
     Label1: TLabel;
-    MainMenu1: TMainMenu;
-    heWalkmans1: TMenuItem;
-    DapperHeart1: TMenuItem;
-    BloodySkull1: TMenuItem;
-    WickedSouls1: TMenuItem;
-    WickedSouls2: TMenuItem;
-    Acustico1: TMenuItem;
-    FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
-    DataSource1: TDataSource;
   private
     { Private declarations }
   public
