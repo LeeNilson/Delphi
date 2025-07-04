@@ -16,6 +16,7 @@ type
     DataSource1: TDataSource;
     FDConnection1: TFDConnection;
     FDQuery1: TFDQuery;
+    FDTable_Musicas: TFDTable;
   private
     { Private declarations }
   public
