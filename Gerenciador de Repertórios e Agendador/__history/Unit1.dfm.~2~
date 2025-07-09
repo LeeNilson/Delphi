@@ -1,0 +1,33 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 1042
+  ClientWidth = 933
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object DBMemo1: TDBMemo
+    Left = 48
+    Top = 120
+    Width = 857
+    Height = 297
+    DataSource = DataModule1.DataSourceMusica
+    TabOrder = 0
+  end
+  object DataSource1: TDataSource
+    DataSet = DataModule1.FDTableMusica
+    Left = 384
+    Top = 584
+  end
+  object FDQuery1: TFDQuery
+    MasterSource = DataModule1.DataSourceMusica
+    Connection = DataModule1.FDConnection1
+    Left = 624
+    Top = 576
+  end
+end

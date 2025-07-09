@@ -12,7 +12,7 @@ uses
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Phys.SQLite,
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
-  FireDAC.Phys.SQLiteWrapper.Stat;
+  FireDAC.Phys.SQLiteWrapper.Stat, Vcl.Mask;
 
 type
   TFrm_Repertorio = class(TForm)
@@ -28,10 +28,14 @@ type
     DataSource1: TDataSource;
     FDConnection1: TFDConnection;
     FDQuery1: TFDQuery;
+    FDQuery2: TFDQuery;
+    DBEdit1: TDBEdit;
+    FDQuery1id_musica: TIntegerField;
     procedure Btn_Novo_MusicaClick(Sender: TObject);
     procedure Btn_SalvarClick(Sender: TObject);
     procedure Btn_DeletarClick(Sender: TObject);
     procedure Btn_EditarMusicaClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -47,29 +51,77 @@ implementation
 
 uses UData_Module;
 
+procedure TFrm_Repertorio.Btn_DeletarClick(Sender: TObject);
+begin
+  if not FDQuery2.IsEmpty then
+  begin
+    FDQuery2.Edit;
+    FDQuery2.FieldByName('titulo').AsString := Edt_AdicionaMusica.Text;
+    FDQuery2.Post;
+    FDQuery2.Refresh;
+    ShowMessage('Título da música deletado com sucesso.');
+  end
+  else
+    ShowMessage('Nenhum registro selecionado.');
+end;
+
+
 procedure TFrm_Repertorio.Btn_EditarMusicaClick(Sender: TObject);
 begin
- if   DataModule1.FDQuery1.State in [dsInsert,dsEdit] then
- DataModule1.FDQuery1.Edit;
+  if not FDQuery2.IsEmpty then
+  begin
+    FDQuery2.Edit;
+    FDQuery2.FieldByName('titulo').AsString := Edt_AdicionaMusica.Text;
+    FDQuery2.Post;
+    FDQuery2.Refresh;
+    ShowMessage('Título da música editado com sucesso.');
+    Edt_AdicionaMusica.Clear;
+  end
+  else
+    ShowMessage('Nenhum registro selecionado.');
 end;
+
 
 procedure TFrm_Repertorio.Btn_Novo_MusicaClick(Sender: TObject);
 begin
-  DataModule1.FDQuery1.append
+    FDQuery2.Append;
+    FDQuery2.FieldByName('titulo').AsString := Edt_AdicionaMusica.Text;
+    FDQuery2.Post;
+    FDQuery2.Refresh;
+    ShowMessage('Título da música adicionado com sucesso.');
+    Edt_AdicionaMusica.Clear;
+
 end;
 
-procedure TFrm_Repertorio.Btn_DeletarClick(Sender: TObject);
-begin
-if not DataModule1.FDQuery1.IsEmpty then
-  if MessageDlg('Deseja excluir este registro?', mtConfirmation, [mbYes,mbNo], 0) =mrYes then
-    DataModule1.FDQuery1.Delete;
-end;
+
 
 procedure TFrm_Repertorio.Btn_SalvarClick(Sender: TObject);
 begin
- if   DataModule1.FDQuery1.State in [dsInsert,dsEdit] then
- DataModule1.FDQuery1.Post;
+ Try
+    if FDQuery2.State in [dsEdit,dsInsert] then
+    begin
+      if Edt_AdicionaMusica.Text = '' then
+      begin
+        ShowMessage('Digite o título da música');
+        Edt_AdicionaMusica.SetFocus;
+        Exit;
+      end;
 
+      FDQuery2.FieldByName('titulo').AsString := Trim(Edt_AdicionaMusica.Text);
+      FDQuery2.Post;
+      FDQuery2.Refresh;
+      ShowMessage('Alterações salvas com sucesso.');
+      Edt_AdicionaMusica.Clear;
+    end
+    else
+      ShowMessage('Nenhuma alteração pendente para salvar.');
+  except
+    on E: Exception do
+    begin
+      FDQuery2.Cancel;
+      ShowMessage('Erro ao salvar: ' + E.Message);
+    end;
+  end;
 end;
 
 end.

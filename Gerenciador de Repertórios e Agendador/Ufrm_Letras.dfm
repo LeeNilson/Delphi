@@ -2,7 +2,7 @@ object Frm_Letras: TFrm_Letras
   Left = 0
   Top = 0
   Caption = 'Frm_Letras'
-  ClientHeight = 978
+  ClientHeight = 970
   ClientWidth = 916
   Color = clOrangered
   Font.Charset = ANSI_CHARSET
@@ -10,71 +10,71 @@ object Frm_Letras: TFrm_Letras
   Font.Height = -24
   Font.Name = 'Arial'
   Font.Style = []
-  WindowState = wsMaximized
   TextHeight = 27
-  object Letras: TMemo
-    Left = 48
-    Top = 32
-    Width = 553
-    Height = 633
-    Lines.Strings = (
-      'Letras')
-    TabOrder = 0
-  end
   object Button1: TButton
-    Left = 656
-    Top = 127
+    Left = 616
+    Top = 95
     Width = 129
     Height = 66
     Caption = 'Atualizar'
-    TabOrder = 1
+    TabOrder = 0
   end
   object Button2: TButton
-    Left = 656
-    Top = 220
+    Left = 616
+    Top = 180
     Width = 129
     Height = 57
     Caption = 'Deletar'
-    TabOrder = 2
+    TabOrder = 1
   end
   object Button3: TButton
-    Left = 656
-    Top = 32
+    Left = 616
+    Top = 8
     Width = 129
     Height = 65
     Caption = 'Adicionar'
-    TabOrder = 3
+    TabOrder = 2
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 954
+    Top = 946
     Width = 916
     Height = 24
     Panels = <>
-    ExplicitTop = 929
-    ExplicitWidth = 908
+    ExplicitTop = 938
+    ExplicitWidth = 914
   end
   object DBNavigator1: TDBNavigator
-    Left = 48
-    Top = 680
-    Width = 550
+    Left = 8
+    Top = 656
+    Width = 560
     Height = 65
-    TabOrder = 5
+    TabOrder = 4
   end
   object Button4: TButton
-    Left = 656
-    Top = 770
+    Left = 616
+    Top = 736
     Width = 129
-    Height = 59
+    Height = 51
     Caption = 'Procurar'
+    TabOrder = 5
+  end
+  object Letras: TDBMemo
+    Left = 8
+    Top = 8
+    Width = 561
+    Height = 625
+    DataField = 'letra'
+    DataSource = DataModule1.DataSourceLetras
+    ParentShowHint = False
+    ShowHint = False
     TabOrder = 6
   end
-  object Edit1: TEdit
-    Left = 48
-    Top = 770
-    Width = 553
+  object Edt_Procurar: TEdit
+    Left = 8
+    Top = 736
+    Width = 561
     Height = 35
     TabOrder = 7
-    TextHint = 'Digite para Procurar'
   end
 end

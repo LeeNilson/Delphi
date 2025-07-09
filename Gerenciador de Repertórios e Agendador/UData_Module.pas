@@ -9,14 +9,22 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, FireDAC.Phys.SQLite,
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
-  FireDAC.Phys.SQLiteWrapper.Stat;
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.Phys.MSAcc, FireDAC.Phys.MSAccDef;
 
 type
   TDataModule1 = class(TDataModule)
-    DataSource1: TDataSource;
+    FDTableMusica: TFDTable;
+    FDTableEvento: TFDTable;
+    FDTableLetras: TFDTable;
+    DataSourceMusica: TDataSource;
+    DataSourceEvento: TDataSource;
+    DataSourceLetras: TDataSource;
     FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
-    FDTable_Musicas: TFDTable;
+    FDQueryMusica: TFDQuery;
+    FDQueryEventos: TFDQuery;
+    FDQueryLetras: TFDQuery;
+    FDQueryMusicatitulo: TWideMemoField;
+    FDQueryMusicaid_musica: TIntegerField;
   private
     { Private declarations }
   public

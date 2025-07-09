@@ -7,7 +7,8 @@ uses
   Ufrm_Repertorio in 'Ufrm_Repertorio.pas' {Frm_Repertorio},
   Ufrm_Relatorio in 'Ufrm_Relatorio.pas' {Frm_relatorio},
   Ufrm_Letras in 'Ufrm_Letras.pas' {Frm_Letras},
-  UData_Module in 'UData_Module.pas' {DataModule1: TDataModule};
+  UData_Module in 'UData_Module.pas' {DataModule1: TDataModule},
+  Unit1 in 'Unit1.pas' {Form1};
 
 {$R *.res}
 
@@ -20,5 +21,6 @@ begin
   Application.CreateForm(TFrm_relatorio, Frm_relatorio);
   Application.CreateForm(TFrm_Letras, Frm_Letras);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

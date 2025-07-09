@@ -1,0 +1,39 @@
+object Frm_relatorio: TFrm_relatorio
+  Left = 0
+  Top = 0
+  Caption = 'Frm_relatorio'
+  ClientHeight = 1069
+  ClientWidth = 1559
+  Color = clOrangered
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -28
+  Font.Name = 'Arial'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 32
+  object RLReport1: TRLReport
+    Left = 82
+    Top = 40
+    Width = 1389
+    Height = 1964
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -23
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 66
+      Top = 66
+      Width = 1257
+      Height = 63
+      object RLLabel1: TRLLabel
+        Left = 384
+        Top = 34
+        Width = 355
+        Height = 26
+        Caption = 'Rela'#231#227'o de Eventos e Repert'#243'rios'
+      end
+    end
+  end
+end

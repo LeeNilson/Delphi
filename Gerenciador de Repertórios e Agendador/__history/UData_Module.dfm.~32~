@@ -1,0 +1,81 @@
+object DataModule1: TDataModule1
+  Height = 1080
+  Width = 1440
+  PixelsPerInch = 144
+  object FDTableMusica: TFDTable
+    Active = True
+    IndexFieldNames = 'titulo;'
+    MasterSource = DataSourceEvento
+    Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'musica'
+    Left = 84
+    Top = 48
+  end
+  object FDTableEvento: TFDTable
+    Active = True
+    IndexFieldNames = 'id_evento'
+    Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'evento'
+    Left = 408
+    Top = 41
+  end
+  object FDTableLetras: TFDTable
+    Active = True
+    IndexFieldNames = 'id_musica'
+    Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'musica'
+    Left = 708
+    Top = 48
+  end
+  object DataSourceMusica: TDataSource
+    DataSet = FDTableMusica
+    Left = 91
+    Top = 228
+  end
+  object DataSourceEvento: TDataSource
+    DataSet = FDTableEvento
+    Left = 413
+    Top = 235
+  end
+  object DataSourceLetras: TDataSource
+    DataSet = FDTableLetras
+    Left = 703
+    Top = 240
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      
+        'Database=E:\Programas Facul\C\Delphi\Gerenciador de Repert'#243'rios ' +
+        'e Agendador\bandas_db.sqlite'
+      'ConnectionDef=SQLite_Demo')
+    Connected = True
+    Left = 965
+    Top = 228
+  end
+  object FDQueryMusica: TFDQuery
+    Active = True
+    MasterSource = DataSourceMusica
+    Connection = FDConnection1
+    SQL.Strings = (
+      '  Select * from musica;')
+    Left = 89
+    Top = 401
+  end
+  object FDQueryEventos: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'Select * from evento;')
+    Left = 415
+    Top = 403
+  end
+  object FDQueryLetras: TFDQuery
+    Connection = FDConnection1
+    Left = 703
+    Top = 401
+  end
+end

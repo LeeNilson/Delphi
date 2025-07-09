@@ -1,0 +1,129 @@
+object Frm_Calendario: TFrm_Calendario
+  Left = 0
+  Top = 0
+  Caption = 'Calend'#225'rio'
+  ClientHeight = 1033
+  ClientWidth = 1441
+  Color = clOrangered
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -19
+  Font.Name = 'Arial'
+  Font.Style = []
+  TextHeight = 22
+  object Label1: TLabel
+    Left = 390
+    Top = 8
+    Width = 394
+    Height = 54
+    Caption = 'Calend'#225'rio de Eventos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -40
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 56
+    Top = 473
+    Width = 148
+    Height = 22
+    Caption = 'Adicionar Evento:'
+  end
+  object MonthCalendar1: TMonthCalendar
+    Left = 680
+    Top = 136
+    Width = 441
+    Height = 289
+    BiDiMode = bdRightToLeft
+    Date = 45778.000000000000000000
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -112
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentFont = False
+    TabOrder = 0
+    OnClick = MonthCalendar1Click
+  end
+  object Edt_Calendario: TEdit
+    Left = 49
+    Top = 527
+    Width = 969
+    Height = 30
+    TabOrder = 1
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 1014
+    Width = 1441
+    Height = 19
+    Panels = <>
+  end
+  object Btn_CalendarioSalvar: TButton
+    Left = 49
+    Top = 608
+    Width = 177
+    Height = 89
+    Caption = 'Salvar'
+    TabOrder = 3
+  end
+  object Btn_CalendarioDeletar: TButton
+    Left = 304
+    Top = 608
+    Width = 177
+    Height = 89
+    Caption = 'Deletar'
+    TabOrder = 4
+  end
+  object Btn_CalendarioAtualizar: TButton
+    Left = 577
+    Top = 608
+    Width = 177
+    Height = 89
+    Caption = 'Atualizar'
+    TabOrder = 5
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 784
+    Top = 100
+    Width = 234
+    Height = 30
+    BiDiMode = bdRightToLeft
+    Date = 45846.000000000000000000
+    Time = 0.472690138885809600
+    ParentBiDiMode = False
+    TabOrder = 6
+    OnClick = DateTimePicker1Click
+  end
+  object Edit2: TEdit
+    Left = 784
+    Top = 152
+    Width = 234
+    Height = 30
+    TabOrder = 7
+  end
+  object DBGrid1: TDBGrid
+    Left = 49
+    Top = 100
+    Width = 705
+    Height = 265
+    DataSource = DataModule1.DataSourceEvento
+    TabOrder = 8
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -19
+    TitleFont.Name = 'Arial'
+    TitleFont.Style = []
+  end
+  object Btn_CalendarioNovo: TButton
+    Left = 841
+    Top = 608
+    Width = 177
+    Height = 89
+    Caption = 'Novo'
+    TabOrder = 9
+  end
+end

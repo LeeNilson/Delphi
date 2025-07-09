@@ -15,12 +15,13 @@ type
   TFrm_Principal = class(TForm)
     StatusBar1: TStatusBar;
     MonthCalendar1: TMonthCalendar;
-    Lbl_Evento: TLabel;
+    Label1: TLabel;
     MainMenu1: TMainMenu;
     Eventos1: TMenuItem;
     Eventos2: TMenuItem;
     Letras1: TMenuItem;
     Letras2: TMenuItem;
+    Lbl_PrincipalEvento: TLabel;
     procedure Relatrios1Click(Sender: TObject);
     procedure Letras1Click(Sender: TObject);
     procedure Eventos1Click(Sender: TObject);
@@ -41,7 +42,7 @@ implementation
 {$R *.dfm}
 
 uses Ufrm_Calendario, Ufrm_Repertorio, Ufrm_Relatorio, Ufrm_Letras,
-  UData_Module;
+  UData_Module, Unit1;
 
 
 procedure TFrm_Principal.Eventos1Click(Sender: TObject);
@@ -51,7 +52,7 @@ end;
 
 procedure TFrm_Principal.Eventos2Click(Sender: TObject);
 begin
-  Frm_Repertorio.showmodal;
+Frm_Repertorio.Show;
 end;
 
 procedure TFrm_Principal.Letras1Click(Sender: TObject);

@@ -1,0 +1,79 @@
+object Frm_Letras: TFrm_Letras
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Letras'
+  ClientHeight = 970
+  ClientWidth = 916
+  Color = clOrangered
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -24
+  Font.Name = 'Arial'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 27
+  object Button1: TButton
+    Left = 688
+    Top = 79
+    Width = 129
+    Height = 66
+    Caption = 'Atualizar'
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 688
+    Top = 164
+    Width = 129
+    Height = 57
+    Caption = 'Deletar'
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 688
+    Top = 0
+    Width = 129
+    Height = 65
+    Caption = 'Adicionar'
+    TabOrder = 2
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 946
+    Width = 916
+    Height = 24
+    Panels = <>
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 72
+    Top = 648
+    Width = 560
+    Height = 65
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 688
+    Top = 784
+    Width = 129
+    Height = 51
+    Caption = 'Procurar'
+    TabOrder = 5
+  end
+  object Letras: TDBMemo
+    Left = 72
+    Top = 8
+    Width = 561
+    Height = 625
+    DataField = 'letra'
+    DataSource = DataModule1.DataSourceLetras
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 6
+  end
+  object Edt_Procurar: TEdit
+    Left = 83
+    Top = 784
+    Width = 550
+    Height = 51
+    TabOrder = 7
+  end
+end

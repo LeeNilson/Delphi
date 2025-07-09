@@ -9,14 +9,14 @@ uses
 
 type
   TFrm_Letras = class(TForm)
-    Letras: TMemo;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     StatusBar1: TStatusBar;
     DBNavigator1: TDBNavigator;
     Button4: TButton;
-    Edit1: TEdit;
+    Letras: TDBMemo;
+    Edt_Procurar: TEdit;
   private
     { Private declarations }
   public
@@ -29,5 +29,7 @@ var
 implementation
 
 {$R *.dfm}
+
+Uses UData_Module;
 
 end.
