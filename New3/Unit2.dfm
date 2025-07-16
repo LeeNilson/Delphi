@@ -24,6 +24,7 @@ object Form2: TForm2
     Top = 95
     Width = 303
     Height = 393
+    DataSource = DataModule4.DataSource1
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
@@ -78,6 +79,7 @@ object Form2: TForm2
     Top = 520
     Width = 550
     Height = 25
+    DataSource = DataModule4.DataSource1
     TabOrder = 6
   end
   object btnNovo: TButton
