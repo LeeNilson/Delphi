@@ -10,7 +10,7 @@ uses
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.UI.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
-  FireDAC.Phys.SQLiteWrapper.Stat;
+  FireDAC.Phys.SQLiteWrapper.Stat, Vcl.StdCtrls;
 
 type
   TForm3 = class(TForm)
@@ -34,6 +34,8 @@ type
     FDQuery2: TFDQuery;
     DataSource1: TDataSource;
     FDConnection2: TFDConnection;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,5 +50,10 @@ implementation
 {$R *.dfm}
 
 uses Unit1, Unit2, Unit4;
+
+procedure TForm3.Button1Click(Sender: TObject);
+begin
+ Form3.RLReport1.Preview;
+end;
 
 end.

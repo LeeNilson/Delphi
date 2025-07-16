@@ -154,6 +154,15 @@ object Form3: TForm3
       Borders.DrawRight = False
       Borders.DrawBottom = True
     end
+    object Button1: TButton
+      Left = 302
+      Top = 334
+      Width = 177
+      Height = 89
+      Caption = 'Gerar Relat'#243'rio'
+      TabOrder = 4
+      OnClick = Button1Click
+    end
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection2

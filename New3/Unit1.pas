@@ -65,9 +65,13 @@ begin
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
+var
+evento :string;
+
 begin
     if SaveDialog1.Execute = true then
     memo1.lines.SaveToFile(SaveDialog1.Filename)
+
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
@@ -92,7 +96,7 @@ end;
 
 procedure TForm1.Relatrios1Click(Sender: TObject);
 begin
-Form3.show;
+Form3.RLReport1.Preview;
 end;
 
 procedure EscreverArquivo;
