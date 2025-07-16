@@ -41,7 +41,7 @@ object Form1: TForm1
   end
   object MonthCalendar1: TMonthCalendar
     Left = 40
-    Top = 49
+    Top = 50
     Width = 225
     Height = 200
     Date = 45778.000000000000000000

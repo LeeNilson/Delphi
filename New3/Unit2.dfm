@@ -14,15 +14,15 @@ object Form2: TForm2
   Menu = MainMenu1
   TextHeight = 18
   object Label1: TLabel
-    Left = 244
-    Top = 55
+    Left = 228
+    Top = 8
     Width = 74
     Height = 18
     Caption = 'Repert'#243'rio'
   end
   object DBGrid1: TDBGrid
     Left = 8
-    Top = 95
+    Top = 32
     Width = 449
     Height = 393
     DataSource = DataModule4.DataSource1
@@ -35,7 +35,7 @@ object Form2: TForm2
   end
   object btnAdicionar: TButton
     Left = 482
-    Top = 223
+    Top = 143
     Width = 161
     Height = 33
     Caption = 'Adicionar'
@@ -43,7 +43,7 @@ object Form2: TForm2
   end
   object btnDelete: TButton
     Left = 482
-    Top = 176
+    Top = 88
     Width = 161
     Height = 33
     Caption = 'Deletar'
@@ -51,7 +51,7 @@ object Form2: TForm2
   end
   object btnAbrir: TButton
     Left = 482
-    Top = 271
+    Top = 207
     Width = 161
     Height = 33
     Caption = 'Abrir'
@@ -66,7 +66,7 @@ object Form2: TForm2
   end
   object DBNavigator1: TDBNavigator
     Left = 8
-    Top = 504
+    Top = 431
     Width = 550
     Height = 65
     DataSource = DataModule4.DataSource1
@@ -74,7 +74,7 @@ object Form2: TForm2
   end
   object btnNovo: TButton
     Left = 482
-    Top = 319
+    Top = 263
     Width = 161
     Height = 33
     Caption = 'Novo'
@@ -82,7 +82,7 @@ object Form2: TForm2
     OnClick = btnNovoClick
   end
   object MainMenu1: TMainMenu
-    Left = 552
+    Left = 608
     Top = 8
     object Letras1: TMenuItem
       Caption = ' LetrasEventos'
@@ -105,7 +105,7 @@ object Form2: TForm2
     Connection = DataModule4.FDConnection1
     SQL.Strings = (
       'SELECT Name, TrackId FROM tracks;')
-    Left = 448
+    Left = 504
     Top = 8
   end
 end
