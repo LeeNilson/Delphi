@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>2025/06/25 21:07:15.000.486,=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/25 21:15:21.000.653,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\UData_Module.pas=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/06/25 21:15:21.000.653,C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\UData_Module.dfm=C:\Users\lee_n\Documents\Delphi\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
-    <Transaction>2025/07/09 14:34:16.834,=E:\Programas Facul\C\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-  </Transactions>
-</BorlandProject>
