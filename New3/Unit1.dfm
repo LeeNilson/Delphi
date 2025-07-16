@@ -13,8 +13,8 @@ object Form1: TForm1
   Menu = MainMenu1
   TextHeight = 15
   object Label1: TLabel
-    Left = 56
-    Top = 63
+    Left = 111
+    Top = 23
     Width = 154
     Height = 21
     Caption = 'Calend'#225'rio de Eventos'
@@ -26,17 +26,24 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 392
-    Top = 193
+    Left = 400
+    Top = 59
     Width = 93
     Height = 15
     Caption = 'Adicionar Evento:'
   end
+  object Label3: TLabel
+    Left = 40
+    Top = 304
+    Width = 99
+    Height = 15
+    Caption = 'Escreva suas letras:'
+  end
   object MonthCalendar1: TMonthCalendar
-    Left = 24
-    Top = 90
+    Left = 40
+    Top = 49
     Width = 225
-    Height = 189
+    Height = 200
     Date = 45778.000000000000000000
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -45,13 +52,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-  end
-  object Edit1: TEdit
-    Left = 392
-    Top = 224
-    Width = 265
-    Height = 27
-    TabOrder = 1
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -62,30 +62,6 @@ object Form1: TForm1
     ExplicitLeft = -581
     ExplicitTop = 602
     ExplicitWidth = 1205
-  end
-  object Btn_Salvar: TButton
-    Left = 295
-    Top = 104
-    Width = 81
-    Height = 45
-    Caption = 'Salvar'
-    TabOrder = 3
-  end
-  object Button1: TButton
-    Left = 295
-    Top = 206
-    Width = 81
-    Height = 45
-    Caption = 'Deletar'
-    TabOrder = 4
-  end
-  object Button2: TButton
-    Left = 295
-    Top = 155
-    Width = 81
-    Height = 45
-    Caption = 'Atualizar'
-    TabOrder = 5
   end
   object StatusBar2: TStatusBar
     Left = 0
@@ -102,7 +78,7 @@ object Form1: TForm1
     Top = 621
     Width = 550
     Height = 65
-    TabOrder = 7
+    TabOrder = 3
   end
   object Button6: TButton
     Left = 568
@@ -110,62 +86,120 @@ object Form1: TForm1
     Width = 129
     Height = 59
     Caption = 'Procurar'
-    TabOrder = 8
+    TabOrder = 4
   end
   object Edit2: TEdit
     Left = 40
     Top = 651
     Width = 553
     Height = 35
-    TabOrder = 9
+    TabOrder = 5
     TextHint = 'Digite para Procurar'
   end
   object Button3: TButton
     Left = 519
-    Top = 321
+    Top = 400
     Width = 81
-    Height = 45
+    Height = 29
     Caption = 'Salvar'
-    TabOrder = 10
+    TabOrder = 6
     OnClick = Button3Click
   end
   object Button4: TButton
     Left = 519
-    Top = 423
+    Top = 504
     Width = 81
-    Height = 45
+    Height = 27
     Caption = 'Deletar'
-    TabOrder = 11
+    TabOrder = 7
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 519
-    Top = 372
+    Top = 448
     Width = 81
-    Height = 45
+    Height = 32
     Caption = 'Atualizar'
-    TabOrder = 12
+    TabOrder = 8
   end
   object Memo1: TMemo
-    Left = 24
-    Top = 285
+    Left = 28
+    Top = 348
     Width = 449
     Height = 183
     Lines.Strings = (
       'Memo1')
-    TabOrder = 13
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 9
   end
   object btnAbrir: TButton
     Left = 519
-    Top = 270
+    Top = 348
     Width = 81
-    Height = 45
+    Height = 30
     Caption = 'Abrir'
-    TabOrder = 14
+    TabOrder = 10
     OnClick = btnAbrirClick
   end
+  object DateTimePicker1: TDateTimePicker
+    Left = 71
+    Top = 236
+    Width = 155
+    Height = 22
+    BiDiMode = bdRightToLeft
+    Date = 45846.000000000000000000
+    Time = 0.472690138885809600
+    ParentBiDiMode = False
+    TabOrder = 11
+  end
+  object Memo2: TMemo
+    Left = 382
+    Top = 80
+    Width = 233
+    Height = 147
+    Lines.Strings = (
+      'Memo2')
+    TabOrder = 12
+  end
+  object Button1: TButton
+    Left = 295
+    Top = 80
+    Width = 81
+    Height = 24
+    Caption = 'Abrir'
+    TabOrder = 13
+    OnClick = btnAbrirClick
+  end
+  object Button2: TButton
+    Left = 295
+    Top = 118
+    Width = 81
+    Height = 27
+    Caption = 'Salvar'
+    TabOrder = 14
+    OnClick = Button3Click
+  end
+  object Button7: TButton
+    Left = 295
+    Top = 159
+    Width = 81
+    Height = 27
+    Caption = 'Atualizar'
+    TabOrder = 15
+  end
+  object Button8: TButton
+    Left = 295
+    Top = 200
+    Width = 81
+    Height = 27
+    Caption = 'Deletar'
+    TabOrder = 16
+    OnClick = Button4Click
+  end
   object MainMenu1: TMainMenu
-    Left = 528
-    Top = 144
+    Left = 288
+    Top = 272
     object Letras1: TMenuItem
       Caption = ' LetrasEventos'
       OnClick = Letras1Click
@@ -182,13 +216,13 @@ object Form1: TForm1
   object SaveDialog1: TSaveDialog
     DefaultExt = 'txt'
     Filter = 'Arquivos textos|*.txt'
-    Left = 488
-    Top = 8
+    Left = 360
+    Top = 272
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = 'txt'
     Filter = 'Arquivos de textos|*.txt'
-    Left = 600
-    Top = 16
+    Left = 456
+    Top = 256
   end
 end

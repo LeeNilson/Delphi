@@ -12,11 +12,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     MonthCalendar1: TMonthCalendar;
-    Edit1: TEdit;
     StatusBar1: TStatusBar;
-    Btn_Salvar: TButton;
-    Button1: TButton;
-    Button2: TButton;
     StatusBar2: TStatusBar;
     DBNavigator1: TDBNavigator;
     Button6: TButton;
@@ -32,11 +28,19 @@ type
     SaveDialog1: TSaveDialog;
     OpenDialog1: TOpenDialog;
     btnAbrir: TButton;
+    DateTimePicker1: TDateTimePicker;
+    Label3: TLabel;
+    Memo2: TMemo;
+    Button1: TButton;
+    Button2: TButton;
+    Button7: TButton;
+    Button8: TButton;
     procedure Playlists1Click(Sender: TObject);
     procedure Relatrios1Click(Sender: TObject);
     procedure Letras1Click(Sender: TObject);
     procedure btnAbrirClick(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,6 +68,16 @@ procedure TForm1.Button3Click(Sender: TObject);
 begin
     if SaveDialog1.Execute = true then
     memo1.lines.SaveToFile(SaveDialog1.Filename)
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  if SaveDialog1.Execute then
+  begin
+    if FileExists(SaveDialog1.FileName) then
+      DeleteFile(SaveDialog1.FileName);
+      memo1.Clear;
+  end;
 end;
 
 procedure TForm1.Letras1Click(Sender: TObject);

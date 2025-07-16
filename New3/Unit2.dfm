@@ -1,6 +1,7 @@
 object Form2: TForm2
   Left = 0
   Top = 0
+  ActiveControl = DBGrid1
   Caption = 'Form2'
   ClientHeight = 653
   ClientWidth = 659
@@ -14,15 +15,15 @@ object Form2: TForm2
   TextHeight = 18
   object Label1: TLabel
     Left = 244
-    Top = 71
+    Top = 55
     Width = 74
     Height = 18
     Caption = 'Repert'#243'rio'
   end
   object DBGrid1: TDBGrid
-    Left = 39
+    Left = 8
     Top = 95
-    Width = 303
+    Width = 449
     Height = 393
     DataSource = DataModule4.DataSource1
     TabOrder = 0
@@ -33,36 +34,28 @@ object Form2: TForm2
     TitleFont.Style = []
   end
   object btnAdicionar: TButton
-    Left = 376
-    Top = 327
+    Left = 482
+    Top = 223
     Width = 161
     Height = 33
     Caption = 'Adicionar'
     TabOrder = 1
   end
-  object edtAdicionaMusica: TEdit
-    Left = 39
-    Top = 568
-    Width = 553
-    Height = 26
-    TabOrder = 2
-    TextHint = 'Digite para editar...'
-  end
   object btnDelete: TButton
-    Left = 376
-    Top = 264
+    Left = 482
+    Top = 176
     Width = 161
     Height = 33
     Caption = 'Deletar'
-    TabOrder = 3
+    TabOrder = 2
   end
   object btnAbrir: TButton
-    Left = 376
-    Top = 391
+    Left = 482
+    Top = 271
     Width = 161
     Height = 33
     Caption = 'Abrir'
-    TabOrder = 4
+    TabOrder = 3
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -70,29 +63,27 @@ object Form2: TForm2
     Width = 659
     Height = 19
     Panels = <>
-    ExplicitLeft = -326
-    ExplicitTop = 635
-    ExplicitWidth = 985
   end
   object DBNavigator1: TDBNavigator
-    Left = 39
-    Top = 520
+    Left = 8
+    Top = 504
     Width = 550
-    Height = 25
+    Height = 65
     DataSource = DataModule4.DataSource1
-    TabOrder = 6
+    TabOrder = 5
   end
   object btnNovo: TButton
-    Left = 376
-    Top = 455
+    Left = 482
+    Top = 319
     Width = 161
     Height = 33
     Caption = 'Novo'
-    TabOrder = 7
+    TabOrder = 6
+    OnClick = btnNovoClick
   end
   object MainMenu1: TMainMenu
-    Left = 528
-    Top = 144
+    Left = 552
+    Top = 8
     object Letras1: TMenuItem
       Caption = ' LetrasEventos'
       OnClick = Letras1Click
@@ -105,5 +96,16 @@ object Form2: TForm2
       Caption = 'Relat'#243'rios'
       OnClick = Relatrios1Click
     end
+  end
+  object FDQuery2: TFDQuery
+    MasterSource = DataModule4.DataSource1
+    MasterFields = 
+      'AlbumId;Bytes;Composer;GenreId;MediaTypeId;Milliseconds;Name;Tra' +
+      'ckId;UnitPrice'
+    Connection = DataModule4.FDConnection1
+    SQL.Strings = (
+      'SELECT Name, TrackId FROM tracks;')
+    Left = 448
+    Top = 8
   end
 end
