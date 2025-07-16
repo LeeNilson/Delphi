@@ -1,0 +1,194 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 605
+  ClientWidth = 659
+  Color = clDarkgoldenrod
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MainMenu1
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 56
+    Top = 63
+    Width = 154
+    Height = 21
+    Caption = 'Calend'#225'rio de Eventos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 392
+    Top = 193
+    Width = 93
+    Height = 15
+    Caption = 'Adicionar Evento:'
+  end
+  object MonthCalendar1: TMonthCalendar
+    Left = 24
+    Top = 90
+    Width = 225
+    Height = 189
+    Date = 45778.000000000000000000
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -42
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 392
+    Top = 224
+    Width = 265
+    Height = 27
+    TabOrder = 1
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 586
+    Width = 659
+    Height = 19
+    Panels = <>
+    ExplicitLeft = -581
+    ExplicitTop = 602
+    ExplicitWidth = 1205
+  end
+  object Btn_Salvar: TButton
+    Left = 295
+    Top = 104
+    Width = 81
+    Height = 45
+    Caption = 'Salvar'
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Left = 295
+    Top = 206
+    Width = 81
+    Height = 45
+    Caption = 'Deletar'
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 295
+    Top = 155
+    Width = 81
+    Height = 45
+    Caption = 'Atualizar'
+    TabOrder = 5
+  end
+  object StatusBar2: TStatusBar
+    Left = 0
+    Top = 562
+    Width = 659
+    Height = 24
+    Panels = <>
+    ExplicitLeft = 40
+    ExplicitTop = 566
+    ExplicitWidth = 705
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 40
+    Top = 621
+    Width = 550
+    Height = 65
+    TabOrder = 7
+  end
+  object Button6: TButton
+    Left = 568
+    Top = 627
+    Width = 129
+    Height = 59
+    Caption = 'Procurar'
+    TabOrder = 8
+  end
+  object Edit2: TEdit
+    Left = 40
+    Top = 651
+    Width = 553
+    Height = 35
+    TabOrder = 9
+    TextHint = 'Digite para Procurar'
+  end
+  object Button3: TButton
+    Left = 519
+    Top = 321
+    Width = 81
+    Height = 45
+    Caption = 'Salvar'
+    TabOrder = 10
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 519
+    Top = 423
+    Width = 81
+    Height = 45
+    Caption = 'Deletar'
+    TabOrder = 11
+  end
+  object Button5: TButton
+    Left = 519
+    Top = 372
+    Width = 81
+    Height = 45
+    Caption = 'Atualizar'
+    TabOrder = 12
+  end
+  object Memo1: TMemo
+    Left = 24
+    Top = 285
+    Width = 449
+    Height = 183
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 13
+  end
+  object btnAbrir: TButton
+    Left = 519
+    Top = 270
+    Width = 81
+    Height = 45
+    Caption = 'Abrir'
+    TabOrder = 14
+    OnClick = btnAbrirClick
+  end
+  object MainMenu1: TMainMenu
+    Left = 528
+    Top = 144
+    object Letras1: TMenuItem
+      Caption = ' LetrasEventos'
+      OnClick = Letras1Click
+    end
+    object Playlists1: TMenuItem
+      Caption = 'Playlists'
+      OnClick = Playlists1Click
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Relat'#243'rios'
+      OnClick = Relatrios1Click
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'txt'
+    Filter = 'Arquivos textos|*.txt'
+    Left = 488
+    Top = 8
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = 'txt'
+    Filter = 'Arquivos de textos|*.txt'
+    Left = 600
+    Top = 16
+  end
+end

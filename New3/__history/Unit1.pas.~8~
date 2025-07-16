@@ -1,0 +1,131 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.ExtCtrls, Vcl.Buttons, Vcl.DBCtrls, Vcl.Menus;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    MonthCalendar1: TMonthCalendar;
+    Edit1: TEdit;
+    StatusBar1: TStatusBar;
+    Btn_Salvar: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    StatusBar2: TStatusBar;
+    DBNavigator1: TDBNavigator;
+    Button6: TButton;
+    Edit2: TEdit;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    MainMenu1: TMainMenu;
+    Letras1: TMenuItem;
+    Playlists1: TMenuItem;
+    Relatrios1: TMenuItem;
+    Memo1: TMemo;
+    SaveDialog1: TSaveDialog;
+    OpenDialog1: TOpenDialog;
+    btnAbrir: TButton;
+    procedure Playlists1Click(Sender: TObject);
+    procedure Relatrios1Click(Sender: TObject);
+    procedure Letras1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2, Unit3, Unit4;
+
+procedure TForm1.Letras1Click(Sender: TObject);
+begin
+Form1.show;
+end;
+
+procedure TForm1.Playlists1Click(Sender: TObject);
+begin
+Form2.show;
+end;
+
+procedure TForm1.Relatrios1Click(Sender: TObject);
+begin
+Form3.show;
+end;
+
+procedure EscreverArquivo;
+var
+  arq: TextFile;
+  begin
+    AssignFile(arq,'C:meuarquivo.txt');
+    Rewrite(arq);
+    Writeln(arq,'Olá, mundo!!');
+    Writeln(arq,'mais uma linha');
+    Closefile(arq);
+  end;
+
+procedure LerArquivo;
+var
+  arq: TextFile;
+  linha: string;
+  begin
+    AssignFile(arq, 'C:\meuarquivo.txt');
+    Reset(arq);
+    while not Eof(arq) do
+    begin
+      Readln(arq,linha);
+      Showmessage(linha);
+    end;
+    CloseFile(arq);
+  end;
+
+  procedure SalvarComStringList;
+
+var
+  lista:TstringList;
+  begin
+    lista :=TstringList.Create;
+    try
+      lista.Add('Primeira linha');
+      lista.Add('Segunda linha');
+      lista.SaveToFile('C:\texto.txt');
+    except
+      on Exception do
+      begin
+        Showmessage('Ocorreu algum erro');
+      end;
+    end;
+  end;
+
+  procedure LerComStringList;
+  var
+    lista:TstringList;
+    i:Integer;
+    begin
+      lista:= TStringList.Create;
+      try
+        lista.LoadFromFile('C:\texto.txt');
+        for i := 0 to lista.Count -1 do
+          Showmessage(lista[i]);
+      except
+        on Exception do
+        begin
+          Showmessage('Ocorreu algum Erro');
+        end;
+      end;
+    end;
+
+
+end.

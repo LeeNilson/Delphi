@@ -1,0 +1,104 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 653
+  ClientWidth = 659
+  Color = clDarkgoldenrod
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Arial'
+  Font.Style = []
+  Menu = MainMenu1
+  TextHeight = 18
+  object Label1: TLabel
+    Left = 244
+    Top = 71
+    Width = 74
+    Height = 18
+    Caption = 'Repert'#243'rio'
+  end
+  object DBGrid1: TDBGrid
+    Left = 39
+    Top = 95
+    Width = 303
+    Height = 393
+    TabOrder = 0
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -16
+    TitleFont.Name = 'Arial'
+    TitleFont.Style = []
+  end
+  object Btn_AdicionarMusica: TButton
+    Left = 376
+    Top = 327
+    Width = 161
+    Height = 33
+    Caption = 'Adicionar'
+    TabOrder = 1
+  end
+  object Edt_AdicionaMusica: TEdit
+    Left = 39
+    Top = 568
+    Width = 553
+    Height = 26
+    TabOrder = 2
+    TextHint = 'Digite para editar...'
+  end
+  object Button1: TButton
+    Left = 376
+    Top = 264
+    Width = 161
+    Height = 33
+    Caption = 'Deletar'
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 376
+    Top = 391
+    Width = 161
+    Height = 33
+    Caption = 'Atualizar'
+    TabOrder = 4
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 634
+    Width = 659
+    Height = 19
+    Panels = <>
+    ExplicitLeft = -326
+    ExplicitTop = 635
+    ExplicitWidth = 985
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 39
+    Top = 520
+    Width = 550
+    Height = 25
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 376
+    Top = 455
+    Width = 161
+    Height = 33
+    Caption = 'Novo'
+    TabOrder = 7
+  end
+  object MainMenu1: TMainMenu
+    Left = 528
+    Top = 144
+    object Letras1: TMenuItem
+      Caption = ' LetrasEventos'
+    end
+    object Playlists1: TMenuItem
+      Caption = 'Playlists'
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Relat'#243'rios'
+    end
+  end
+end

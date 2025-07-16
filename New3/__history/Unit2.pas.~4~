@@ -1,0 +1,58 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.DBCtrls, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Menus;
+
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    DBGrid1: TDBGrid;
+    btnAdicionar: TButton;
+    edtAdicionaMusica: TEdit;
+    btnDelete: TButton;
+    btnAbrir: TButton;
+    StatusBar1: TStatusBar;
+    DBNavigator1: TDBNavigator;
+    btnNovo: TButton;
+    MainMenu1: TMainMenu;
+    Letras1: TMenuItem;
+    Playlists1: TMenuItem;
+    Relatrios1: TMenuItem;
+    procedure Letras1Click(Sender: TObject);
+    procedure Playlists1Click(Sender: TObject);
+    procedure Relatrios1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit3;
+
+procedure TForm2.Letras1Click(Sender: TObject);
+begin
+Form1.Show;
+end;
+
+procedure TForm2.Playlists1Click(Sender: TObject);
+begin
+Form2.Show;
+end;
+
+procedure TForm2.Relatrios1Click(Sender: TObject);
+begin
+Form3.Show;
+end;
+
+end.
