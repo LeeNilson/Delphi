@@ -1,0 +1,38 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Calcular IMC'
+  ClientHeight = 932
+  ClientWidth = 1131
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -28
+  Font.Name = 'Arial'
+  Font.Style = []
+  TextHeight = 32
+  object btnCalcular: TButton
+    Left = 416
+    Top = 328
+    Width = 195
+    Height = 73
+    Caption = 'Calcular'
+    TabOrder = 0
+  end
+  object edtAltura: TEdit
+    Left = 192
+    Top = 208
+    Width = 241
+    Height = 40
+    TabOrder = 1
+    TextHint = 'Altura'
+  end
+  object edtPeso: TEdit
+    Left = 528
+    Top = 208
+    Width = 289
+    Height = 40
+    TabOrder = 2
+    TextHint = 'Peso'
+  end
+end
