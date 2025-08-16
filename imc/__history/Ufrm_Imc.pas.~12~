@@ -1,0 +1,68 @@
+unit Ufrm_Imc;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnCalcular: TButton;
+    edtAltura: TEdit;
+    edtPeso: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    lblResultadoImc: TLabel;
+    lblClassificacao: TLabel;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+    peso:Double;
+    altura : Double;
+    IMC:Double;
+    resultadoIMC:Double;
+
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+var
+  peso: Double;
+  altura: Double;
+  IMC: Double;
+begin
+
+  altura := StrToFloat(edtAltura.Text);
+  peso   := StrToFloat(edtPeso.Text);
+
+  IMC := peso / (altura * altura);
+
+  lblResultadoImc.Caption := FormatFloat('0,00', IMC);
+
+  if IMC < 18.5 then
+    lblClassificacao.Caption := 'Magreza'
+  else if IMC < 24.9 then
+    lblClassificacao.Caption := 'Peso normal'
+  else if IMC < 29.9 then
+    lblClassificacao.Caption := 'Sobrepeso'
+  else if IMC < 34.9 then
+    lblClassificacao.Caption := 'Obesidade '
+  else
+    lblClassificacao.Caption := 'Obesidade Grave'
+
+
+end;
+end.

@@ -1,0 +1,106 @@
+unit Ufrm_Imc;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnCalcular: TButton;
+    edtAltura: TEdit;
+    edtPeso: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    lblResultadoImc: TLabel;
+    lblClassificacao: TLabel;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+var
+  peso: Double;
+  altura: Double;
+  IMC: Double;
+  pesoStr, alturaStr: string;
+begin
+  try
+    // Prepara as strings para conversão (substitui vírgula por ponto se necessário)
+    pesoStr := StringReplace(edtPeso.Text, ',', '.', [rfReplaceAll]);
+    alturaStr := StringReplace(edtAltura.Text, ',', '.', [rfReplaceAll]);
+
+    // Verifica se os campos estão preenchidos
+    if (Trim(pesoStr) = '') or (Trim(alturaStr) = '') then
+    begin
+      ShowMessage('Por favor, preencha todos os campos!');
+      Exit;
+    end;
+
+    // Converte os valores
+    peso := StrToFloat(pesoStr);
+    altura := StrToFloat(alturaStr);
+
+    // Validações básicas
+    if peso <= 0 then
+    begin
+      ShowMessage('O peso deve ser maior que zero!');
+      edtPeso.SetFocus;
+      Exit;
+    end;
+
+    if (altura <= 0) or (altura > 3) then
+    begin
+      ShowMessage('Por favor, informe uma altura válida em metros (ex: 1.75)!');
+      edtAltura.SetFocus;
+      Exit;
+    end;
+
+    // Calcula o IMC
+    IMC := peso / (altura * altura);
+
+    // Exibe o resultado
+    lblResultadoImc.Caption := 'IMC: ' + FormatFloat('0.00', IMC);
+
+    // Determina a classificação
+    if IMC < 18.5 then
+      lblClassificacao.Caption := 'Classificação: Abaixo do peso'
+    else if IMC < 25.0 then
+      lblClassificacao.Caption := 'Classificação: Peso normal'
+    else if IMC < 30.0 then
+      lblClassificacao.Caption := 'Classificação: Sobrepeso'
+    else if IMC < 35.0 then
+      lblClassificacao.Caption := 'Classificação: Obesidade grau I'
+    else if IMC < 40.0 then
+      lblClassificacao.Caption := 'Classificação: Obesidade grau II'
+    else
+      lblClassificacao.Caption := 'Classificação: Obesidade grau III (mórbida)';
+
+  except
+    on E: EConvertError do
+    begin
+      ShowMessage('Por favor, digite valores numéricos válidos!' + #13#10 +
+                  'Use ponto ou vírgula como separador decimal.' + #13#10 +
+                  'Exemplo: Peso: 70.5 | Altura: 1.75');
+    end;
+    on E: Exception do
+    begin
+      ShowMessage('Erro inesperado: ' + E.Message);
+    end;
+  end;
+end;
+
+end.

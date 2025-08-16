@@ -17,12 +17,17 @@ type
     Label4: TLabel;
     lblResultadoImc: TLabel;
     lblClassificacao: TLabel;
+    procedure btnCalcularClick(Sender: TObject);
   private
     { Private declarations }
 
   public
     { Public declarations }
-    IMC :Integer;
+    peso:Double;
+    altura : Double;
+    IMC:Double;
+    resultadoIMC:Double;
+
   end;
 
 var
@@ -32,4 +37,30 @@ implementation
 
 {$R *.dfm}
 
+
+procedure TForm1.btnCalcularClick(Sender: TObject);
+var
+  peso: Double;
+  altura: Double;
+  IMC: Double;
+begin
+
+  altura := StrToFloat(edtAltura.Text);
+  peso   := StrToFloat(edtPeso.Text);
+
+  IMC := peso / (altura * altura);
+
+  lblResultadoImc.Caption := FormatFloat('0,00', IMC);
+
+  if IMC < 18.5 then
+    lblClassificacao.Caption := 'Magreza'
+  else if IMC < 24.9 then
+    lblClassificacao.Caption := 'Peso normal'
+  else if IMC < 29.9 then
+    lblClassificacao.Caption := 'Sobrepeso'
+  else if IMC < 34.9 then
+    lblClassificacao.Caption := 'Obesidade '
+  else
+    lblClassificacao.Caption := 'Obesidade Grave'
+end;
 end.
