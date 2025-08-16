@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2025/08/15 21:26:05.129,=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 21:26:53.801,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.pas=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 21:26:53.801,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.dfm=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm</Transaction>
-    <Transaction>2025/08/15 21:27:50.336,E:\Programas Facul\Delphi\Maior,Meio,Menor\Prj_Maior.dproj=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Project2.dproj</Transaction>
-    <Transaction>2025/08/15 21:28:05.080,E:\Programas Facul\Delphi\Maior,Meio,Menor\Ufrm_MaiorMeioMenor.dfm=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.dfm</Transaction>
-    <Transaction>2025/08/15 21:28:05.080,E:\Programas Facul\Delphi\Maior,Meio,Menor\Ufrm_MaiorMeioMenor.pas=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.pas</Transaction>
+	<Transactions>
+    <Transaction>2025/08/15 21:26:05.000.129,=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 21:26:53.000.801,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Unit1.pas=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.pas</Transaction>
+    <Transaction>2025/08/15 21:26:53.000.801,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Unit1.dfm=E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.dfm</Transaction>
+    <Transaction>2025/08/15 21:27:50.000.336,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Project2.dproj=E:\Programas Facul\Delphi\Maior,Meio,Menor\Prj_Maior.dproj</Transaction>
+    <Transaction>2025/08/15 21:28:05.000.080,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.dfm=E:\Programas Facul\Delphi\Maior,Meio,Menor\Ufrm_MaiorMeioMenor.dfm</Transaction>
+    <Transaction>2025/08/15 21:28:05.000.080,E:\Programas Facul\Delphi\Gerenciador de Repertórios e Agendador\Ufrm_MaiorMeioMenor.pas=E:\Programas Facul\Delphi\Maior,Meio,Menor\Ufrm_MaiorMeioMenor.pas</Transaction>
   </Transactions>
 </BorlandProject>

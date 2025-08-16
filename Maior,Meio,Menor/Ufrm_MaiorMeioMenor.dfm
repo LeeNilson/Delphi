@@ -36,21 +36,21 @@ object Form1: TForm1
     Left = 96
     Top = 176
     Width = 121
-    Height = 39
+    Height = 23
     TabOrder = 0
   end
   object edtMeio: TEdit
     Left = 320
     Top = 176
     Width = 121
-    Height = 39
+    Height = 23
     TabOrder = 1
   end
   object edtMenor: TEdit
     Left = 520
     Top = 176
     Width = 121
-    Height = 39
+    Height = 23
     TabOrder = 2
   end
   object btnOrdenar: TButton
@@ -60,5 +60,6 @@ object Form1: TForm1
     Height = 25
     Caption = 'Ordenar'
     TabOrder = 3
+    OnClick = btnOrdenarClick
   end
 end
