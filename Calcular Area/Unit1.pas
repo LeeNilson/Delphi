@@ -19,7 +19,6 @@ type
     lbl_result: TLabel;
     procedure Rdg_1Click(Sender: TObject);
     procedure Btn_CalcularClick(Sender: TObject);
-
   private
     { Private declarations }
   public
@@ -35,129 +34,126 @@ implementation
 
 procedure TForm1.Btn_CalcularClick(Sender: TObject);
 var
-a,b,c,R: double;
-
+  a, b, c, R: Double;
 begin
 
-  a:=StrToFloat(edt_1.Text);
-  b:=StrToFloat(edt_2.Text);
+  case Rdg_1.ItemIndex of
+    0:
+    begin
 
-if rdg_1.ItemIndex = 0 then
-begin
-  a := StrToFloat(edt_1.Text);
-  lbl_result.Caption := 'A Área é: ' + FloatToStr(a);
-end
-else if rdg_1.ItemIndex = 1 then
-begin
-  a := StrToFloat(edt_1.Text);
-  b := StrToFloat(edt_2.Text);
-  R := a * b;
-  lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
-end;
+      if not TryStrToFloat(edt_1.Text, a) then
+      begin
+        ShowMessage('Por favor, insira um valor numérico válido para o Lado.');
+        Exit;
+      end;
+      R := Sqr(a);
+      lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
+    end;
 
+    1, 2:
+    begin
+      if not (TryStrToFloat(edt_1.Text, a) and TryStrToFloat(edt_2.Text, b)) then
+      begin
+        ShowMessage('Por favor, insira valores numéricos válidos para a Base e a Altura.');
+        Exit;
+      end;
+      R := (a * b) / 2;
+      lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
+    end;
 
- if (rdg_1.ItemIndex = 1) then
- begin
-    a:=StrToFloat(edt_1.Text);
-    b:=StrToFloat(edt_2.Text);
-    R := (a * b )/2 ;
-    lbl_result.Caption:=('A Área é :' + FloatTostr(R));
- end;
+    3:
+    begin
+      if not (TryStrToFloat(edt_1.Text, a) and TryStrToFloat(edt_2.Text, b) and TryStrToFloat(edt_3.Text, c)) then
+      begin
+        ShowMessage('Por favor, insira valores numéricos válidos para as Bases e a Altura.');
+        Exit;
+      end;
 
- if (rdg_1.ItemIndex = 2) then
- begin
-   a:=StrToFloat(edt_1.Text);
-   b:=StrToFloat(edt_2.Text);
-   R := a* b/2 ;
-   lbl_result.Caption:=('A Área é :' +FloatTostr(R));
- end;
+      if a <= b then
+      begin
+        ShowMessage('Operação inválida: A Base Maior deve ser maior que a Base Menor.');
+        Exit;
+      end;
+      R := ((a + b) * c) / 2;
+      lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
+    end;
 
- if (rdg_1.ItemIndex = 3) and ( a > b) then
- begin
-    Showmessage('Operação inválida, as dimensões informadas não correspondem a um Trapézio')
- end;
+    4:
+    begin
+      if not (TryStrToFloat(edt_1.Text, a) and TryStrToFloat(edt_2.Text, b)) then
+      begin
+        ShowMessage('Por favor, insira valores numéricos válidos para a Base e a Altura.');
+        Exit;
+      end;
+      R := a * b;
+      lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
+    end;
 
-if (rdg_1.ItemIndex = 3) then
-begin
-  a := StrToFloat(edt_1.Text);
-  b := StrToFloat(edt_2.Text);
-  c := StrToFloat(edt_3.Text);
-
-  if a <= b then
-  begin
-    ShowMessage('A Base Maior deve ser maior que a Base Menor');
-    Exit;
+    5:
+    begin
+      if not TryStrToFloat(edt_1.Text, a) then
+      begin
+        ShowMessage('Por favor, insira um valor numérico válido para o Raio.');
+        Exit;
+      end;
+      R := Pi * Sqr(a);
+      lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
+    end;
   end;
-
-  R := (a + b) * c / 2;
-  lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
 end;
-
-if (rdg_1.ItemIndex = 4) then
- begin
-    a:=StrToFloat(edt_1.Text);
-    b:=StrToFloat(edt_2.Text);
-    R := a * b ;
-    lbl_result.Caption:=('A Área é :' +FloatTostr(R));
- end;
-
-if (rdg_1.ItemIndex = 5) then
- begin
-   a:=StrToFloat(edt_1.Text);
-   R := a * a * Pi;
-   lbl_result.Caption:=('A Área é :' +FloatTostr(R));
- end;
- end;
 
 procedure TForm1.Rdg_1Click(Sender: TObject);
 begin
-edt_1.Text :=  '' ;
-edt_2.Text :=  '' ;
-edt_3.Text :=  '' ;
 
-if (rdg_1.ItemIndex = 0) then
-begin
-  lbl_n1.Visible:= true;
-  edt_1.Visible:= true;
-  lbl_n1.Caption:=('Lado');
+  edt_1.Text := '';
+  edt_2.Text := '';
+  edt_3.Text := '';
+  lbl_result.Caption := '';
+  lbl_n1.Visible := False;
+  lbl_n2.Visible := False;
+  lbl_n3.Visible := False;
+  edt_1.Visible := False;
+  edt_2.Visible := False;
+  edt_3.Visible := False;
+
+  case Rdg_1.ItemIndex of
+    0:
+    begin
+      lbl_n1.Visible := True;
+      edt_1.Visible := True;
+      lbl_n1.Caption := 'Lado';
+    end;
+
+    1, 2, 4:
+    begin
+      lbl_n1.Visible := True;
+      lbl_n2.Visible := True;
+      edt_1.Visible := True;
+      edt_2.Visible := True;
+      lbl_n1.Caption := 'Base';
+      lbl_n2.Caption := 'Altura';
+    end;
+
+    3:
+    begin
+      lbl_n1.Visible := True;
+      lbl_n2.Visible := True;
+      lbl_n3.Visible := True;
+      edt_1.Visible := True;
+      edt_2.Visible := True;
+      edt_3.Visible := True;
+      lbl_n1.Caption := 'Base Maior';
+      lbl_n2.Caption := 'Base Menor';
+      lbl_n3.Caption := 'Altura';
+    end;
+
+    5:
+    begin
+      lbl_n1.Visible := True;
+      edt_1.Visible := True;
+      lbl_n1.Caption := 'Raio';
+    end;
+  end;
 end;
 
-
-if (rdg_1.ItemIndex = 4) or(rdg_1.ItemIndex = 1)or (rdg_1.ItemIndex = 2) or (rdg_1.ItemIndex = 4)then
- begin
-  lbl_n3.Visible:= false;
-  edt_3.Visible:= false;
-  lbl_n1.Visible:= true;
-  lbl_n2.Visible:= true;
-  lbl_n1.Caption:=('Base');
-  lbl_n2.Caption:=('Altura');
-  edt_1.Visible:= true;
-  edt_2.Visible:= true;
- end;
-
- if (rdg_1.ItemIndex = 3) then
-   begin
-      lbl_n1.Visible:= true;
-      lbl_n2.Visible:= true;
-      lbl_n3.Visible:= true;
-      edt_1.Visible:= true ;
-      edt_2.Visible:= true ;
-      edt_3.Visible:= true;
-      lbl_n1.Caption:=('Base Maior');
-      lbl_n2.Caption:=('Base Menor');
-      lbl_n3.Caption:=('Altura');
-   end;
-
- if (rdg_1.ItemIndex = 5) then
-   begin
-      lbl_n2.Visible:= false;
-      lbl_n3.Visible:= false;
-      edt_2.Visible:= false ;
-      edt_3.Visible:= false ;
-      lbl_n1.Caption:=('Raio');
-      edt_1.Visible:= true;
-   end;
-end;
-end.
-end;
 end.

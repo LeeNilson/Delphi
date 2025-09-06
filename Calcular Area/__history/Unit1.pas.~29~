@@ -1,0 +1,162 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    Btn_Calcular: TButton;
+    lbl_n1: TLabel;
+    Rdg_1: TRadioGroup;
+    edt_1: TEdit;
+    edt_2: TEdit;
+    lbl_n2: TLabel;
+    lbl_n3: TLabel;
+    edt_3: TEdit;
+    lbl_result: TLabel;
+    procedure Rdg_1Click(Sender: TObject);
+    procedure Btn_CalcularClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Btn_CalcularClick(Sender: TObject);
+var
+a,b,c,R: double;
+
+begin
+
+  a:=StrToFloat(edt_1.Text);
+  b:=StrToFloat(edt_2.Text);
+
+if rdg_1.ItemIndex = 0 then
+begin
+  lbl_result.Caption := 'A Área é: ' + FloatToStr(a);
+end
+else if rdg_1.ItemIndex = 1 then
+begin
+  a := StrToFloat(edt_1.Text);
+  b := StrToFloat(edt_2.Text);
+  R := a * a;
+  lbl_result.Caption := 'A Área é: ' + FloatToStr(a);
+end;
+
+
+ if (rdg_1.ItemIndex = 1) then
+ begin
+    a:=StrToFloat(edt_1.Text);
+    b:=StrToFloat(edt_2.Text);
+    R := (a * b )/2 ;
+    lbl_result.Caption:=('A Área é :' + FloatTostr(R));
+ end;
+
+ if (rdg_1.ItemIndex = 2) then
+ begin
+   a:=StrToFloat(edt_1.Text);
+   b:=StrToFloat(edt_2.Text);
+   R := a* b/2 ;
+   lbl_result.Caption:=('A Área é :' +FloatTostr(R));
+ end;
+
+ if (rdg_1.ItemIndex = 3) and ( a > b) then
+ begin
+    Showmessage('Operação inválida, as dimensões informadas não correspondem a um Trapézio')
+ end;
+
+if (rdg_1.ItemIndex = 3) then
+begin
+  a := StrToFloat(edt_1.Text);
+  b := StrToFloat(edt_2.Text);
+  c := StrToFloat(edt_3.Text);
+
+  if a <= b then
+  begin
+    ShowMessage('A Base Maior deve ser maior que a Base Menor');
+    Exit;
+  end;
+
+  R := (a + b) * c / 2;
+  lbl_result.Caption := 'A Área é: ' + FloatToStr(R);
+end;
+
+if (rdg_1.ItemIndex = 4) then
+ begin
+    a:=StrToFloat(edt_1.Text);
+    b:=StrToFloat(edt_2.Text);
+    R := a * b ;
+    lbl_result.Caption:=('A Área é :' +FloatTostr(R));
+ end;
+
+if (rdg_1.ItemIndex = 5) then
+ begin
+   a:=StrToFloat(edt_1.Text);
+   R := a * a * Pi;
+   lbl_result.Caption:=('A Área é :' +FloatTostr(R));
+ end;
+ end;
+
+procedure TForm1.Rdg_1Click(Sender: TObject);
+begin
+edt_1.Text :=  '' ;
+edt_2.Text :=  '' ;
+edt_3.Text :=  '' ;
+
+if (rdg_1.ItemIndex = 0) then
+begin
+  lbl_n1.Visible:= true;
+  edt_1.Visible:= true;
+  lbl_n1.Caption:=('Lado');
+end;
+
+
+if (rdg_1.ItemIndex = 4) or(rdg_1.ItemIndex = 1)or (rdg_1.ItemIndex = 2) or (rdg_1.ItemIndex = 4)then
+ begin
+  lbl_n3.Visible:= false;
+  edt_3.Visible:= false;
+  lbl_n1.Visible:= true;
+  lbl_n2.Visible:= true;
+  lbl_n1.Caption:=('Base');
+  lbl_n2.Caption:=('Altura');
+  edt_1.Visible:= true;
+  edt_2.Visible:= true;
+ end;
+
+ if (rdg_1.ItemIndex = 3) then
+   begin
+      lbl_n1.Visible:= true;
+      lbl_n2.Visible:= true;
+      lbl_n3.Visible:= true;
+      edt_1.Visible:= true ;
+      edt_2.Visible:= true ;
+      edt_3.Visible:= true;
+      lbl_n1.Caption:=('Base Maior');
+      lbl_n2.Caption:=('Base Menor');
+      lbl_n3.Caption:=('Altura');
+   end;
+
+ if (rdg_1.ItemIndex = 5) then
+   begin
+      lbl_n2.Visible:= false;
+      lbl_n3.Visible:= false;
+      edt_2.Visible:= false ;
+      edt_3.Visible:= false ;
+      lbl_n1.Caption:=('Raio');
+      edt_1.Visible:= true;
+   end;
+end;
+end.
+end;
+end.
