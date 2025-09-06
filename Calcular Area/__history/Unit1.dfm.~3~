@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 528
+  ClientWidth = 699
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 168
+    Top = 312
+    Width = 23
+    Height = 15
+    Caption = 'Raio'
+    Visible = False
+  end
+  object Label2: TLabel
+    Left = 152
+    Top = 360
+    Width = 32
+    Height = 15
+    Caption = 'Altura'
+    Visible = False
+  end
+  object Btn_calcular: TButton
+    Left = 448
+    Top = 360
+    Width = 75
+    Height = 23
+    Caption = 'Calcular'
+    TabOrder = 0
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 128
+    Top = 120
+    Width = 481
+    Height = 153
+    Caption = 'Calcular area'
+    Columns = 2
+    Items.Strings = (
+      'Quadrado'
+      'Tri'#226'ngulo'
+      'Paralelogramo'
+      'Retangulo'
+      'Trap'#233'zio'
+      'C'#237'rculo')
+    TabOrder = 1
+  end
+  object Edt_1: TEdit
+    Left = 248
+    Top = 309
+    Width = 121
+    Height = 23
+    TabOrder = 2
+    Visible = False
+  end
+  object Edt_2: TEdit
+    Left = 248
+    Top = 360
+    Width = 121
+    Height = 23
+    TabOrder = 3
+    Visible = False
+  end
+end
