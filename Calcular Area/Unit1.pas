@@ -19,6 +19,7 @@ type
     lbl_result: TLabel;
     procedure Rdg_1Click(Sender: TObject);
     procedure Btn_CalcularClick(Sender: TObject);
+    procedure LimpaCampos() ;
   private
     { Private declarations }
   public
@@ -102,13 +103,17 @@ begin
   end;
 end;
 
-procedure TForm1.Rdg_1Click(Sender: TObject);
+procedure TForm1.LimpaCampos;
 begin
-
   edt_1.Text := '';
   edt_2.Text := '';
   edt_3.Text := '';
   lbl_result.Caption := '';
+end;
+
+procedure TForm1.Rdg_1Click(Sender: TObject);
+begin
+  LimpaCampos(edt_1,edt_2,edt_3);
   lbl_n1.Visible := False;
   lbl_n2.Visible := False;
   lbl_n3.Visible := False;

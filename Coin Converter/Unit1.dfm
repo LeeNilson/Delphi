@@ -19,8 +19,8 @@ object Form1: TForm1
     Caption = 'Valor em Real'
   end
   object Label2: TLabel
-    Left = 344
-    Top = 248
+    Left = 200
+    Top = 243
     Width = 88
     Height = 15
     Caption = 'Valor Convertido'
@@ -29,7 +29,7 @@ object Form1: TForm1
     Left = 304
     Top = 120
     Width = 217
-    Height = 33
+    Height = 23
     TabOrder = 0
   end
   object ComboBox1: TComboBox
@@ -44,5 +44,12 @@ object Form1: TForm1
       'D'#243'lar Americano'
       'Euro'
       'Peso Argentino')
+  end
+  object Edit2: TEdit
+    Left = 304
+    Top = 240
+    Width = 217
+    Height = 23
+    TabOrder = 2
   end
 end
