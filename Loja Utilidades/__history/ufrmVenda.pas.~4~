@@ -1,0 +1,47 @@
+unit ufrmVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus,
+  ufrmCliente, ufrmProduto, ufrmRelatorio;
+
+type
+  TfrmVenda = class(TForm)
+    Panel1: TPanel;
+    CmbxPagamento: TComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtVendedorResponsavel: TEdit;
+    Label3: TLabel;
+    edtQuantidade: TEdit;
+    MainMenu1: TMainMenu;
+    CadastroProduto1: TMenuItem;
+    CadastroCliente1: TMenuItem;
+    FormadePagamento1: TMenuItem;
+    Relatorio1: TMenuItem;
+    Label4: TLabel;
+    edtValorCusto: TEdit;
+    Label5: TLabel;
+    edtValorProduto: TEdit;
+    Label6: TLabel;
+    edtDesconto: TEdit;
+    Label7: TLabel;
+    edtPrecoFinal: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmVenda: TfrmVenda;
+
+implementation
+
+{$R *.dfm}
+
+uses uDataModule;
+
+end.

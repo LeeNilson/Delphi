@@ -1,0 +1,30 @@
+unit ufrmRelatorio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.Menus;
+
+type
+  TfrmRelatorio = class(TForm)
+    MainMenu1: TMainMenu;
+    CadastroProduto1: TMenuItem;
+    CadastroCliente1: TMenuItem;
+    FormadePagamento1: TMenuItem;
+    Relatorio1: TMenuItem;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelatorio: TfrmRelatorio;
+
+implementation
+
+{$R *.dfm}
+
+end.

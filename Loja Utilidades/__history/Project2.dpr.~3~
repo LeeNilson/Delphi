@@ -1,0 +1,16 @@
+program Project2;
+
+uses
+  Vcl.Forms,
+  ufrmProduto in 'ufrmProduto.pas' {frmCadastroProduto},
+  ufrmCliente in 'ufrmCliente.pas' {frmCadastroCliente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmCadastroProduto, frmCadastroProduto);
+  Application.CreateForm(TfrmCadastroCliente, frmCadastroCliente);
+  Application.Run;
+end.
