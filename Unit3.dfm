@@ -75,12 +75,19 @@ object frmVendas: TfrmVendas
     Top = 16
     object CadastroProduto1: TMenuItem
       Caption = 'Cadastro Produto'
+      OnClick = CadastroProduto1Click
     end
     object CadastroCliente1: TMenuItem
       Caption = 'Cadastro Cliente'
     end
     object CadastroVenda1: TMenuItem
       Caption = 'Cadastro Venda'
+    end
+    object Pedidos1: TMenuItem
+      Caption = 'Pedidos'
+    end
+    object Relatrio1: TMenuItem
+      Caption = 'Relat'#243'rio'
     end
   end
 end

@@ -19,6 +19,9 @@ type
     CadastroCliente1: TMenuItem;
     CadastroProduto1: TMenuItem;
     CadastroVenda1: TMenuItem;
+    Pedidos1: TMenuItem;
+    Relatrio1: TMenuItem;
+    procedure CadastroProduto1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,5 +34,9 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmVendas.CadastroProduto1Click(Sender: TObject);
+beg
+end;
 
 end.
