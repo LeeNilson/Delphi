@@ -80,11 +80,6 @@ object frmVenda: TfrmVenda
       Height = 35
       TabOrder = 0
       TextHint = 'Selecione....'
-      Items.Strings = (
-        'D'#233'bito'
-        'Cr'#233'dito '#225' Vista'
-        'Cr'#233'dito Parcelado'
-        'Pix ')
     end
     object edtVendedorResponsavel: TEdit
       Left = 72

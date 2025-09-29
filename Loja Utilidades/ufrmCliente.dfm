@@ -194,7 +194,7 @@ object frmCadastroCliente: TfrmCadastroCliente
       object edtEstado: TEdit
         Left = 423
         Top = 176
-        Width = 297
+        Width = 305
         Height = 32
         TabOrder = 5
       end
