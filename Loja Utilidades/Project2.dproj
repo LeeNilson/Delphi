@@ -135,15 +135,6 @@
             <Form>frmVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="ufrmRelatorio.pas">
-            <Form>frmRelatorio</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="uDataModule.pas">
-            <Form>DataModule1</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

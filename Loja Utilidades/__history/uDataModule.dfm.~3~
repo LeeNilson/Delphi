@@ -1,0 +1,39 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDTransaction1: TFDTransaction
+    Connection = FDConnection1
+    Left = 280
+    Top = 56
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Delphi\Delphi\Loja Utilidades\loja_utilidades.db'
+      'StringFormat='
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Transaction = FDTransaction1
+    Left = 144
+    Top = 56
+  end
+  object FDQuery1: TFDQuery
+    Indexes = <
+      item
+        Active = True
+      end>
+    Connection = FDConnection1
+    Transaction = FDTransaction1
+    SQL.Strings = (
+      'SELECT * FROM clientes')
+    Left = 128
+    Top = 152
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 344
+    Top = 136
+  end
+end

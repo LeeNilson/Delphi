@@ -1,0 +1,27 @@
+object DataModule1: TDataModule1
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Delphi\Delphi\Loja Utilidades\dbLojaUtilidades.db'
+      'User_Name=root'
+      'DriverID=SQLite')
+    Connected = True
+    Left = 56
+    Top = 104
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 56
+    Top = 32
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from categorias')
+    Left = 48
+    Top = 184
+  end
+end

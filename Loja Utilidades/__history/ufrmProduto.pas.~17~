@@ -1,0 +1,70 @@
+unit ufrmProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus,
+  ufrmCliente, ufrmVenda, ufrmRelatorio, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TfrmCadastroProduto = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    edtNomeProduto: TEdit;
+    edtCategoriaProduto: TEdit;
+    edtQuantidadeProduto: TEdit;
+    edtCodigoSku: TEdit;
+    edtValorProduto: TEdit;
+    edtValorCusto: TEdit;
+    MainMenu1: TMainMenu;
+    CadastroProduto1: TMenuItem;
+    CadastroCliente1: TMenuItem;
+    FormadePagamento1: TMenuItem;
+    Relatorio1: TMenuItem;
+    DBGrid1: TDBGrid;
+    FDQuery1: TFDQuery;
+    procedure CadastroCliente1Click(Sender: TObject);
+    procedure FormadePagamento1Click(Sender: TObject);
+    procedure Relatorio1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroProduto: TfrmCadastroProduto;
+
+implementation
+
+{$R *.dfm}
+
+uses uDataModule;
+
+
+procedure TfrmCadastroProduto.CadastroCliente1Click(Sender: TObject);
+begin
+ufrmCliente.frmCadastroCliente.Show ;
+end;
+
+procedure TfrmCadastroProduto.FormadePagamento1Click(Sender: TObject);
+begin
+ ufrmVenda.frmVenda.Show ;
+end;
+
+procedure TfrmCadastroProduto.Relatorio1Click(Sender: TObject);
+begin
+ufrmRelatorio.frmRelatorio.Show ;
+end;
+
+end.

@@ -1,0 +1,47 @@
+object DataModule1: TDataModule1
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Delphi\Delphi\Loja Utilidades\dbLojaUtilidades.db'
+      'User_Name=root'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 104
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 56
+    Top = 32
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from categorias')
+    Left = 48
+    Top = 184
+  end
+  object MainMenu1: TMainMenu
+    Left = 920
+    Top = 296
+    object CadastroProduto1: TMenuItem
+      Caption = 'Cadastro Produto'
+      OnClick = CadastroProduto1Click
+    end
+    object CadastroCliente1: TMenuItem
+      Caption = 'Cadastro Cliente'
+      OnClick = CadastroCliente1Click
+    end
+    object FormadePagamento1: TMenuItem
+      Caption = 'Forma de Pagamento'
+      OnClick = FormadePagamento1Click
+    end
+    object Relatorio1: TMenuItem
+      Caption = 'Relatorio'
+    end
+  end
+end

@@ -1,0 +1,38 @@
+object DataModule1: TDataModule1
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Delphi\Delphi\Loja Utilidades\loja_utilidades.db'
+      'User_Name=admin'
+      'DriverID=SQLite')
+    TxOptions.Params.Strings = (
+      'Database: loja_utilidades'
+      'Username: root'
+      'Password: '
+      'Server: localhost '
+      'Port: 3306 '
+      'Connected: true')
+    Transaction = FDTransaction1
+    Left = 224
+    Top = 80
+  end
+  object FDTransaction1: TFDTransaction
+    Options.Params.Strings = (
+      'Database: loja_utilidades'
+      'Username: root'
+      'Password: '
+      'Server: localhost '
+      'Port: 3306 '
+      'Connected: true')
+    Connection = FDConnection1
+    Left = 360
+    Top = 80
+  end
+  object FDTable1: TFDTable
+    Connection = FDConnection1
+    Left = 624
+    Top = 112
+  end
+end
