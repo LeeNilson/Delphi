@@ -24,7 +24,8 @@ object frmCadastroProduto: TfrmCadastroProduto
     ParentBackground = False
     TabOrder = 0
     VerticalAlignment = taAlignBottom
-    ExplicitWidth = 1942
+    ExplicitWidth = 1924
+    ExplicitHeight = 764
     object Label1: TLabel
       Left = 312
       Top = 8
