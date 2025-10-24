@@ -3,7 +3,7 @@ object frmVenda: TfrmVenda
   Top = 0
   Caption = 'frmVenda'
   ClientHeight = 777
-  ClientWidth = 1504
+  ClientWidth = 1540
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -14,10 +14,10 @@ object frmVenda: TfrmVenda
   WindowState = wsMaximized
   TextHeight = 27
   object Panel1: TPanel
-    Left = 0
-    Top = -8
-    Width = 1505
-    Height = 785
+    Left = -14
+    Top = -16
+    Width = 1546
+    Height = 793
     Align = alCustom
     Alignment = taLeftJustify
     AutoSize = True
@@ -147,16 +147,16 @@ object frmVenda: TfrmVenda
       TabOrder = 9
     end
     object DBGrid1: TDBGrid
-      Left = 0
-      Top = 363
-      Width = 884
-      Height = 158
+      Left = -4
+      Top = 355
+      Width = 1077
+      Height = 142
       DataSource = DataSource1
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'Times New Roman'
-      Font.Style = [fsItalic]
+      Font.Name = 'Tw Cen MT'
+      Font.Style = []
       ParentFont = False
       TabOrder = 10
       TitleFont.Charset = ANSI_CHARSET
@@ -168,45 +168,85 @@ object frmVenda: TfrmVenda
         item
           Expanded = False
           FieldName = 'N'#186'Venda'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
           Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'fPgto'
-          Width = 75
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 90
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'VendResp'
-          Width = 80
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 100
           Visible = True
         end
         item
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'DescT(R$)'
-          Width = 40
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 100
           Visible = True
         end
         item
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'Desc(%)'
-          Width = 40
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 80
           Visible = True
         end
         item
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'Qtd'
-          Width = 12
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 40
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Produto'
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
           Width = 50
           Visible = True
         end
@@ -214,35 +254,69 @@ object frmVenda: TfrmVenda
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'VlCust(R$)'
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 100
           Visible = True
         end
         item
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'PrUn(R$)'
-          Width = 55
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 80
           Visible = True
         end
         item
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'PrFnl(R$)'
-          Width = 42
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 80
           Visible = True
         end
         item
           Alignment = taLeftJustify
           Expanded = False
           FieldName = 'TVenda (R$)'
-          Width = 80
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
+          Width = 100
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Data'
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -17
+          Title.Font.Name = 'Arial Narrow'
+          Title.Font.Style = []
           Width = 135
           Visible = True
         end>
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 0
+      Top = 320
+      Width = 1070
+      Height = 37
+      DataSource = DataSource1
+      TabOrder = 11
     end
   end
   object MainMenu1: TMainMenu

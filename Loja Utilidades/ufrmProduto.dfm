@@ -24,96 +24,95 @@ object frmCadastroProduto: TfrmCadastroProduto
     ParentBackground = False
     TabOrder = 0
     VerticalAlignment = taAlignBottom
-    ExplicitWidth = 1924
-    ExplicitHeight = 764
+    ExplicitWidth = 1942
     object Label1: TLabel
-      Left = 48
-      Top = 16
+      Left = 312
+      Top = 8
       Width = 119
       Height = 27
       Caption = 'Nome Produto'
     end
     object Label2: TLabel
-      Left = 576
+      Left = 888
       Top = 8
       Width = 79
       Height = 27
       Caption = 'Categoria'
     end
     object Label3: TLabel
-      Left = 48
-      Top = 103
+      Left = 312
+      Top = 82
       Width = 163
       Height = 27
       Caption = 'Quantidade Produto'
     end
     object Label4: TLabel
-      Left = 576
-      Top = 103
+      Left = 888
+      Top = 82
       Width = 113
       Height = 27
       Caption = 'C'#243'digo - SKU'
     end
     object Label5: TLabel
-      Left = 48
-      Top = 207
+      Left = 312
+      Top = 156
       Width = 112
       Height = 27
       Caption = 'Valor Produto'
     end
     object Label6: TLabel
-      Left = 576
-      Top = 207
+      Left = 888
+      Top = 156
       Width = 121
       Height = 27
       Caption = 'Valor de Custo'
     end
     object edtNomeProduto: TEdit
-      Left = 48
+      Left = 312
       Top = 41
       Width = 473
       Height = 35
       TabOrder = 0
     end
     object edtCategoriaProduto: TEdit
-      Left = 576
+      Left = 888
       Top = 41
       Width = 433
       Height = 35
       TabOrder = 1
     end
     object edtQuantidadeProduto: TEdit
-      Left = 48
-      Top = 136
+      Left = 312
+      Top = 115
       Width = 473
       Height = 35
       TabOrder = 2
     end
     object edtCodigoSku: TEdit
-      Left = 576
-      Top = 136
+      Left = 888
+      Top = 115
       Width = 433
       Height = 35
       TabOrder = 3
     end
     object edtValorProduto: TEdit
-      Left = 48
-      Top = 240
+      Left = 312
+      Top = 189
       Width = 473
       Height = 35
       TabOrder = 4
     end
     object edtValorCusto: TEdit
-      Left = 576
-      Top = 240
+      Left = 888
+      Top = 189
       Width = 433
       Height = 35
       TabOrder = 5
     end
     object DBGrid1: TDBGrid
-      Left = 65
-      Top = 392
-      Width = 512
+      Left = 408
+      Top = 376
+      Width = 529
       Height = 249
       Color = clGold
       DataSource = DataSource1
@@ -157,49 +156,49 @@ object frmCadastroProduto: TfrmCadastroProduto
         end>
     end
     object btnNovo: TButton
-      Left = 586
-      Top = 291
+      Left = 710
+      Top = 283
       Width = 85
       Height = 55
       Caption = 'Novo'
       TabOrder = 7
     end
     object btnAtualizar: TButton
-      Left = 372
-      Top = 291
+      Left = 568
+      Top = 283
       Width = 85
       Height = 55
       Caption = 'Atualizar'
       TabOrder = 8
     end
     object btnSalvar: TButton
-      Left = 168
-      Top = 291
+      Left = 408
+      Top = 283
       Width = 85
       Height = 55
       Caption = 'Salvar'
       TabOrder = 9
     end
     object btnExcluir: TButton
-      Left = 748
-      Top = 291
+      Left = 844
+      Top = 283
       Width = 85
       Height = 55
       Caption = 'Excluir'
       TabOrder = 10
     end
     object DBNavigator1: TDBNavigator
-      Left = 65
+      Left = 408
       Top = 655
-      Width = 520
+      Width = 530
       Height = 50
       DataSource = DataSource1
       TabOrder = 11
     end
   end
   object MainMenu1: TMainMenu
-    Left = 920
-    Top = 296
+    Left = 1864
+    Top = 688
     object CadastroProduto1: TMenuItem
       Caption = 'Cadastro Produto'
     end
@@ -222,20 +221,20 @@ object frmCadastroProduto: TfrmCadastroProduto
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
-    Left = 1040
-    Top = 104
+    Left = 1856
+    Top = 560
   end
   object DataSource1: TDataSource
     DataSet = FDQuery1
-    Left = 1040
-    Top = 40
+    Left = 1856
+    Top = 504
   end
   object FDQuery1: TFDQuery
     Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from categorias')
-    Left = 1040
-    Top = 176
+    Left = 1856
+    Top = 632
   end
 end

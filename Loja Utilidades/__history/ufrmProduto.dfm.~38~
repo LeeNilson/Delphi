@@ -3,7 +3,7 @@ object frmCadastroProduto: TfrmCadastroProduto
   Top = 0
   Caption = 'Cadastro Produto'
   ClientHeight = 772
-  ClientWidth = 1904
+  ClientWidth = 1926
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,15 +16,16 @@ object frmCadastroProduto: TfrmCadastroProduto
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1904
+    Width = 1926
     Height = 772
     Align = alClient
+    Caption = 'DataSource1'
     Color = clGoldenrod
     ParentBackground = False
     TabOrder = 0
     VerticalAlignment = taAlignBottom
-    ExplicitLeft = 256
-    ExplicitTop = 96
+    ExplicitWidth = 1924
+    ExplicitHeight = 764
     object Label1: TLabel
       Left = 48
       Top = 16
@@ -110,10 +111,11 @@ object frmCadastroProduto: TfrmCadastroProduto
       TabOrder = 5
     end
     object DBGrid1: TDBGrid
-      Left = 9
-      Top = 368
-      Width = 1000
+      Left = 65
+      Top = 392
+      Width = 512
       Height = 249
+      Color = clGold
       DataSource = DataSource1
       TabOrder = 6
       TitleFont.Charset = ANSI_CHARSET
@@ -134,7 +136,7 @@ object frmCadastroProduto: TfrmCadastroProduto
         item
           Expanded = False
           FieldName = 'nome'
-          Width = 90
+          Width = 100
           Visible = True
         end
         item
@@ -186,6 +188,14 @@ object frmCadastroProduto: TfrmCadastroProduto
       Caption = 'Excluir'
       TabOrder = 10
     end
+    object DBNavigator1: TDBNavigator
+      Left = 65
+      Top = 655
+      Width = 520
+      Height = 50
+      DataSource = DataSource1
+      TabOrder = 11
+    end
   end
   object MainMenu1: TMainMenu
     Left = 920
@@ -203,7 +213,6 @@ object frmCadastroProduto: TfrmCadastroProduto
     end
     object Relatorio1: TMenuItem
       Caption = 'Relatorio'
-      OnClick = Relatorio1Click
     end
   end
   object FDConnection1: TFDConnection
