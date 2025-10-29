@@ -14,9 +14,9 @@ object frmVenda: TfrmVenda
   WindowState = wsMaximized
   TextHeight = 27
   object Panel1: TPanel
-    Left = -14
-    Top = -16
-    Width = 1546
+    Left = -166
+    Top = 8
+    Width = 1711
     Height = 793
     Align = alCustom
     Alignment = taLeftJustify
@@ -24,299 +24,281 @@ object frmVenda: TfrmVenda
     Color = clGoldenrod
     ParentBackground = False
     TabOrder = 0
-    object Label1: TLabel
-      Left = 325
-      Top = 32
-      Width = 178
-      Height = 27
-      Caption = 'Forma de Pagamento'
-    end
-    object Label2: TLabel
-      Left = 325
-      Top = 106
-      Width = 189
-      Height = 27
-      Caption = 'Vendedor Respons'#225'vel'
-    end
-    object Label3: TLabel
-      Left = 784
-      Top = 32
-      Width = 94
-      Height = 27
-      Caption = 'Quantidade'
-    end
-    object Label4: TLabel
-      Left = 782
-      Top = 106
-      Width = 96
-      Height = 27
-      Caption = 'Valor Custo'
-    end
-    object Label6: TLabel
-      Left = 326
-      Top = 188
-      Width = 101
-      Height = 27
-      Caption = 'Desconto %'
-    end
-    object Label7: TLabel
-      Left = 782
-      Top = 188
-      Width = 93
-      Height = 27
-      Caption = 'Pre'#231'o Final'
-    end
-    object CmbxPagamento: TComboBox
-      Left = 325
-      Top = 65
-      Width = 305
-      Height = 35
-      TabOrder = 0
-      TextHint = 'Selecione....'
-      Items.Strings = (
-        'D'#233'bito'
-        'Cr'#233'dito '#225' Vista'
-        'Cr'#233'dito Parcelado'
-        'Pix ')
-    end
-    object edtVendedorResponsavel: TEdit
-      Left = 326
-      Top = 139
-      Width = 305
-      Height = 35
-      TabOrder = 1
-    end
-    object edtQuantidade: TEdit
-      Left = 782
-      Top = 65
-      Width = 305
-      Height = 35
-      TabOrder = 2
-    end
-    object edtValorCusto: TEdit
-      Left = 782
-      Top = 139
-      Width = 305
-      Height = 35
-      TabOrder = 3
-    end
-    object edtDesconto: TEdit
-      Left = 326
-      Top = 221
-      Width = 305
-      Height = 35
-      TabOrder = 4
-    end
-    object edtPrecoFinal: TEdit
-      Left = 784
-      Top = 221
-      Width = 307
-      Height = 35
-      TabOrder = 5
-    end
-    object btnNovo: TButton
-      Left = 1270
-      Top = 187
-      Width = 85
-      Height = 55
-      Caption = 'Novo'
-      TabOrder = 6
-    end
     object btnAtualizar: TButton
-      Left = 1270
-      Top = 113
+      Left = 37
+      Top = 255
       Width = 85
       Height = 55
       Caption = 'Atualizar'
-      TabOrder = 7
+      TabOrder = 0
     end
-    object btnSalvar: TButton
-      Left = 1270
-      Top = 39
-      Width = 85
-      Height = 55
-      Caption = 'Salvar'
-      TabOrder = 8
+    object Panel2: TPanel
+      Left = 189
+      Top = 352
+      Width = 1276
+      Height = 369
+      Color = clDarkgoldenrod
+      ParentBackground = False
+      TabOrder = 1
+      object DBGrid2: TDBGrid
+        Left = 24
+        Top = 120
+        Width = 1233
+        Height = 257
+        DataSource = DataSource1
+        TabOrder = 0
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -23
+        TitleFont.Name = 'Arial Narrow'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'N'#186'Venda'
+            Width = 100
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'fPgto'
+            Width = 120
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'VendResp'
+            Width = 140
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'DescT(R$)'
+            Width = 80
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'Desc(%)'
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'Qtd'
+            Width = 70
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Produto'
+            Width = 200
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'VlCust(R$)'
+            Width = 80
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'PrUn(R$)'
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'PrFnl(R$)'
+            Visible = True
+          end
+          item
+            Alignment = taLeftJustify
+            Expanded = False
+            FieldName = 'TVenda (R$)'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Data'
+            Width = 187
+            Visible = True
+          end>
+      end
+      object DBNavigator2: TDBNavigator
+        Left = 24
+        Top = 89
+        Width = 770
+        Height = 25
+        TabOrder = 1
+      end
+      object SearchBox1: TSearchBox
+        Left = 24
+        Top = 24
+        Width = 770
+        Height = 35
+        TabOrder = 2
+        TextHint = 'Buscar..'
+      end
+      object Button1: TButton
+        Left = 816
+        Top = 24
+        Width = 75
+        Height = 35
+        Caption = 'Buscar'
+        TabOrder = 3
+      end
     end
-    object btnExcluir: TButton
-      Left = 1270
-      Top = 263
-      Width = 85
-      Height = 55
-      Caption = 'Excluir'
-      TabOrder = 9
+    object Panel3: TPanel
+      Left = 189
+      Top = 24
+      Width = 724
+      Height = 306
+      TabOrder = 2
+      object Label5: TLabel
+        Left = 37
+        Top = 8
+        Width = 178
+        Height = 27
+        Caption = 'Forma de Pagamento'
+      end
+      object Label8: TLabel
+        Left = 37
+        Top = 82
+        Width = 189
+        Height = 27
+        Caption = 'Vendedor Respons'#225'vel'
+      end
+      object Label9: TLabel
+        Left = 374
+        Top = 8
+        Width = 94
+        Height = 27
+        Caption = 'Quantidade'
+      end
+      object Label10: TLabel
+        Left = 374
+        Top = 82
+        Width = 96
+        Height = 27
+        Caption = 'Valor Custo'
+      end
+      object Label11: TLabel
+        Left = 45
+        Top = 156
+        Width = 101
+        Height = 27
+        Caption = 'Desconto %'
+      end
+      object Label12: TLabel
+        Left = 377
+        Top = 156
+        Width = 93
+        Height = 27
+        Caption = 'Pre'#231'o Final'
+      end
+      object ComboBox1: TComboBox
+        Left = 37
+        Top = 41
+        Width = 305
+        Height = 35
+        TabOrder = 0
+        TextHint = 'Selecione ...'
+        Items.Strings = (
+          'D'#233'bito'
+          'Cr'#233'dito '#225' Vista'
+          'Cr'#233'dito Parcelado'
+          'Pix ')
+      end
+      object Edit1: TEdit
+        Left = 37
+        Top = 115
+        Width = 305
+        Height = 35
+        TabOrder = 1
+      end
+      object Edit2: TEdit
+        Left = 374
+        Top = 41
+        Width = 305
+        Height = 35
+        TabOrder = 2
+      end
+      object Edit3: TEdit
+        Left = 374
+        Top = 115
+        Width = 305
+        Height = 35
+        TabOrder = 3
+      end
+      object Edit4: TEdit
+        Left = 37
+        Top = 189
+        Width = 305
+        Height = 35
+        TabOrder = 4
+      end
+      object Edit5: TEdit
+        Left = 372
+        Top = 189
+        Width = 307
+        Height = 35
+        TabOrder = 5
+      end
+      object Button2: TButton
+        Left = 374
+        Top = 239
+        Width = 85
+        Height = 55
+        Caption = 'Novo'
+        TabOrder = 6
+      end
+      object Button3: TButton
+        Left = 130
+        Top = 239
+        Width = 85
+        Height = 55
+        Caption = 'Atualizar'
+        TabOrder = 7
+      end
+      object Button4: TButton
+        Left = 257
+        Top = 239
+        Width = 85
+        Height = 55
+        Caption = 'Salvar'
+        TabOrder = 8
+      end
+      object Button5: TButton
+        Left = 498
+        Top = 239
+        Width = 85
+        Height = 55
+        Caption = 'Excluir'
+        TabOrder = 9
+      end
     end
-    object DBGrid1: TDBGrid
-      Left = 180
-      Top = 427
-      Width = 1077
-      Height = 142
-      DataSource = DataSource1
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'Tw Cen MT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 10
-      TitleFont.Charset = ANSI_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -23
-      TitleFont.Name = 'Arial Narrow'
-      TitleFont.Style = []
-      Columns = <
-        item
-          Expanded = False
-          FieldName = 'N'#186'Venda'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -13
-          Font.Name = 'Times New Roman'
-          Font.Style = []
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 65
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'fPgto'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 90
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'VendResp'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 100
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'DescT(R$)'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 100
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'Desc(%)'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 80
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'Qtd'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 40
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Produto'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 50
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'VlCust(R$)'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 100
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'PrUn(R$)'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 80
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'PrFnl(R$)'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 80
-          Visible = True
-        end
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'TVenda (R$)'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 100
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Data'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -17
-          Title.Font.Name = 'Arial Narrow'
-          Title.Font.Style = []
-          Width = 135
-          Visible = True
-        end>
+    object StatusBar1: TStatusBar
+      Left = 1
+      Top = 773
+      Width = 1709
+      Height = 19
+      Panels = <>
+      ExplicitLeft = 1040
+      ExplicitTop = 224
+      ExplicitWidth = 0
     end
-    object DBNavigator1: TDBNavigator
-      Left = 180
-      Top = 384
-      Width = 1070
-      Height = 37
-      DataSource = DataSource1
-      TabOrder = 11
+    object ScrollBar1: TScrollBar
+      Left = 160
+      Top = 750
+      Width = 1550
+      Height = 17
+      PageSize = 0
+      TabOrder = 4
     end
   end
   object MainMenu1: TMainMenu

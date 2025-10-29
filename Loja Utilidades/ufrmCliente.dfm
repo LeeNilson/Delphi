@@ -69,35 +69,35 @@ object frmCadastroCliente: TfrmCadastroCliente
     object edtNomeCliente: TEdit
       Left = 26
       Top = 56
-      Width = 593
+      Width = 647
       Height = 35
       TabOrder = 0
     end
     object edtTelefoneCliente: TEdit
       Left = 26
       Top = 130
-      Width = 593
+      Width = 647
       Height = 35
       TabOrder = 1
     end
     object edtEmailCliente: TEdit
       Left = 26
       Top = 204
-      Width = 593
+      Width = 647
       Height = 35
       TabOrder = 2
     end
     object edtCpfCliente: TEdit
       Left = 26
       Top = 278
-      Width = 593
+      Width = 647
       Height = 35
       TabOrder = 3
     end
     object edtNomeVendedor: TEdit
       Left = 26
       Top = 352
-      Width = 593
+      Width = 647
       Height = 35
       TabOrder = 4
     end
@@ -105,7 +105,7 @@ object frmCadastroCliente: TfrmCadastroCliente
       Left = 26
       Top = 416
       Width = 791
-      Height = 281
+      Height = 313
       Color = clDarkgoldenrod
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -199,33 +199,49 @@ object frmCadastroCliente: TfrmCadastroCliente
         Height = 32
         TabOrder = 5
       end
+      object SearchBox1: TSearchBox
+        Left = 19
+        Top = 232
+        Width = 343
+        Height = 41
+        TabOrder = 6
+        TextHint = 'Selecione..'
+      end
+      object Button5: TButton
+        Left = 423
+        Top = 232
+        Width = 97
+        Height = 41
+        Caption = 'Pesquisar'
+        TabOrder = 7
+      end
     end
     object Button1: TButton
-      Left = 688
-      Top = 67
+      Left = 718
+      Top = 56
       Width = 99
       Height = 57
       Caption = 'Salvar'
       TabOrder = 6
     end
     object Button2: TButton
-      Left = 688
-      Top = 157
+      Left = 718
+      Top = 141
       Width = 99
       Height = 57
       Caption = 'Novo'
       TabOrder = 7
     end
     object Button3: TButton
-      Left = 688
-      Top = 245
+      Left = 718
+      Top = 231
       Width = 99
       Height = 57
       Caption = 'Atualizar'
       TabOrder = 8
     end
     object Button4: TButton
-      Left = 688
+      Left = 718
       Top = 330
       Width = 99
       Height = 57

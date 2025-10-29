@@ -24,8 +24,8 @@ object frmCadastroProduto: TfrmCadastroProduto
     ParentBackground = False
     TabOrder = 0
     VerticalAlignment = taAlignBottom
-    ExplicitWidth = 1924
-    ExplicitHeight = 764
+    ExplicitLeft = 440
+    ExplicitTop = -40
     object Label1: TLabel
       Left = 312
       Top = 8
@@ -110,96 +110,118 @@ object frmCadastroProduto: TfrmCadastroProduto
       Height = 35
       TabOrder = 5
     end
-    object DBGrid1: TDBGrid
-      Left = 408
-      Top = 376
-      Width = 529
-      Height = 249
-      Color = clGold
-      DataSource = DataSource1
-      TabOrder = 6
-      TitleFont.Charset = ANSI_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -23
-      TitleFont.Name = 'Arial Narrow'
-      TitleFont.Style = []
-      Columns = <
-        item
-          Alignment = taLeftJustify
-          Expanded = False
-          FieldName = 'id_categoria'
-          Title.Alignment = taCenter
-          Title.Caption = 'id'
-          Width = 27
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'nome'
-          Width = 100
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'descricao'
-          Width = 150
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'ativo'
-          Width = 60
-          Visible = True
-        end
-        item
-          Expanded = False
-          Visible = True
-        end>
-    end
     object btnNovo: TButton
-      Left = 710
-      Top = 283
+      Left = 700
+      Top = 259
       Width = 85
       Height = 55
       Caption = 'Novo'
-      TabOrder = 7
+      TabOrder = 6
     end
     object btnAtualizar: TButton
-      Left = 568
-      Top = 283
+      Left = 536
+      Top = 259
       Width = 85
       Height = 55
       Caption = 'Atualizar'
-      TabOrder = 8
+      TabOrder = 7
     end
     object btnSalvar: TButton
-      Left = 408
-      Top = 283
+      Left = 888
+      Top = 259
       Width = 85
       Height = 55
       Caption = 'Salvar'
-      TabOrder = 9
+      TabOrder = 8
     end
     object btnExcluir: TButton
-      Left = 844
-      Top = 283
+      Left = 1052
+      Top = 259
       Width = 85
       Height = 55
       Caption = 'Excluir'
-      TabOrder = 10
+      TabOrder = 9
     end
-    object DBNavigator1: TDBNavigator
-      Left = 408
-      Top = 655
-      Width = 530
-      Height = 50
-      DataSource = DataSource1
-      TabOrder = 11
+    object Panel2: TPanel
+      Left = 312
+      Top = 387
+      Width = 1009
+      Height = 385
+      TabOrder = 10
+      object DBGrid1: TDBGrid
+        Left = 40
+        Top = 32
+        Width = 929
+        Height = 209
+        Color = clGold
+        DataSource = DataSource1
+        TabOrder = 0
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -23
+        TitleFont.Name = 'Arial Narrow'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Alignment = taCenter
+            Expanded = False
+            FieldName = 'id_categoria'
+            Title.Alignment = taCenter
+            Title.Caption = 'id'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'nome'
+            Width = 284
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'descricao'
+            Width = 393
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ativo'
+            Width = 390
+            Visible = True
+          end
+          item
+            Expanded = False
+            Width = 200
+            Visible = True
+          end>
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 40
+        Top = 247
+        Width = 920
+        Height = 50
+        TabOrder = 1
+      end
+      object SearchBox1: TSearchBox
+        Left = 40
+        Top = 303
+        Width = 729
+        Height = 42
+        TabOrder = 2
+      end
+      object Button1: TButton
+        Left = 816
+        Top = 303
+        Width = 153
+        Height = 41
+        Caption = 'Pesquisar'
+        TabOrder = 3
+      end
     end
   end
   object MainMenu1: TMainMenu
-    Left = 1864
-    Top = 688
+    Left = 1840
+    Top = 496
     object CadastroProduto1: TMenuItem
       Caption = 'Cadastro Produto'
     end
@@ -222,20 +244,20 @@ object frmCadastroProduto: TfrmCadastroProduto
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
-    Left = 1856
-    Top = 560
-  end
-  object DataSource1: TDataSource
-    DataSet = FDQuery1
-    Left = 1856
-    Top = 504
+    Left = 1832
+    Top = 344
   end
   object FDQuery1: TFDQuery
     Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from categorias')
-    Left = 1856
-    Top = 632
+    Left = 1832
+    Top = 416
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 1832
+    Top = 265
   end
 end

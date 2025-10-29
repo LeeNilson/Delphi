@@ -11,7 +11,8 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
   FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
-  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait, Vcl.Buttons, Vcl.DBCtrls;
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait, Vcl.Buttons, Vcl.DBCtrls,
+  Vcl.WinXCtrls;
 
 type
   TfrmCadastroProduto = class(TForm)
@@ -20,6 +21,8 @@ type
     CadastroCliente1: TMenuItem;
     FormadePagamento1: TMenuItem;
     Relatorio1: TMenuItem;
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
     Panel1: TPanel;
     Label1: TLabel;
     Label2: TLabel;
@@ -33,15 +36,16 @@ type
     edtCodigoSku: TEdit;
     edtValorProduto: TEdit;
     edtValorCusto: TEdit;
-    DBGrid1: TDBGrid;
     btnNovo: TButton;
     btnAtualizar: TButton;
     btnSalvar: TButton;
     btnExcluir: TButton;
-    FDConnection1: TFDConnection;
-    DataSource1: TDataSource;
-    FDQuery1: TFDQuery;
+    Panel2: TPanel;
+    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
+    SearchBox1: TSearchBox;
+    Button1: TButton;
+    DataSource1: TDataSource;
     procedure CadastroCliente1Click(Sender: TObject);
     procedure FormadePagamento1Click(Sender: TObject);
 
