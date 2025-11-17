@@ -72,20 +72,17 @@ object frmVenda: TfrmVenda
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'DescT(R$)'
             Width = 80
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'Desc(%)'
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'Qtd'
             Width = 70
@@ -98,26 +95,22 @@ object frmVenda: TfrmVenda
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'VlCust(R$)'
             Width = 80
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'PrUn(R$)'
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'PrFnl(R$)'
             Visible = True
           end
           item
-            Alignment = taLeftJustify
             Expanded = False
             FieldName = 'TVenda (R$)'
             Visible = True
@@ -288,9 +281,6 @@ object frmVenda: TfrmVenda
       Width = 1709
       Height = 19
       Panels = <>
-      ExplicitLeft = 1040
-      ExplicitTop = 224
-      ExplicitWidth = 0
     end
     object ScrollBar1: TScrollBar
       Left = 160
@@ -319,7 +309,9 @@ object frmVenda: TfrmVenda
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=C:\Delphi\Delphi\Loja Utilidades\dbLojaUtilidades.db'
+      
+        'Database=C:\Delphi-prod\Delphi-prod\Loja Utilidades\dbLojaUtilid' +
+        'ades.db'
       'User_Name=root'
       'DriverID=SQLite')
     Connected = True

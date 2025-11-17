@@ -24,8 +24,8 @@ object frmCadastroProduto: TfrmCadastroProduto
     ParentBackground = False
     TabOrder = 0
     VerticalAlignment = taAlignBottom
-    ExplicitLeft = 440
-    ExplicitTop = -40
+    ExplicitWidth = 1924
+    ExplicitHeight = 764
     object Label1: TLabel
       Left = 312
       Top = 8
@@ -200,13 +200,14 @@ object frmCadastroProduto: TfrmCadastroProduto
         Top = 247
         Width = 920
         Height = 50
+        DataSource = DataSource1
         TabOrder = 1
       end
       object SearchBox1: TSearchBox
         Left = 40
         Top = 303
         Width = 729
-        Height = 42
+        Height = 35
         TabOrder = 2
       end
       object Button1: TButton
@@ -235,11 +236,14 @@ object frmCadastroProduto: TfrmCadastroProduto
     end
     object Relatorio1: TMenuItem
       Caption = 'Relatorio'
+      OnClick = Relatorio1Click
     end
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=C:\Delphi\Delphi\Loja Utilidades\dbLojaUtilidades.db'
+      
+        'Database=C:\Delphi-prod\Delphi-prod\Loja Utilidades\dbLojaUtilid' +
+        'ades.db'
       'User_Name=root'
       'DriverID=SQLite')
     Connected = True

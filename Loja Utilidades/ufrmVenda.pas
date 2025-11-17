@@ -62,6 +62,5 @@ implementation
 
 {$R *.dfm}
 
-uses uDataModule;
 
 end.

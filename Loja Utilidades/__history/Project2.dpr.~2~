@@ -2,13 +2,19 @@ program Project2;
 
 uses
   Vcl.Forms,
-  ufrmProduto in 'ufrmProduto.pas' {frmCadastroProduto};
+  ufrmProduto in 'ufrmProduto.pas' {frmCadastroProduto},
+  ufrmCliente in 'ufrmCliente.pas' {frmCadastroCliente},
+  ufrmVenda in 'ufrmVenda.pas' {frmVenda},
+  ufrmRelatorio in 'ufrmRelatorio.pas' {frmRelatorio};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmCadastroProduto, frmCadastroProduto);
-  Application.Run;
+  AApplication.CreateForm(TfrmCadastroProduto, frmCadastroProduto);
+  AApplication.CreateForm(TfrmCadastroCliente, frmCadastroCliente);
+  AApplication.CreateForm(TfrmVenda, frmVenda);
+  Application.CreateForm(TfrmRelatorio, frmRelatorio);
+  lication.Run;
 end.

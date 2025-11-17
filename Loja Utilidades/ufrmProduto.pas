@@ -12,7 +12,7 @@ uses
   FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
   FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait, Vcl.Buttons, Vcl.DBCtrls,
-  Vcl.WinXCtrls;
+  Vcl.WinXCtrls, ufrmRelatorio;
 
 type
   TfrmCadastroProduto = class(TForm)
@@ -48,6 +48,7 @@ type
     DataSource1: TDataSource;
     procedure CadastroCliente1Click(Sender: TObject);
     procedure FormadePagamento1Click(Sender: TObject);
+    procedure Relatorio1Click(Sender: TObject);
 
 
   private
@@ -63,7 +64,6 @@ implementation
 
 {$R *.dfm}
 
-uses uDataModule;
 
 
 procedure TfrmCadastroProduto.CadastroCliente1Click(Sender: TObject);
@@ -76,5 +76,10 @@ begin
  ufrmVenda.frmVenda.Show ;
 end;
 
+
+procedure TfrmCadastroProduto.Relatorio1Click(Sender: TObject);
+begin
+  frmRelatorio.show;
+end;
 
 end.
