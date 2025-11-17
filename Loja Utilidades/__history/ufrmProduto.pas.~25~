@@ -22,6 +22,7 @@ type
     FormadePagamento1: TMenuItem;
     Relatorio1: TMenuItem;
     FDConnection1: TFDConnection;
+    DataSource1: TDataSource;
     FDQuery1: TFDQuery;
     Panel1: TPanel;
     Label1: TLabel;
@@ -45,7 +46,6 @@ type
     DBNavigator1: TDBNavigator;
     SearchBox1: TSearchBox;
     Button1: TButton;
-    DataSource1: TDataSource;
     procedure CadastroCliente1Click(Sender: TObject);
     procedure FormadePagamento1Click(Sender: TObject);
 

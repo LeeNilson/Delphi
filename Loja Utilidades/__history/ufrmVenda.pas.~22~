@@ -10,7 +10,8 @@ uses
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
   FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
-  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait;
+  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait,
+  Vcl.Buttons, Vcl.DBCtrls;
 
 type
   TfrmVenda = class(TForm)
@@ -40,8 +41,7 @@ type
     DataSource1: TDataSource;
     FDQuery1: TFDQuery;
     DBGrid1: TDBGrid;
-    Button1: TButton;
-    DBGrid2: TDBGrid;
+    DBNavigator1: TDBNavigator;
   private
     { Private declarations }
   public

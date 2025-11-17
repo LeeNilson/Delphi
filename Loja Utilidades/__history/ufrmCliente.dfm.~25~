@@ -11,6 +11,7 @@ object frmCadastroCliente: TfrmCadastroCliente
   Font.Name = 'Arial Narrow'
   Font.Style = []
   Menu = MainMenu1
+  WindowState = wsMaximized
   TextHeight = 27
   object Panel1: TPanel
     Left = 0
@@ -21,8 +22,8 @@ object frmCadastroCliente: TfrmCadastroCliente
     Color = clGoldenrod
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1153
-    ExplicitHeight = 797
+    ExplicitWidth = 845
+    ExplicitHeight = 740
     object Label1: TLabel
       Left = 26
       Top = 23
@@ -199,9 +200,42 @@ object frmCadastroCliente: TfrmCadastroCliente
         TabOrder = 5
       end
     end
+    object Button1: TButton
+      Left = 688
+      Top = 67
+      Width = 99
+      Height = 57
+      Caption = 'Salvar'
+      TabOrder = 6
+    end
+    object Button2: TButton
+      Left = 688
+      Top = 157
+      Width = 99
+      Height = 57
+      Caption = 'Novo'
+      TabOrder = 7
+    end
+    object Button3: TButton
+      Left = 688
+      Top = 245
+      Width = 99
+      Height = 57
+      Caption = 'Atualizar'
+      TabOrder = 8
+    end
+    object Button4: TButton
+      Left = 688
+      Top = 330
+      Width = 99
+      Height = 57
+      Caption = 'Deletar'
+      TabOrder = 9
+    end
   end
   object MainMenu1: TMainMenu
-    Left = 754
+    Left = 634
+    Top = 8
     object CadastroProduto1: TMenuItem
       Caption = 'Cadastro Produto'
     end

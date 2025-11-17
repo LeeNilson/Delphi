@@ -154,7 +154,7 @@ object frmVenda: TfrmVenda
       end
     end
     object Panel3: TPanel
-      Left = 189
+      Left = 197
       Top = 24
       Width = 724
       Height = 306
@@ -207,7 +207,7 @@ object frmVenda: TfrmVenda
         Width = 305
         Height = 35
         TabOrder = 0
-        TextHint = 'Selecione ...'
+        TextHint = 'Selecione....'
         Items.Strings = (
           'D'#233'bito'
           'Cr'#233'dito '#225' Vista'
@@ -250,7 +250,7 @@ object frmVenda: TfrmVenda
         TabOrder = 5
       end
       object Button2: TButton
-        Left = 374
+        Left = 407
         Top = 239
         Width = 85
         Height = 55
@@ -258,7 +258,7 @@ object frmVenda: TfrmVenda
         TabOrder = 6
       end
       object Button3: TButton
-        Left = 130
+        Left = 45
         Top = 239
         Width = 85
         Height = 55
@@ -266,7 +266,7 @@ object frmVenda: TfrmVenda
         TabOrder = 7
       end
       object Button4: TButton
-        Left = 257
+        Left = 209
         Top = 239
         Width = 85
         Height = 55
@@ -274,7 +274,7 @@ object frmVenda: TfrmVenda
         TabOrder = 8
       end
       object Button5: TButton
-        Left = 498
+        Left = 594
         Top = 239
         Width = 85
         Height = 55

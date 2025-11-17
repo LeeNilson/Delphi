@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Menus,
+  Vcl.WinXCtrls;
 
 type
   TfrmCadastroCliente = class(TForm)
@@ -42,6 +43,8 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    SearchBox1: TSearchBox;
+    Button5: TButton;
   private
     { Private declarations }
   public

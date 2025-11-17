@@ -34,11 +34,14 @@ type
     edtNumero: TEdit;
     Label9: TLabel;
     Label10: TLabel;
-    ScrollBar1: TScrollBar;
     Label11: TLabel;
     edtCep: TEdit;
     Label12: TLabel;
     edtEstado: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
   private
     { Private declarations }
   public
@@ -51,5 +54,7 @@ var
 implementation
 
 {$R *.dfm}
+
+
 
 end.

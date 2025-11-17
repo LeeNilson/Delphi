@@ -258,7 +258,7 @@ object frmVenda: TfrmVenda
         TabOrder = 6
       end
       object Button3: TButton
-        Left = 130
+        Left = 37
         Top = 239
         Width = 85
         Height = 55
@@ -274,7 +274,7 @@ object frmVenda: TfrmVenda
         TabOrder = 8
       end
       object Button5: TButton
-        Left = 498
+        Left = 594
         Top = 239
         Width = 85
         Height = 55
